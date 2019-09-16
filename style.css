@@ -1,11 +1,43 @@
-* {
-  margin: 0;
-  padding: 0;
+@font-face {
+  font-family: lato-light;
+  src: url("fonts/lato-light.ttf");
+}
+
+@font-face {
+  font-family: lato-bold;
+  src: url("fonts/lato-bold.ttf");
+}
+
+@font-face {
+  font-family: futura-light-bt;
+  src: url("fonts/futura-light-bt.ttf");
+}
+
+@font-face {
+  font-family: futura-bold-bt;
+  src: url("fonts/futura-bold-bt.ttf");
+}
+
+*,
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
 }
 
 header {
+  background-image: url("images/header-background.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,160 +48,251 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100vw;
-  max-width: 100%;
-  height: 965px;
-  background: url("images/header-background.jpg");
-  background-size: cover;
-  background-position: center center;
 }
 
 header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%;
-  height: 120px;
-  padding: 0 70px;
-  /*border: 2px solid white;*/
+  width: 100vw;
+  max-width: 100%;
+  padding: 0  3.7vw;
+  padding-top: 5.7vh;
 }
 
 header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 2vh;
 }
 
 header nav ul li {
-  /*border: 1px solid white;*/
   list-style: none;
-  margin-left: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 header nav ul li a {
   color: white;
   text-decoration: none;
-  font-family: 'Lato', sans-serif;
-  font-size: 25px;
+  font-family: lato-bold;
+  margin-left: 3.7vw;
 }
 
-header nav #logo {
-  height: 65px;
+header nav ul li #select-language {
+  margin-left: 1.05vw;
 }
 
-header nav #flag {
-  width: 50px;
-  height: 25px;
-}
-
-header .fluid-container {
+header .content {
+  height: 100%;
+  width: 70vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 1320px;
-  height: 845px;
 }
 
-header .fluid-container p {
+header .content p {
   color: white;
-  font-size: 85px;
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: futura-light-bt;
+}
+
+header .content p span {
+  font-family: futura-bold-bt;
 }
 
 .services {
   width: 100vw;
   max-width: 100%;
-  height: 550px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 10.8vh;
 }
 
-.services .fluid-container {
+.services .content {
+  width: 70vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /*border:1px solid aqua;*/
-  width: 1320px;
-  height: 100%;
-  font-family: 'Lato', sans-serif;
-  padding-top: 105px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.services .fluid-container p:first-of-type {
+.services .content .left {
   color: #3fb2f9;
-  font-size: 41px;
 }
 
-.services .fluid-container p:last-of-type {
+.services .content .left p {
+  font-family: lato-light;
+}
+
+.services .content .left p span {
+  font-family: lato-bold;
+}
+
+.services .content .right {
   color: #081038;
-  font-size: 25px;
 }
 
-.boxes {
+.services .content .right p {
+  font-family: lato-light;
+}
+
+.services .content .icons {
+  width: 100%;
+  padding: 5.7vh 8.6vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.services-boxs {
   width: 100vw;
   max-width: 100%;
-  /*border: 1px solid red;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.boxes .box {
-  /*border: 1px solid green;*/
+.services-boxs .box {
   width: 33.33%;
-  height: 405px;
-  padding-top: 95px;
-  padding-left: 70px;
-  padding-bottom: 45px;
-  color: white;
-  font-family: 'Lato', sans-serif;
-  font-size: 66px;
+  padding: 9.3vh 0 4.6vh 3.7vw;
 }
 
-.boxes .box:nth-of-type(1) {
+.services-boxs .box p {
+  color: white;
+}
+
+.services-boxs .box p:nth-of-type(1) {
+  font-family: lato-light;
+}
+
+.services-boxs .box p:nth-of-type(2) {
+  font-family: futura-light-bt;
+}
+
+.services-boxs .box p:nth-of-type(3) {
+  font-family: futura-light-bt;
+}
+
+.services-boxs .box button {
+  font-family: lato-bold;
+  width: 9.45vw;
+  height: 6.2vh;
+  border-radius: 50px;
+  border: 3px solid white;
+  background: transparent;
+  color: white;
+  margin-top: 9.2vh;
+  cursor: pointer;
+}
+
+.services-boxs .box #btn2 {
+  color: orange;
+  background: white;
+}
+
+.services-boxs .box #btn3 {
+  margin-top: 16vh;
+}
+
+.services-boxs .box:nth-of-type(1) {
   background-image: url("images/bg1.png");
   background-position: center center;
   background-size: cover;
 }
 
-.boxes .box:nth-of-type(2) {
+.services-boxs .box:nth-of-type(2) {
   background-image: url("images/bg2.png");
   background-position: center center;
   background-size: cover;
 }
 
-.boxes .box:nth-of-type(3) {
+.services-boxs .box:nth-of-type(3) {
   background-image: url("images/bg3.png");
   background-position: center center;
   background-size: cover;
 }
 
-.boxes button {
-  height: 60px;
-  width: 180px;
-  border: 3px solid white;
-  border-radius: 50px;
-  background: transparent;
-  color: white;
-  cursor: pointer;
+@media only screen and (min-width: 1920px) {
+  nav ul li a {
+    font-size: 1.5rem;
+  }
+  header .content p, header .content p span {
+    font-size: 5.3rem;
+  }
+  .services .content .left p, .services .content .left p span {
+    font-size: 2.56rem;
+  }
+  .services .content .right p {
+    font-size: 1.55rem;
+  }
+  .services-boxs .box p {
+    font-size: 4.1rem;
+  }
+  .services-boxs .box button {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  nav ul li a {
+    font-size: 2rem;
+  }
+  header .content p, header .content p span {
+    font-size: 7.1rem;
+  }
+  .services .content .left p, .services .content .left p span {
+    font-size: 3.41rem;
+  }
+  .services .content .right p {
+    font-size: 2.06rem;
+  }
+  .services-boxs .box p {
+    font-size: 5.46rem;
+  }
+  .services-boxs .box button {
+    font-size: 1.73rem;
+  }
+}
+
+@media only screen and (min-width: 4096px) {
+  nav ul li a {
+    font-size: 3.2rem;
+  }
+  header .content p, header .content p span {
+    font-size: 11.3rem;
+  }
+  .services .content .left p, .services .content .left p span {
+    font-size: 5.46rem;
+  }
+  .services .content .right p {
+    font-size: 3.3rem;
+  }
+  .services-boxs .box p {
+    font-size: 8.74rem;
+  }
+  .services-boxs .box button {
+    font-size: 2.77rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

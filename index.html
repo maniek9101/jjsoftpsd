@@ -4,70 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     
-  
     <header>
         <nav>
-            <img src="images/logo.png" alt="logo" id="logo">
+            <img src="images/logo.png" alt="logo">
             <ul>
-                <li>
-                    <a href="#"><b>Home</b></a>
-                </li>
-                <li>
-                    <a href="#"><b>Services</b></a>
-                </li>
-                <li>
-                    <a href="#"><b>Company</b></a>
-                </li>
-                <li>
-                    <a href="#"><b>Careers</b></a>
-                </li>
-                <li>
-                    <a href="#"><b>Contact</b></a>
-                </li>    
-                <li>
-                    <a href="#"><img src="images/flag.png" alt="language" id="flag"></a>
-                </li>
+                <!--TO DO SEMANTIC TAG HTML5-->
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Company</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" id="select-language"><img src="images/flag.png" alt="selecs-language"></a></li> <!--to do-->
             </ul>
-            
         </nav>
-        <div class="fluid-container">
-            <p>We help companies <br>
-            achieve their <b>software</b> <br>
-            <b> development goals</b></p>
+
+        <div class="content">
+            <p>We help companies <br> achieve their <span>software <br> development goals</span></p>
         </div>
     </header>
-    <div class="services">
-        <div class="fluid-container">
-            <p><b>JJ Soft</b> specializes in IT  Professional outsourcing, software development and  recruitment.</p>
-            <p>We help companies to instantly establish and expand their own IT teams. <br><br>
-We offer a large talent pool of highly skilled IT professionals from Europe and help drive high results in customer journeys and supply the best customer experience.</p>
+        
+    <section class="services">
+        <div class="content">
+            <div class="left">
+                <p> <span> JJ Soft </span> specializes in IT <br> Professional outsourcing, <br>
+                    software development and <br> recruitment.</p>
+            </div>
+            <div class="right">
+                <p>We help companies to instantly establish and expand their own <br> IT teams. <br> <br>
+                    We offer a large talent pool of highly skilled IT professionals <br> from Europe and help drive high results in customer journeys <br> and supply the best customer experience.</p>
+            </div>
+            <div class="icons">
+                <!--TO DO COLOR ICON!-->
+                <img src="images/ico1.png" alt="">
+                <img src="images/ico2.png" alt="">
+                <img src="images/ico3.png" alt="">
+                <img src="images/ico4.png" alt="">
+                <img src="images/ico5.png" alt="">
+                <img src="images/ico6.png" alt="">
+            </div>
         </div>
-    </div>
-    <div class="boxes">
+    </section>
+    
+    <section class="services-boxs">
         <div class="box">
-            <p>IT Professional outsourcing</p>
-            <button>SEE MORE</button>
+            <p>IT Professional <br> outsourcing</p>
+            <button id="btn1">SEE MORE</button>
         </div>
         <div class="box">
-            <p>Software development</p>
-            <button>SEE MORE</button>
+            <p>Software <br> development </p>
+            <button id="btn2">SEE MORE</button>
         </div>
         <div class="box">
             <p>Recruitment</p>
-            <button>SEE MORE</button>
+            <button id="btn3">SEE MORE</button>
         </div>
-    </div>
+    </section>
 
-
-    <script>
-        
-    </script>
 </body>
 </html>

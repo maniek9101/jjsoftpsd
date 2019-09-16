@@ -1,118 +1,212 @@
-*
+//Variables
+$baseFontSize: 16px;
+
+
+//fonts
+@font-face
 {
+    font-family: lato-light;
+    src:url('fonts/lato-light.ttf');
+}
+
+@font-face
+{
+    font-family: lato-bold;
+    src:url('fonts/lato-bold.ttf');
+}
+
+@font-face
+{
+    font-family: futura-light-bt;
+    src:url('fonts/futura-light-bt.ttf');
+}
+@font-face
+{
+    font-family: futura-bold-bt;
+    src:url('fonts/futura-bold-bt.ttf');
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
+
+html
+{
+    font-size: $baseFontSize;
+}
+
 header
 {
+    background-image: url('images/header-background.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 100vw;
-    max-width: 100%;
-    height: 965px;
-    background: url('images/header-background.jpg');
-    background-size: cover;
-    background-position: center center;
+
     nav
     {
+        //border:2px solid white;
         display: flex;
-        align-items: center;
         justify-content: space-between;
-        width: 100%;
-        height: 120px;
-        padding: 0 70px;
-        /*border: 2px solid white;*/
+        width: 100vw;
+        max-width: 100%;
+        //height: 18vh;
+        padding:0  3.7vw;
+        padding-top: 5.7vh;
         ul
         {
+            //border: 2px solid lightblue;
             display: flex;
+            padding-top: 2vh;
             li
             {
-                /*border: 1px solid white;*/
                 list-style: none;
-                margin-left: 50px;
                 display: flex;
-                align-items: center;
                 a
                 {
                     color: white;
                     text-decoration: none;
-                    font-family: 'Lato', sans-serif;
-                    font-size: 25px;
+                    font-family: lato-bold;
+                    margin-left: 3.7vw;
+                }
+                #select-language
+                {
+                    margin-left: 1.05vw;
                 }
             }
         }
-        #logo
-        {
-            height: 65px;
-        }
-        #flag
-        {
-            width: 50px;
-            height: 25px;
-        }
     }
-    .fluid-container
+
+    .content
     {
+        //border: 2px solid aqua;
+        height: 100%;
+        width: 70vw;
         display: flex;
         align-items: center;
-        width: 1320px;
-        height: 845px;
-        p
-        {
-            color: white;
-            font-size: 85px;
-            font-family: 'Didact Gothic', sans-serif;
-        }
     }
+
+    .content p 
+    {
+        color: white;
+        font-family: futura-light-bt;
+    }
+
+    .content p span
+    {
+        font-family: futura-bold-bt;
+    }
+
 }
 
 .services
 {
-    width:100vw;
+    //border: 2px solid maroon;
+    width: 100vw;
     max-width: 100%;
-    height: 550px;
     display: flex;
     justify-content: center;
-    .fluid-container
+    padding-top: 10.8vh;
+    .content
     {
+        width: 70vw;
         display: flex;
-        /*border:1px solid aqua;*/
-        width: 1320px;
-        height: 100%;
-        font-family: 'Lato', sans-serif;
-        padding-top: 105px;
-        p:first-of-type
+        flex-wrap: wrap;
+        justify-content: space-between;
+        //border: 2px solid blueviolet;
+        .left
         {
             color: #3fb2f9;
-            font-size: 41px;
+            p
+            {
+                font-family: lato-light;
+                span
+                {
+                    font-family: lato-bold;
+                }
+            }
+            //border:1px dashed red;
         }
-        p:last-of-type
+        .right
         {
-            color:#081038;
-            font-size: 25px;
+            color: #081038;
+            p
+            {
+                font-family: lato-light;
+            }
+            //border:1px dashed olive;
+        }
+        .icons
+        {
+            width: 100%;
+            //border:2px solid red;
+            padding: 5.7vh 8.6vw;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
         }
     }
 }
-.boxes
+
+.services-boxs
 {
     width: 100vw;
     max-width: 100%;
-    /*border: 1px solid red;*/
     display: flex;
-
     .box
     {
-        /*border: 1px solid green;*/
+        //border: 2px solid red;
         width: 33.33%;
-        height: 405px;
-        padding-top: 95px;
-        padding-left: 70px;
-        padding-bottom: 45px;
-        color: white;
-        font-family: 'Lato', sans-serif;
-        font-size: 66px;
+        padding: 9.3vh 0 4.6vh 3.7vw;
+        p
+        {
+            //font-family: futura-light-bt;
+            color: white;
+        }
+        p:nth-of-type(1)
+        {
+            font-family: lato-light;
+        }
+        p:nth-of-type(2)
+        {
+            font-family: futura-light-bt;
+        }
+        p:nth-of-type(3)
+        {
+            font-family: futura-light-bt;
+        }
+
+        button
+        {
+            font-family: lato-bold;
+            width: 9.45vw;
+            height: 6.2vh;
+            border-radius: 50px;
+            border: 3px solid white;
+            background: transparent;
+            color: white;
+            margin-top: 9.2vh;
+            cursor: pointer;
+        }
+        #btn2
+        {
+            color: orange;
+            background: white;
+        }
+        #btn3
+        {
+            //TO DO 
+            margin-top: 16vh; // to do - repair 
+        }
+        
     }
     .box:nth-of-type(1)
     {
@@ -132,16 +226,129 @@ header
         background-position: center center;
         background-size: cover;
     }
-    button
-    {
-        height: 60px;
-        width: 180px;
-        border:3px solid white;
-        border-radius: 50px;
-        background: transparent;
-        color: white;
-        cursor: pointer;
-    }
     
 }
 
+
+
+
+
+
+
+
+
+
+// Media Queries for font size
+
+@media only screen and (min-width: 768px){
+    //to do 
+}
+
+@media only screen and (min-width: 1024px){
+    //to do
+}
+
+@media only screen and (min-width: 1366px){
+    ///to do
+}
+
+//currently default res on project
+@media only screen and (min-width: 1920px) { // FULL HD
+
+    nav ul li a
+    {
+        font-size: 1.5rem;
+    }
+
+    header .content p , header .content p span
+    {
+        font-size: 5.3rem;
+    } 
+
+    .services .content .left p , .services .content .left p span
+    {
+        font-size: 2.56rem;
+    }
+
+    .services .content .right p
+    {
+        font-size: 1.55rem;
+    }
+
+    .services-boxs .box p
+    {
+        font-size: 4.1rem;
+    }
+
+    .services-boxs .box button
+    {
+        font-size: 1.3rem;
+    }
+    //to do styl flag and logo
+}
+
+@media only screen and (min-width: 2560px) {  // 2k
+    //TO DO SET DIMENSION ALL IMG 
+    nav ul li a
+    {
+        font-size: 2rem;
+    }
+
+    header .content p , header .content p span
+    {
+        font-size: 7.1rem;
+    } 
+
+    .services .content .left p , .services .content .left p span
+    {
+        font-size: 3.41rem;
+    }
+
+    .services .content .right p
+    {
+        font-size: 2.06rem;
+    }
+
+    .services-boxs .box p
+    {
+        font-size: 5.46rem;
+    }
+
+    .services-boxs .box button
+    {
+        font-size: 1.73rem;
+    }
+}
+
+@media only screen and (min-width: 4096px) {  // 4k
+    //TO DO SET DIMENSION ALL IMG 
+    nav ul li a
+    {
+        font-size: 3.2rem;
+    }
+
+    header .content p , header .content p span
+    {
+        font-size: 11.3rem;
+    } 
+
+    .services .content .left p , .services .content .left p span
+    {
+        font-size: 5.46rem;
+    }
+
+    .services .content .right p
+    {
+        font-size: 3.3rem;
+    }
+
+    .services-boxs .box p
+    {
+        font-size: 8.74rem;
+    }
+
+    .services-boxs .box button
+    {
+        font-size: 2.77rem;
+    }
+}
