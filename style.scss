@@ -85,6 +85,12 @@ header
         }
     }
 
+    //color current watching section TO DO BEHAVIOR JS WHILE SCROLL 
+    .active-section
+    {
+        color: #e5aa28;
+    }
+
     .content
     {
         //border: 2px solid aqua;
@@ -229,6 +235,105 @@ header
     
 }
 
+.services-different
+{
+    //border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    .content
+    {
+        width: 70vw;
+        //border: 2px solid blue;
+        display: flex;
+        flex-wrap: wrap;
+        .services-different-content-header
+        {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            font-family: lato-light;
+            color: #3fb2f9;
+            padding: 10.3vh 0 10.3vh 0;
+        }
+        //to do respons ico
+        .left
+        {
+            //border: 1px solid red;
+            width: 50%;
+            color: #081038;
+            .box
+            {
+                //border: 1px solid black;
+
+                img
+                {
+                    margin-bottom: 2.57vh;
+                }
+
+                p:nth-child(even)
+                {
+                    //background: red;
+                    font-family: lato-bold;
+                    margin-bottom: 3.5vh;
+                }
+                p:nth-child(odd)
+                {
+                    //background: red;
+                    font-family: lato-light;
+                    margin-bottom: 9.58vh;
+                }
+            }
+        }
+        //to do respons ico
+        .right
+        {
+            //border: 2px dashed orangered;
+            width: 50%;
+            color: #081038;
+            padding-left: 2.1vw;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            .box 
+            {
+                //border: 1px dashed red;
+                
+                img
+                {
+                    margin-bottom: 3.6vh;
+                }
+
+                p:nth-child(even)
+                {
+                    //background: green;
+                    font-family: lato-bold;
+                    margin-bottom: 3.6vh;
+                }
+                p:nth-child(odd)
+                {
+                    //background: red;
+                    font-family: lato-light;
+                    margin-bottom: 10.82vh;
+                }
+                
+            }
+            
+        }
+
+    }
+}
+
+.company-img
+{
+    width: 100vw;
+    max-width: 100%;
+    height: 64vh;
+    background-image: url('images/companyHeader.png');
+    background-size: cover;
+    background-position: center center;
+}
 
 
 
@@ -239,7 +344,7 @@ header
 
 
 // Media Queries for font size
-
+// !!!!!TO DO !!!!!!!!!!!! ALL rwd IMG in web!~!!!!!!!!!!!!!!
 @media only screen and (min-width: 768px){
     //to do 
 }
@@ -285,6 +390,21 @@ header
         font-size: 1.3rem;
     }
     //to do styl flag and logo
+    .services-different-content-header p
+    {
+        font-size: 4.71rem;
+    }
+    
+    .services-different .content .right p:nth-child(even) , .services-different .content .left p:nth-child(even)
+    {
+        font-size: 2.56rem;
+    }
+
+    .services-different .content .right p:nth-child(odd) , .services-different .content .left p:nth-child(odd)
+    {
+        font-size: 1.54rem;
+    }
+
 }
 
 @media only screen and (min-width: 2560px) {  // 2k
@@ -318,6 +438,21 @@ header
     {
         font-size: 1.73rem;
     }
+
+    .services-different-content-header p
+    {
+        font-size: 6.28rem;
+    }
+    
+    .services-different .content .right p:nth-child(even) , .services-different .content .left p:nth-child(even)
+    {
+        font-size: 3.41rem;
+    }
+
+    .services-different .content .right p:nth-child(odd) , .services-different .content .left p:nth-child(odd)
+    {
+        font-size: 2.05rem;
+    }
 }
 
 @media only screen and (min-width: 4096px) {  // 4k
@@ -350,5 +485,20 @@ header
     .services-boxs .box button
     {
         font-size: 2.77rem;
+    }
+
+    .services-different-content-header p
+    {
+        font-size: 10.04rem;
+    }
+    
+    .services-different .content .right p:nth-child(even) , .services-different .content .left p:nth-child(even)
+    {
+        font-size: 5.46rem;
+    }
+
+    .services-different .content .right p:nth-child(odd) , .services-different .content .left p:nth-child(odd)
+    {
+        font-size: 3.28rem;
     }
 }
