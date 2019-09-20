@@ -11,20 +11,28 @@
     
     <header>
         <nav>
-            <img src="images/logo.png" alt="logo">
+            <img src="images/logo.png" alt="logo" id="logo">
             <ul>
                 <!--TO DO SEMANTIC TAG HTML5-->
-                <li><a href="#" class="active-section">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Company</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#" id="select-language"><img src="images/flag.png" alt="selecs-language"></a></li> <!--to do drop down flag menu-->
+                <li><a href="#" class="hrefHome active-section">Home</a></li>
+                <li><a href="#" class="hrefServices">Services</a></li>
+                <li><a href="#" class="hrefCompany">Company</a></li>
+                <li><a href="#" class="hrefCareers">Careers</a></li>
+                <li><a href="#" class="hrefContact">Contact</a></li>
+                <li><a href="#" id="select-language"><img src="images/GBflag.png" alt="English"></a>
+                    <ul>
+                        <!--Add text on hover flag-->
+                        <li><a href="#" id="deutsch"><img src="images/GERflag.png" alt="Deutsch"></a></li>
+                        <li><a href="#" id="français"><img src="images/FRflag.png" alt="Français"></a></li>
+                        <li><a href="#" id="polski"><img src="images/PLflag.png" alt="Polski"></a></li>
+                    </ul>
+                </li> 
             </ul>
         </nav>
 
         <div class="content">
             <p>We help companies <br> achieve their <span>software <br> development goals</span></p>
+            <!--<p id="temp">x</p>-->
         </div>
     </header>
         
@@ -53,15 +61,15 @@
     <section class="services-boxs">
         <div class="box">
             <p>IT Professional <br> outsourcing</p>
-            <button id="btn1">SEE MORE</button>
+            <button>SEE MORE</button>
         </div>
         <div class="box">
             <p>Software <br> development </p>
-            <button id="btn2">SEE MORE</button>
+            <button>SEE MORE</button>
         </div>
         <div class="box">
             <p>Recruitment</p>
-            <button id="btn3">SEE MORE</button>
+            <button>SEE MORE</button>
         </div>
     </section>
 
@@ -116,9 +124,112 @@
 
     <div class="company-img"><!--swap backgroundimg to non stock--></div>
     <section class="company">
-        <!--TO DO -->
-
+        <div class="content">
+            <p>Our Team & Company</p>
+            <div class="chain">
+                <!--ADD ALT-->
+                <div class="wrap"><img src="images/circleBasic.png" alt=""></div>
+                <img src="images/chain.png" alt="">
+                <div class="wrap"><img src="images/circleBasic.png" alt=""></div>
+                <img src="images/chain.png" alt="">
+                <div class="wrap"><img src="images/circle.png" alt=""></div>
+                <img src="images/chain.png" alt="">
+                <div class="wrap"><img src="images/circleBasic.png" alt=""></div>
+                <img src="images/chain.png" alt="">
+                <div class="wrap"><img src="images/circleBasic.png" alt=""></div>
+            </div>
+            <div class="article">
+                <div class="left">
+                    <p>Since 2008, <span>JJ Soft</span> has been <br> establishing, developing and <br> maintaining IT Teams that <br> implement customer’s objectives efficiently and harmoniously with  guaranteed success.</p>
+                </div>
+                <div class="right">
+                    <p>We believe everyone deserves to have an IT Professional who can provide a perfect solution to business challenges. <br> <br> <br>
+                        Innovation and simplicity makes us happy: our goal is to remove any technical or financial barriers that can prevent business owners from recruiting their own IT Professionals. <br><br><br>
+                        <span>We are excited to help you on your journey!</span></p>
+                </div>
+            </div>
+            <div class="char">
+                <div class="box">
+                    <!--add alt AND change font in circle-->
+                    <div class="wrap"><img src="images/char.png" alt=""></div>
+                    <p>Years in the market</p>
+                </div>
+                <div class="box">
+                    <div class="wrap"><img src="images/char.png" alt=""></div>
+                    <p>In-house <br> IT Professionals</p>
+                </div>
+                <div class="box">
+                    <div class="wrap"><img src="images/char.png" alt=""></div>
+                    <p>Projects Completed</p>
+                </div>
+            </div>
+        </div>
     </section>
 
+
+
+    <script>
+        const nav = document.querySelector('nav')
+        //const topOfNav = nav.offsetTop;
+        const img = document.getElementById('logo');
+        const topOfImg = img.offsetTop;
+
+        //const temp = document.getElementById('temp');
+
+        function fixNav()
+        {
+            //temp.innerHTML = window.scrollY + ' ' + topOfImg;
+            //console.log(topOfNav, ' ' , window.scrollY);
+            //console.log(topOfImg, ' ' , window.scrollY);
+            if(window.scrollY >= topOfImg)
+            {
+                //fix
+                nav.classList.add('fix-nav');
+            }
+            else
+            {
+                nav.classList.remove('fix-nav');
+            }
+        }
+
+        window.addEventListener('scroll',fixNav);
+
+        //smooth Scroll
+        /*function smoothScroll(target,duration)
+        {
+            var target = document.querySelector(target);
+            var targetPosition = target.getBoundingClientRect().top;
+            var startPostion = window.pageYOffset;
+            var distance = targetPosition - startPostion;
+            var startTime = null;
+            
+            function animation(currentTime)
+            {
+                if(startTime === null)startTime = currentTime;
+                var timeElapsed = currentTime - startTime;
+                var run = ease(timeElapsed,startPostion,distance,duration);
+                window.scrollTo(0,run);
+                if(timeElapsed < duration) requestAnimationFrame(animation);
+            }
+
+            function ease(t,b,c,d)
+            {
+                t /= d/2;
+	            if (t < 1) return c/2*t*t + b;
+	            t--;
+	            return -c/2 * (t*(t-2) - 1) + b;
+            }
+
+            requestAnimationFrame(animation);
+        }
+
+        var goTo = document.querySelector('.ser');
+        goTo.addEventListener('click',function(){
+            smoothScroll('.services-boxs',1000);
+        });
+        */
+
+       
+    </script>
 </body>
 </html>

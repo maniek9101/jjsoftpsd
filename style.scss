@@ -53,6 +53,9 @@ header
 
     nav
     {
+        position: fixed;
+        top: 0;
+        left: 0;
         //border:2px solid white;
         display: flex;
         justify-content: space-between;
@@ -61,6 +64,7 @@ header
         //height: 18vh;
         padding:0  3.7vw;
         padding-top: 5.7vh;
+        transition: all .5s ease;
         ul
         {
             //border: 2px solid lightblue;
@@ -70,6 +74,21 @@ header
             {
                 list-style: none;
                 display: flex;
+                transition-duration: .5s;
+                position: relative;
+                ul
+                {
+                    position: absolute;
+                    left: 1.05vw;
+                    top: 30%;
+                    /*border: 1px solid white;*/
+                    display: none;
+                    li a
+                    {
+                        margin-left: 0;
+                        position: relative;
+                    }
+                }
                 a
                 {
                     color: white;
@@ -84,6 +103,40 @@ header
             }
         }
     }
+
+    //show flag
+    ul li:hover > ul,
+    ul li ul:hover {
+        display: block;
+    }
+
+    #deutsch::after
+    {
+        content: 'Deu';
+        position: absolute;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+    #deutsch:hover::after
+    {
+        display: block;
+    }
+    
+    //temporary class to fixed nav 
+    .fix-nav
+    {
+       padding-top: 0;
+       background: #3fb2f9;
+       opacity: .9;
+    }
+    #logo
+    {
+        //border: 1px solid white;
+    }
+
 
     //color current watching section TO DO BEHAVIOR JS WHILE SCROLL 
     .active-section
@@ -172,6 +225,9 @@ header
         //border: 2px solid red;
         width: 33.33%;
         padding: 9.3vh 0 4.6vh 3.7vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         p
         {
             //font-family: futura-light-bt;
@@ -202,16 +258,7 @@ header
             margin-top: 9.2vh;
             cursor: pointer;
         }
-        #btn2
-        {
-            color: orange;
-            background: white;
-        }
-        #btn3
-        {
-            //TO DO 
-            margin-top: 16vh; // to do - repair 
-        }
+        
         
     }
     .box:nth-of-type(1)
@@ -261,6 +308,9 @@ header
             //border: 1px solid red;
             width: 50%;
             color: #081038;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             .box
             {
                 //border: 1px solid black;
@@ -291,10 +341,8 @@ header
             width: 50%;
             color: #081038;
             padding-left: 2.1vw;
-
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: space-between;
             .box 
             {
@@ -335,6 +383,186 @@ header
     background-position: center center;
 }
 
+.company
+{
+    //border: 2px solid red;
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: url('images/companyBackground.png');
+    background-size: cover;
+    background-position: center center;
+    .content
+    {
+        //border:1px solid green;
+        width: 70vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #3cb4f9;
+        font-family: lato-light;
+        padding-top: 10.3vh;
+        .chain
+        {
+            //border:1px solid pink;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-bottom: 5.15vh;
+            margin-top: 3.81vh;
+            .wrap
+            {
+                //border: 1px solid white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                white-space: nowrap;
+                font-family: lato-bold;
+                 // to remove from here 
+            }
+            .wrap:nth-of-type(1)::after
+            {
+                content: 'Sales Department';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                color: white;
+                text-align: center;
+            }
+            .wrap:nth-of-type(2)::after
+            {
+                content: 'Human Resources';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                color: white;
+                text-align: center;
+            }
+            .wrap:nth-of-type(3)::after
+            {
+                content: 'Development Teams';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                color: white;
+                text-align: center;
+            }
+            .wrap:nth-of-type(4)::after
+            {
+                content: 'Legal Department';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                color: white;
+                text-align: center;
+            }
+            .wrap:nth-of-type(5)::after
+            {
+                content: 'Accountancy';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                color: white;
+                text-align: center;
+            }
+        }
+        .article
+        {
+            display: flex;
+            font-family: lato-light;
+            color: #3cb4f9;
+            //border: 2px solid white;
+            margin-bottom: 11.35vh;
+            .left
+            {
+                //border: 2px dashed red;
+                span
+                {
+                    font-family: lato-bold;
+                }
+            }
+            .right
+            {
+                //border: 2px solid darkviolet;
+                color: white;
+                margin-left: 5.04vw;
+                span
+                {
+                    font-family: lato-bold;
+                }
+            }
+        }
+        .char
+        {
+            //border: 2px dashed white;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10.3vh;
+            .box
+            {
+                //border:1px solid red;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                color: #f4c348;
+                text-align: center;
+                font-family: lato-bold;
+            }
+            .box:nth-of-type(1) .wrap
+            {
+                //border:3px solid royalblue;
+                position: relative;
+            }
+            .box:nth-of-type(1) .wrap::after
+            {
+                content: '10+';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                color: white;
+                
+            }
+            .box:nth-of-type(2) .wrap
+            {
+                position: relative;
+            }
+            .box:nth-of-type(2) .wrap::after
+            {
+                content: '40+';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                color: white;
+            }
+            .box:nth-of-type(3) .wrap
+            {
+                position: relative;
+            }
+            .box:nth-of-type(3) .wrap::after
+            {
+                content: '50+';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                color: white;
+            }
+        }
+    }
+}
 
 
 
@@ -405,6 +633,34 @@ header
         font-size: 1.54rem;
     }
 
+    .company .content
+    {
+        font-size: 4.71rem;
+    }
+
+    .company .content .chain
+    {
+        font-size: 1.55rem;
+    }
+
+    .company .content .article .left
+    {
+        font-size: 2.57rem;
+    }
+    .company .content .article .right
+    {
+        font-size: 1.54rem;
+    }
+
+    .company .content .char .box 
+    {
+        font-size: 2.57rem;
+    }
+
+    .company .content .char .box .wrap::after
+    {
+        font-size: 4.71rem;
+    }
 }
 
 @media only screen and (min-width: 2560px) {  // 2k
@@ -453,6 +709,35 @@ header
     {
         font-size: 2.05rem;
     }
+
+    .company .content
+    {
+        font-size: 6.28rem;
+    }
+
+    .company .content .chain
+    {
+        font-size: 2.06rem;
+    }
+
+    .company .content .article .left
+    {
+        font-size: 3.42rem;
+    }
+    .company .content .article .right
+    {
+        font-size: 2.05rem;
+    }
+
+    .company .content .char .box 
+    {
+        font-size: 3.42rem;
+    }
+
+    .company .content .char .box .wrap::after
+    {
+        font-size: 6.28rem;
+    }
 }
 
 @media only screen and (min-width: 4096px) {  // 4k
@@ -500,5 +785,34 @@ header
     .services-different .content .right p:nth-child(odd) , .services-different .content .left p:nth-child(odd)
     {
         font-size: 3.28rem;
+    }
+
+    .company .content
+    {
+        font-size: 10.04rem;
+    }
+
+    .company .content .chain
+    {
+        font-size: 3.30rem;
+    }
+
+    .company .content .article .left
+    {
+        font-size: 5.48rem;
+    }
+    .company .content .article .right
+    {
+        font-size: 3.28rem;
+    }
+
+    .company .content .char .box 
+    {
+        font-size: 5.48rem;
+    }
+
+    .company .content .char .box .wrap::after
+    {
+        font-size: 10.04rem;
     }
 }
