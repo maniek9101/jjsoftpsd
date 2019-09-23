@@ -722,7 +722,6 @@ header .content p span {
 }
 
 .contact {
-  border: 1px solid red;
   width: 100vw;
   max-width: 100%;
   height: 151.23vh;
@@ -735,15 +734,15 @@ header .content p span {
   background-image: url("images/contact-background.png");
   background-size: cover;
   background-position: center top;
+  padding-top: 8.86vh;
 }
 
 .contact .content {
-  border: 1px solid green;
   width: 70%;
+  color: white;
 }
 
 .contact .content .content-header {
-  border: 1px solid white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -754,19 +753,137 @@ header .content p span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: white;
+  font-family: lato-light;
+  margin-bottom: 8.24vh;
 }
 
 .contact .content .wrap-info-form {
-  border: 1px solid yellow;
+  height: 32.37vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .contact .content .wrap-info-form .left {
-  border: 1px dashed green;
+  width: 32%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact .content .wrap-info-form .left .left-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact .content .wrap-info-form .left .left-row img {
+  height: 25px;
+  width: 25px;
+  margin-right: 0.8vw;
+}
+
+.contact .content .wrap-info-form .left .left-row:nth-of-type(1),
+.contact .content .wrap-info-form .left .left-row:nth-of-type(4) {
+  font-family: lato-regular;
+}
+
+.contact .content .wrap-info-form .left .left-row:nth-of-type(2),
+.contact .content .wrap-info-form .left .left-row:nth-of-type(3) {
+  font-family: lato-light;
 }
 
 .contact .content .wrap-info-form .right {
-  border: 1px solid burlywood;
+  width: 68%;
+}
+
+.contact .content .wrap-info-form .right p:first-of-type {
+  font-family: lato-regular;
+  margin-bottom: 4.12vh;
+}
+
+.contact .content .wrap-info-form .right form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact .content .wrap-info-form .right form input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #2989c5;
+  margin-bottom: 5.15vh;
+}
+
+.contact .content .wrap-info-form .right form .form-left {
+  width: 48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: lato-regular;
+}
+
+.contact .content .wrap-info-form .right form .form-right {
+  width: 48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: lato-regular;
+}
+
+.contact .content .wrap-info-form .right form .form-bottom {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: lato-regular;
+}
+
+.contact .content .wrap-info-form .right form .form-bottom label {
+  width: 100%;
+}
+
+.contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(1) {
+  width: 100%;
+}
+
+.contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(2) {
+  border: 3px solid white;
+  background: transparent;
+  border-radius: 50px;
+  width: 9.45vw;
+  height: 6vh;
+  color: white;
+  font-family: lato-bold;
+  margin-top: 5.15vh;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 1366px) {
@@ -912,6 +1029,21 @@ header .content p span {
   }
   .careers .content .right button {
     font-size: 1.28rem;
+  }
+  .contact .content .content-header p:nth-of-type(1) {
+    font-size: 4.71rem;
+  }
+  .contact .content .content-header p:nth-of-type(2) {
+    font-size: 2.57rem;
+  }
+  .contact .content .wrap-info-form .left {
+    font-size: 1.54rem;
+  }
+  .contact .content .wrap-info-form .right {
+    font-size: 1.28rem;
+  }
+  .contact .content .wrap-info-form .right p:first-of-type {
+    font-size: 1.54rem;
   }
 }
 
