@@ -17,6 +17,12 @@ $baseFontSize: 16px;
 
 @font-face
 {
+    font-family: lato-regular;
+    src:url('fonts/lato-regular.ttf');
+}
+
+@font-face
+{
     font-family: futura-light-bt;
     src:url('fonts/futura-light-bt.ttf');
 }
@@ -65,10 +71,18 @@ header
         padding:0  3.7vw;
         padding-top: 5.7vh;
         transition: all .5s ease;
+        z-index: 9999;
+        img
+        {
+            //border: 2px solid red;
+            //width: 16.16vw;
+            //height: 6.70vh;
+        }
         ul
         {
             //border: 2px solid lightblue;
             display: flex;
+            align-items: center;
             padding-top: 2vh;
             li
             {
@@ -76,6 +90,13 @@ header
                 display: flex;
                 transition-duration: .5s;
                 position: relative;
+                //border: 1px solid white;
+                img 
+                {
+                    border: 1px solid white;
+                    //width: 2.20vw;
+                    //height: 2.68vh;
+                }
                 ul
                 {
                     position: absolute;
@@ -128,9 +149,10 @@ header
     //temporary class to fixed nav 
     .fix-nav
     {
-       padding-top: 0;
+       padding-top: 0.6vh;
+       padding-bottom: 0.6vh;
        background: #3fb2f9;
-       opacity: .9;
+       //opacity: .9;
     }
     #logo
     {
@@ -564,6 +586,160 @@ header
     }
 }
 
+.company-article 
+{
+    //border: 1px solid red;
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    .content
+    {
+        //border: 1px solid green;
+        width: 70vw;
+        display: flex;
+        padding: 12.35vh 0 12.35vh 0;
+        .left
+        {
+            //border:2px solid darkviolet;
+        }
+        .right
+        {
+            //border: 2px solid orange;
+        }
+        .left p:nth-of-type(1),
+        .right p:nth-of-type(1)
+        {
+            font-family: lato-bold;
+            color: #3fb2f9;
+            margin-bottom: 2.06vh;
+        }
+        .left p:nth-of-type(2),
+        .right p:nth-of-type(2)
+        {
+            color: #7d85ae;
+            margin-bottom: 4.63vh;
+        }
+        .left,.right
+        {
+            font-family: lato-light;
+            color: #081038;
+        }
+        .left button,.right button
+        {
+            font-family: lato-bold;
+            color: #3fb2f9;
+            border: 3px solid #3fb2f9;
+            border-radius: 50px;
+            background: transparent;
+            height: 6.18vh;
+            width: 9.45vw;
+            margin-top: 7.21vh;
+        }
+
+    }
+}
+
+.careers
+{
+    //border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    background-image: url('images/careers-background.png');
+    background-position: center center;
+    background-size: cover;
+    .content
+    {
+        width: 70vw;
+        //border:1px solid green;
+        display: flex;
+        flex-wrap: wrap;
+        color: white;
+        padding-top: 10.3vh;
+        p
+        {
+            width: 100%;
+            //border: 2px solid brown;
+            text-align: center;
+            font-family: lato-light;
+            margin-bottom: 4.5vh;
+        }
+        .left
+        {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            //border:1px dashed blue;
+        }
+        .left img:nth-of-type(2)
+        {
+            //border: 1px solid white;
+            margin-bottom: 5.15vh;
+        }
+        .right
+        {
+            width: 50%;
+            //border:1px dashed black;
+            font-family: lato-regular;
+            padding: 3.09vh 0 0 2.20vw;
+            button
+            {
+                font-family: lato-bold;
+                color: white;
+                background: transparent;
+                border: 3px solid white;
+                border-radius: 50px;
+                height: 6.18vh;
+                width: 18.12vw;
+                margin-top: 7.21vh;
+            }
+        }
+    }
+}
+
+.contact
+{
+    border: 1px solid red;
+    width: 100vw;
+    max-width: 100%;
+    height: 151.23vh;
+    display: flex;
+    justify-content: center;
+    background-image: url('images/contact-background.png');
+    background-size: cover;
+    background-position: center top;
+    //padding-top: 8.86vh;
+    .content
+    {
+        border: 1px solid green;
+        width: 70%;
+        .content-header
+        {
+            border: 1px solid white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+        }
+        .wrap-info-form
+        {
+            border: 1px solid yellow;
+            .left
+            {
+                border: 1px dashed green;
+            }
+            .right
+            {
+                border: 1px solid burlywood;
+
+                
+            }
+        }
+    }
+}
+
 
 
 
@@ -573,7 +749,7 @@ header
 
 // Media Queries for font size
 // !!!!!TO DO !!!!!!!!!!!! ALL rwd IMG in web!~!!!!!!!!!!!!!!
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px){ // mobile
     //to do 
 }
 
@@ -582,7 +758,118 @@ header
 }
 
 @media only screen and (min-width: 1366px){
-    ///to do
+    nav ul li a
+    {
+        font-size: 1.07rem;
+    }
+
+    header .content p , header .content p span
+    {
+        font-size: 3.77rem;
+    } 
+
+    .services .content .left p , .services .content .left p span
+    {
+        font-size: 1.82rem;
+    }
+
+    .services .content .right p
+    {
+        font-size: 1.10rem;
+    }
+
+    .services-boxs .box p
+    {
+        font-size: 2.91rem;
+    }
+
+    .services-boxs .box button
+    {
+        font-size: 0.92rem;
+    }
+    //to do styl flag and logo
+    .services-different-content-header p
+    {
+        font-size: 3.35rem;
+    }
+    
+    .services-different .content .right p:nth-child(even) , .services-different .content .left p:nth-child(even)
+    {
+        font-size: 1.82rem;
+    }
+
+    .services-different .content .right p:nth-child(odd) , .services-different .content .left p:nth-child(odd)
+    {
+        font-size: 1.09rem;
+    }
+
+    .company .content
+    {
+        font-size: 3.35rem;
+    }
+
+    .company .content .chain
+    {
+        font-size: 1.10rem;
+    }
+
+    .company .content .article .left
+    {
+        font-size: 1.82rem;
+    }
+    .company .content .article .right
+    {
+        font-size: 1.09rem;
+    }
+
+    .company .content .char .box 
+    {
+        font-size: 1.82rem;
+    }
+
+    .company .content .char .box .wrap::after
+    {
+        font-size: 3.35rem;
+    }
+
+    .company-article .content .left p:nth-of-type(1),
+    .company-article .content .right p:nth-of-type(1)
+    {
+        font-size: 1.82rem;
+    }
+
+    .company-article .content .left p:nth-of-type(2),
+    .company-article .content .right p:nth-of-type(2)
+    {
+        font-size: 0.91rem;
+    }
+
+    .company-article .content .left,
+    .company-article .content .right
+    {
+        font-size: 1.09rem;
+    }
+
+    .company-article .content .left button,
+    .company-article .content .right button
+    {
+        font-size: 0.91rem;
+    }
+
+    .careers .content p
+    {
+        font-size: 3.35rem;
+    }
+    
+    .careers .content .right
+    {
+        font-size: 1.52rem;
+    }
+
+    .careers .content .right button
+    {
+        font-size: 0.91rem;
+    }
 }
 
 //currently default res on project
@@ -661,10 +948,54 @@ header
     {
         font-size: 4.71rem;
     }
+
+    .company-article .content .left p:nth-of-type(1),
+    .company-article .content .right p:nth-of-type(1)
+    {
+        font-size: 2.57rem;
+    }
+
+    .company-article .content .left p:nth-of-type(2),
+    .company-article .content .right p:nth-of-type(2)
+    {
+        font-size: 1.28rem;
+    }
+
+    .company-article .content .left,
+    .company-article .content .right
+    {
+        font-size: 1.54rem;
+    }
+
+    .company-article .content .left button,
+    .company-article .content .right button
+    {
+        font-size: 1.28rem;
+    }
+
+    .careers .content p
+    {
+        font-size: 4.71rem;
+    }
+    
+    .careers .content .right
+    {
+        font-size: 2.14rem;
+    }
+
+    .careers .content .right button
+    {
+        font-size: 1.28rem;
+    }
+    //contact
+    
+
 }
 
 @media only screen and (min-width: 2560px) {  // 2k
     //TO DO SET DIMENSION ALL IMG 
+    
+    //
     nav ul li a
     {
         font-size: 2rem;
@@ -737,6 +1068,45 @@ header
     .company .content .char .box .wrap::after
     {
         font-size: 6.28rem;
+    }
+
+    .company-article .content .left p:nth-of-type(1),
+    .company-article .content .right p:nth-of-type(1)
+    {
+        font-size: 3.42rem;
+    }
+
+    .company-article .content .left p:nth-of-type(2),
+    .company-article .content .right p:nth-of-type(2)
+    {
+        font-size: 1.70rem;
+    }
+
+    .company-article .content .left,
+    .company-article .content .right
+    {
+        font-size: 2.05rem;
+    }
+
+    .company-article .content .left button,
+    .company-article .content .right button
+    {
+        font-size: 1.66rem;
+    }
+
+    .careers .content p
+    {
+        font-size: 6.28rem;
+    }
+    
+    .careers .content .right
+    {
+        font-size: 2.85rem;
+    }
+
+    .careers .content .right button
+    {
+        font-size: 1.70rem;
     }
 }
 
@@ -814,5 +1184,44 @@ header
     .company .content .char .box .wrap::after
     {
         font-size: 10.04rem;
+    }
+
+    .company-article .content .left p:nth-of-type(1),
+    .company-article .content .right p:nth-of-type(1)
+    {
+        font-size: 5.48rem;
+    }
+
+    .company-article .content .left p:nth-of-type(2),
+    .company-article .content .right p:nth-of-type(2)
+    {
+        font-size: 2.73rem;
+    }
+
+    .company-article .content .left,
+    .company-article .content .right
+    {
+        font-size: 3.28rem;
+    }
+
+    .company-article .content .left button,
+    .company-article .content .right button
+    {
+        font-size: 2.73rem;
+    }
+
+    .careers .content p
+    {
+        font-size: 10.04rem;
+    }
+    
+    .careers .content .right
+    {
+        font-size: 4.56rem;
+    }
+
+    .careers .content .right button
+    {
+        font-size: 2.73rem;
     }
 }

@@ -166,10 +166,81 @@
         </div>
     </section>
 
+    <section class="company-article">
+        <div class="content">
+            <div class="left">
+                <p>Lorem ipsum dolor sit amet</p>
+                <p>28.07.2020</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper hendrerit auctor. Aliquam erat volutpat. 
+                     Donec ullamcorper interdum tincidunt. Fusce rutrum mauris eget lacus consequat ultricies. Interdum et malesuada fames ac ante 
+                     ipsum primis in faucibus. Maecenas suscipit eu massa non gravida. Nunc mollis nisl mauris, at dapibus augue maximus id.</p>
+                <button>SEE MORE</button>
+            </div>
+            <div class="right">
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <p>28.07.2020</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper hendrerit auctor. Aliquam erat volutpat.
+                         Donec ullamcorper interdum tincidunt. Fusce rutrum mauris eget lacus consequat ultricies. Interdum et malesuada fames ac ante 
+                         ipsum primis in faucibus. Maecenas suscipit eu massa non gravida. Nunc mollis nisl mauris, at dapibus augue maximus id.</p>
+                <button>SEE MORE</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="careers">
+        <div class="content">
+            <p>Work with us</p>
+            <div class="left">
+                <img src="images/careers-glass.png" alt="">
+                <img src="images/careers-cup.png" alt="">
+            </div>
+            <div class="right">
+                <ul>
+                    <li>Long-term cooperation</li>
+                    <li>Remote work</li>
+                    <li>Interesting projects for global brands
+                        or innovative projects</li>
+                    <li>Personal development through internal courses (React, Angular, Node.JS)</li>
+                    <li>The ability to change projects between clients</li>
+                </ul>
+                <button>CAREER OPPORTUNITIES</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact"><!--TO DO !!!!!!!!!!!!!!!!!-->
+        <div class="content">
+            <div class="content-header">
+                <p>Let’s discuss</p>
+                <p>We would love to hear from you on any possible subject</p>
+            </div>
+            <div class="wrap-info-form">
+                <div class="left">
+                    
+                </div>
+                <div class="right">
+                    <form action="#">
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
 
 
     <script>
         const nav = document.querySelector('nav')
+        const ul = document.querySelector('nav ul');
         //const topOfNav = nav.offsetTop;
         const img = document.getElementById('logo');
         const topOfImg = img.offsetTop;
@@ -185,10 +256,12 @@
             {
                 //fix
                 nav.classList.add('fix-nav');
+                ul.style.paddingTop = 0;
             }
             else
             {
                 nav.classList.remove('fix-nav');
+                ul.style.paddingTop = '2vh';
             }
         }
 
