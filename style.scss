@@ -761,7 +761,7 @@ header {
     {
         .left{
             width: 100%;
-            border: 1px solid red;
+            //border: 1px solid red;
             justify-content: none;
             .box
             {
@@ -782,7 +782,8 @@ header {
         {
             width: 100%;
             justify-content: none;
-            border: 1px solid green;
+            padding-left: 0;
+            //border: 1px solid green;
             .box
             {
                 img{
