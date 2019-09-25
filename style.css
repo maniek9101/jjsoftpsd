@@ -393,7 +393,7 @@ header .content p span {
   height: 64vh;
   background-image: url("images/companyHeader.png");
   background-size: cover;
-  background-position: center center;
+  background-position: center top;
 }
 
 .company {
@@ -784,18 +784,14 @@ header .content p span {
           justify-content: space-between;
 }
 
-.contact .content .wrap-info-form .left .left-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .contact .content .wrap-info-form .left .left-row img {
   margin-right: 0.8vw;
+  display: inline-block;
 }
 
-.contact .content .wrap-info-form .left .left-row:nth-of-type(3) img {
-  height: 25px;
+.contact .content .wrap-info-form .left .left-row .wrap-p {
+  display: inline-block;
+  top: 0;
 }
 
 .contact .content .wrap-info-form .left .left-row:nth-of-type(1),
@@ -945,6 +941,238 @@ header .content p span {
   .contact .content .wrap-info-form .left,
   .contact .content .wrap-info-form .right {
     width: 100%;
+  }
+  nav ul li a {
+    font-size: 0.75rem;
+  }
+  header .content p,
+  header .content p span {
+    font-size: 2.65rem;
+  }
+  .services .content .left p,
+  .services .content .left p span {
+    font-size: 1.28rem;
+  }
+  .services .content .right p {
+    font-size: 0.77rem;
+  }
+  .services-boxs .box p {
+    font-size: 2.05rem;
+  }
+  .services-boxs .box button {
+    font-size: 0.65rem;
+  }
+  .services-different-content-header p {
+    font-size: 2.35rem;
+  }
+  .services-different .content .right p:nth-child(even),
+  .services-different .content .left p:nth-child(even) {
+    font-size: 1.28rem;
+  }
+  .services-different .content .right p:nth-child(odd),
+  .services-different .content .left p:nth-child(odd) {
+    font-size: 0.77rem;
+  }
+  .company .content {
+    font-size: 2.35rem;
+  }
+  .company .content .chain {
+    font-size: 0.77rem;
+  }
+  .company .content .article .left {
+    font-size: 1.28rem;
+  }
+  .company .content .article .right {
+    font-size: 0.77rem;
+  }
+  .company .content .char .box {
+    font-size: 1.28rem;
+  }
+  .company .content .char .box .wrap::after {
+    font-size: 2.35rem;
+  }
+  .company-article .content .left p:nth-of-type(1),
+  .company-article .content .right p:nth-of-type(1) {
+    font-size: 1.28rem;
+  }
+  .company-article .content .left p:nth-of-type(2),
+  .company-article .content .right p:nth-of-type(2) {
+    font-size: 0.64rem;
+  }
+  .company-article .content .left,
+  .company-article .content .right {
+    font-size: 0.77rem;
+  }
+  .company-article .content .left button,
+  .company-article .content .right button {
+    font-size: 0.64rem;
+  }
+  .careers .content p {
+    font-size: 2.35rem;
+  }
+  .careers .content .right {
+    font-size: 1.07rem;
+  }
+  .careers .content .right button {
+    font-size: 0.64rem;
+  }
+  .contact .content .content-header p:nth-of-type(1) {
+    font-size: 2.35rem;
+  }
+  .contact .content .content-header p:nth-of-type(2) {
+    font-size: 1.28rem;
+  }
+  .contact .content .wrap-info-form .left {
+    font-size: 0.77rem;
+  }
+  .contact .content .wrap-info-form .right {
+    font-size: 0.64rem;
+  }
+  .contact .content .wrap-info-form .right p:first-of-type {
+    font-size: 0.77rem;
+  }
+  .contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(2) {
+    font-size: 0.64rem;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1365px) {
+  header .content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .content p {
+    text-align: center;
+  }
+  .services-boxs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .services-boxs .box {
+    width: 100%;
+  }
+  .services-boxs .box button {
+    width: 15vw;
+  }
+  .company-article .content .left button,
+  .company-article .content .right button {
+    width: 15vw;
+  }
+  .careers .content .right button {
+    margin-top: 3vh;
+  }
+  .contact .content .wrap-info-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .content .wrap-info-form .left {
+    width: 100%;
+  }
+  .contact .content .wrap-info-form .left .left-row {
+    margin-bottom: 1vh;
+  }
+  .contact .content .wrap-info-form .right {
+    width: 100%;
+  }
+  .contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(2) {
+    width: 15vw;
+  }
+  nav ul li a {
+    font-size: 0.75rem;
+  }
+  header .content p,
+  header .content p span {
+    font-size: 2.65rem;
+  }
+  .services .content .left p,
+  .services .content .left p span {
+    font-size: 1.28rem;
+  }
+  .services .content .right p {
+    font-size: 0.77rem;
+  }
+  .services-boxs .box p {
+    font-size: 2.05rem;
+  }
+  .services-boxs .box button {
+    font-size: 0.65rem;
+  }
+  .services-different-content-header p {
+    font-size: 2.35rem;
+  }
+  .services-different .content .right p:nth-child(even),
+  .services-different .content .left p:nth-child(even) {
+    font-size: 1.28rem;
+  }
+  .services-different .content .right p:nth-child(odd),
+  .services-different .content .left p:nth-child(odd) {
+    font-size: 0.77rem;
+  }
+  .company .content {
+    font-size: 2.35rem;
+  }
+  .company .content .chain {
+    font-size: 0.77rem;
+  }
+  .company .content .article .left {
+    font-size: 1.28rem;
+  }
+  .company .content .article .right {
+    font-size: 0.77rem;
+  }
+  .company .content .char .box {
+    font-size: 1.28rem;
+  }
+  .company .content .char .box .wrap::after {
+    font-size: 2.35rem;
+  }
+  .company-article .content .left p:nth-of-type(1),
+  .company-article .content .right p:nth-of-type(1) {
+    font-size: 1.28rem;
+  }
+  .company-article .content .left p:nth-of-type(2),
+  .company-article .content .right p:nth-of-type(2) {
+    font-size: 0.64rem;
+  }
+  .company-article .content .left,
+  .company-article .content .right {
+    font-size: 0.77rem;
+  }
+  .company-article .content .left button,
+  .company-article .content .right button {
+    font-size: 0.64rem;
+  }
+  .careers .content p {
+    font-size: 2.35rem;
+  }
+  .careers .content .right {
+    font-size: 1.07rem;
+  }
+  .careers .content .right button {
+    font-size: 0.64rem;
+  }
+  .contact .content .content-header p:nth-of-type(1) {
+    font-size: 2.35rem;
+  }
+  .contact .content .content-header p:nth-of-type(2) {
+    font-size: 1.28rem;
+  }
+  .contact .content .wrap-info-form .left {
+    font-size: 0.77rem;
+  }
+  .contact .content .wrap-info-form .right {
+    font-size: 0.64rem;
+  }
+  .contact .content .wrap-info-form .right p:first-of-type {
+    font-size: 0.77rem;
+  }
+  .contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(2) {
+    font-size: 0.64rem;
   }
 }
 

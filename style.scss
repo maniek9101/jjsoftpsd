@@ -324,7 +324,7 @@ header {
     height: 64vh;
     background-image: url('images/companyHeader.png');
     background-size: cover;
-    background-position: center center;
+    background-position: center top;
 }
 
 .company {
@@ -620,17 +620,23 @@ header {
                 justify-content: space-between;
                 .left-row {
                     //border: 1px solid blue;
-                    display: flex;
+                    //display: flex;
                     img {
                         //height: 25px;
                         //width: 25px;
                         margin-right: 0.8vw;
+                        display: inline-block;
+                    }
+                    .wrap-p
+                    {
+                        display: inline-block;
+                        top: 0;
                     }
                 }
                 .left-row:nth-of-type(3) img 
                 {
                     //border: 1px solid red;
-                    height: 25px;
+                    //height: 25px;
                 }
                 .left-row:nth-of-type(1),
                 .left-row:nth-of-type(4) {
@@ -753,8 +759,252 @@ header {
             width: 100%;
         }
     }
+    //end mobile style//
     //mobile font size
     //to do 
+    nav ul li a {
+        font-size: 0.75rem;
+    }
+    header .content p,
+    header .content p span {
+        font-size: 2.65rem;
+    }
+    .services .content .left p,
+    .services .content .left p span {
+        font-size: 1.28rem;
+    }
+    .services .content .right p {
+        font-size: 0.77rem;
+    }
+    .services-boxs .box p {
+        font-size: 2.05rem;
+    }
+    .services-boxs .box button {
+        font-size: 0.65rem;
+    }
+    //to do styl flag and logo
+    .services-different-content-header p {
+        font-size: 2.35rem;
+    }
+    .services-different .content .right p:nth-child(even),
+    .services-different .content .left p:nth-child(even) {
+        font-size: 1.28rem;
+    }
+    .services-different .content .right p:nth-child(odd),
+    .services-different .content .left p:nth-child(odd) {
+        font-size: 0.77rem;
+    }
+    .company .content {
+        font-size: 2.35rem;
+    }
+    .company .content .chain {
+        font-size: 0.77rem;
+    }
+    .company .content .article .left {
+        font-size: 1.28rem;
+    }
+    .company .content .article .right {
+        font-size: 0.77rem;
+    }
+    .company .content .char .box {
+        font-size: 1.28rem;
+    }
+    .company .content .char .box .wrap::after {
+        font-size: 2.35rem;
+    }
+    .company-article .content .left p:nth-of-type(1),
+    .company-article .content .right p:nth-of-type(1) {
+        font-size: 1.28rem;
+    }
+    .company-article .content .left p:nth-of-type(2),
+    .company-article .content .right p:nth-of-type(2) {
+        font-size: 0.64rem;
+    }
+    .company-article .content .left,
+    .company-article .content .right {
+        font-size: 0.77rem;
+    }
+    .company-article .content .left button,
+    .company-article .content .right button {
+        font-size: 0.64rem;
+    }
+    .careers .content p {
+        font-size: 2.35rem;
+    }
+    .careers .content .right {
+        font-size: 1.07rem;
+    }
+    .careers .content .right button {
+        font-size: 0.64rem;
+    }
+    //contact
+    .contact .content .content-header p:nth-of-type(1) {
+        font-size: 2.35rem;
+    }
+    .contact .content .content-header p:nth-of-type(2) {
+        font-size: 1.28rem;
+    }
+    .contact .content .wrap-info-form .left {
+        font-size: 0.77rem;
+    }
+    .contact .content .wrap-info-form .right {
+        font-size: 0.64rem;
+    }
+    .contact .content .wrap-info-form .right p:first-of-type {
+        font-size: 0.77rem;
+    }
+    .contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(2)
+    {
+        font-size: 0.64rem;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1365px) // Tablets ? for 960px
+{
+    //style for tablet//
+    header .content
+    {
+        justify-content: center;
+        p
+        {
+            text-align: center;
+        }
+    }
+    .services-boxs {
+        flex-direction: column;
+        .box {
+            width: 100%;
+            button
+            {
+                width: 15vw;
+            }
+        }
+    }
+    .company-article .content .left button ,
+    .company-article .content .right button 
+    {
+        width: 15vw;
+    }
+    .careers .content .right button
+    {
+        margin-top: 3vh;
+    }
+    .contact .content .wrap-info-form
+    {
+        flex-direction: column;
+        .left
+        {
+            width: 100%;
+            .left-row
+            {
+                margin-bottom: 1vh;
+            }
+        }
+        .right{
+            width: 100%;
+            form .form-bottom input:nth-of-type(2)
+            {
+                width: 15vw;
+            }
+        }
+    }
+    //end style for tablet//
+    //FONTS-size//
+    nav ul li a {
+        font-size: 0.75rem;
+    }
+    header .content p,
+    header .content p span {
+        font-size: 2.65rem;
+    }
+    .services .content .left p,
+    .services .content .left p span {
+        font-size: 1.28rem;
+    }
+    .services .content .right p {
+        font-size: 0.77rem;
+    }
+    .services-boxs .box p {
+        font-size: 2.05rem;
+    }
+    .services-boxs .box button {
+        font-size: 0.65rem;
+    }
+    //to do styl flag and logo
+    .services-different-content-header p {
+        font-size: 2.35rem;
+    }
+    .services-different .content .right p:nth-child(even),
+    .services-different .content .left p:nth-child(even) {
+        font-size: 1.28rem;
+    }
+    .services-different .content .right p:nth-child(odd),
+    .services-different .content .left p:nth-child(odd) {
+        font-size: 0.77rem;
+    }
+    .company .content {
+        font-size: 2.35rem;
+    }
+    .company .content .chain {
+        font-size: 0.77rem;
+    }
+    .company .content .article .left {
+        font-size: 1.28rem;
+    }
+    .company .content .article .right {
+        font-size: 0.77rem;
+    }
+    .company .content .char .box {
+        font-size: 1.28rem;
+    }
+    .company .content .char .box .wrap::after {
+        font-size: 2.35rem;
+    }
+    .company-article .content .left p:nth-of-type(1),
+    .company-article .content .right p:nth-of-type(1) {
+        font-size: 1.28rem;
+    }
+    .company-article .content .left p:nth-of-type(2),
+    .company-article .content .right p:nth-of-type(2) {
+        font-size: 0.64rem;
+    }
+    .company-article .content .left,
+    .company-article .content .right {
+        font-size: 0.77rem;
+    }
+    .company-article .content .left button,
+    .company-article .content .right button {
+        font-size: 0.64rem;
+    }
+    .careers .content p {
+        font-size: 2.35rem;
+    }
+    .careers .content .right {
+        font-size: 1.07rem;
+    }
+    .careers .content .right button {
+        font-size: 0.64rem;
+    }
+    //contact
+    .contact .content .content-header p:nth-of-type(1) {
+        font-size: 2.35rem;
+    }
+    .contact .content .content-header p:nth-of-type(2) {
+        font-size: 1.28rem;
+    }
+    .contact .content .wrap-info-form .left {
+        font-size: 0.77rem;
+    }
+    .contact .content .wrap-info-form .right {
+        font-size: 0.64rem;
+    }
+    .contact .content .wrap-info-form .right p:first-of-type {
+        font-size: 0.77rem;
+    }
+    .contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(2)
+    {
+        font-size: 0.64rem;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
