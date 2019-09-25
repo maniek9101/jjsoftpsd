@@ -1,35 +1,29 @@
 //Variables
 $baseFontSize: 16px;
-
-
 //fonts
-@font-face
-{
+@font-face {
     font-family: lato-light;
-    src:url('fonts/lato-light.ttf');
+    src: url('fonts/lato-light.ttf');
 }
 
-@font-face
-{
+@font-face {
     font-family: lato-bold;
-    src:url('fonts/lato-bold.ttf');
+    src: url('fonts/lato-bold.ttf');
 }
 
-@font-face
-{
+@font-face {
     font-family: lato-regular;
-    src:url('fonts/lato-regular.ttf');
+    src: url('fonts/lato-regular.ttf');
 }
 
-@font-face
-{
+@font-face {
     font-family: futura-light-bt;
-    src:url('fonts/futura-light-bt.ttf');
+    src: url('fonts/futura-light-bt.ttf');
 }
-@font-face
-{
+
+@font-face {
     font-family: futura-bold-bt;
-    src:url('fonts/futura-bold-bt.ttf');
+    src: url('fonts/futura-bold-bt.ttf');
 }
 
 *,
@@ -40,13 +34,11 @@ $baseFontSize: 16px;
     padding: 0;
 }
 
-html
-{
+html {
     font-size: $baseFontSize;
 }
 
-header
-{
+header {
     background-image: url('images/header-background.jpg');
     background-size: cover;
     background-position: center center;
@@ -56,9 +48,7 @@ header
     display: flex;
     align-items: center;
     flex-direction: column;
-
-    nav
-    {
+    nav {
         position: fixed;
         top: 0;
         left: 0;
@@ -68,71 +58,60 @@ header
         width: 100vw;
         max-width: 100%;
         //height: 18vh;
-        padding:0  3.7vw;
+        padding: 0 3.7vw;
         padding-top: 5.7vh;
         transition: all .5s ease;
         z-index: 9999;
-        img
-        {
+        img {
             //border: 2px solid red;
             //width: 16.16vw;
             //height: 6.70vh;
         }
-        ul
-        {
+        ul {
             //border: 2px solid lightblue;
             display: flex;
             align-items: center;
             padding-top: 2vh;
-            li
-            {
+            li {
                 list-style: none;
                 display: flex;
                 transition-duration: .5s;
                 position: relative;
                 //border: 1px solid white;
-                img 
-                {
+                img {
                     border: 1px solid white;
                     //width: 2.20vw;
                     //height: 2.68vh;
                 }
-                ul
-                {
+                ul {
                     position: absolute;
                     left: 1.05vw;
                     top: 30%;
                     /*border: 1px solid white;*/
                     display: none;
-                    li a
-                    {
+                    li a {
                         margin-left: 0;
                         position: relative;
                     }
                 }
-                a
-                {
+                a {
                     color: white;
                     text-decoration: none;
                     font-family: lato-bold;
                     margin-left: 3.7vw;
                 }
-                #select-language
-                {
+                #select-language {
                     margin-left: 1.05vw;
                 }
             }
         }
     }
-
     //show flag
-    ul li:hover > ul,
+    ul li:hover>ul,
     ul li ul:hover {
         display: block;
     }
-
-    #deutsch::after
-    {
+    #deutsch::after {
         content: 'Deu';
         position: absolute;
         top: 0;
@@ -141,92 +120,70 @@ header
         height: 100%;
         display: none;
     }
-    #deutsch:hover::after
-    {
+    #deutsch:hover::after {
         display: block;
     }
-    
     //temporary class to fixed nav 
-    .fix-nav
-    {
-       padding-top: 0.6vh;
-       padding-bottom: 0.6vh;
-       background: #3fb2f9;
-       //opacity: .9;
+    .fix-nav {
+        padding-top: 0.6vh;
+        padding-bottom: 0.6vh;
+        background: #3fb2f9;
+        //opacity: .9;
     }
-    #logo
-    {
+    #logo {
         //border: 1px solid white;
     }
-
-
     //color current watching section TO DO BEHAVIOR JS WHILE SCROLL 
-    .active-section
-    {
+    .active-section {
         color: #e5aa28;
     }
-
-    .content
-    {
+    .content {
         //border: 2px solid aqua;
         height: 100%;
         width: 70vw;
         display: flex;
         align-items: center;
     }
-
-    .content p 
-    {
+    .content p {
         color: white;
         font-family: futura-light-bt;
     }
-
-    .content p span
-    {
+    .content p span {
         font-family: futura-bold-bt;
     }
-
 }
 
-.services
-{
+.services {
     //border: 2px solid maroon;
     width: 100vw;
     max-width: 100%;
     display: flex;
     justify-content: center;
     padding-top: 10.8vh;
-    .content
-    {
+    .content {
         width: 70vw;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         //border: 2px solid blueviolet;
-        .left
-        {
+        .left {
             color: #3fb2f9;
-            p
-            {
+            p {
                 font-family: lato-light;
-                span
-                {
+                span {
                     font-family: lato-bold;
                 }
             }
             //border:1px dashed red;
         }
-        .right
-        {
+        .right {
             color: #081038;
-            p
-            {
+            p {
                 font-family: lato-light;
             }
             //border:1px dashed olive;
         }
-        .icons
-        {
+        .icons {
             width: 100%;
             //border:2px solid red;
             padding: 5.7vh 8.6vw;
@@ -237,39 +194,31 @@ header
     }
 }
 
-.services-boxs
-{
+.services-boxs {
     width: 100vw;
     max-width: 100%;
     display: flex;
-    .box
-    {
+    .box {
         //border: 2px solid red;
         width: 33.33%;
         padding: 9.3vh 0 4.6vh 3.7vw;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        p
-        {
+        p {
             //font-family: futura-light-bt;
             color: white;
         }
-        p:nth-of-type(1)
-        {
+        p:nth-of-type(1) {
             font-family: lato-light;
         }
-        p:nth-of-type(2)
-        {
+        p:nth-of-type(2) {
             font-family: futura-light-bt;
         }
-        p:nth-of-type(3)
-        {
+        p:nth-of-type(3) {
             font-family: futura-light-bt;
         }
-
-        button
-        {
+        button {
             font-family: lato-bold;
             width: 9.45vw;
             height: 6.2vh;
@@ -280,43 +229,34 @@ header
             margin-top: 9.2vh;
             cursor: pointer;
         }
-        
-        
     }
-    .box:nth-of-type(1)
-    {
+    .box:nth-of-type(1) {
         background-image: url('images/bg1.png');
         background-position: center center;
         background-size: cover;
     }
-    .box:nth-of-type(2)
-    {
+    .box:nth-of-type(2) {
         background-image: url('images/bg2.png');
         background-position: center center;
         background-size: cover;
     }
-    .box:nth-of-type(3)
-    {
+    .box:nth-of-type(3) {
         background-image: url('images/bg3.png');
         background-position: center center;
         background-size: cover;
     }
-    
 }
 
-.services-different
-{
+.services-different {
     //border: 2px solid red;
     display: flex;
     justify-content: center;
-    .content
-    {
+    .content {
         width: 70vw;
         //border: 2px solid blue;
         display: flex;
         flex-wrap: wrap;
-        .services-different-content-header
-        {
+        .services-different-content-header {
             display: flex;
             justify-content: center;
             width: 100%;
@@ -325,31 +265,24 @@ header
             padding: 10.3vh 0 10.3vh 0;
         }
         //to do respons ico
-        .left
-        {
+        .left {
             //border: 1px solid red;
             width: 50%;
             color: #081038;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            .box
-            {
+            .box {
                 //border: 1px solid black;
-
-                img
-                {
+                img {
                     margin-bottom: 2.57vh;
                 }
-
-                p:nth-child(even)
-                {
+                p:nth-child(even) {
                     //background: red;
                     font-family: lato-bold;
                     margin-bottom: 3.5vh;
                 }
-                p:nth-child(odd)
-                {
+                p:nth-child(odd) {
                     //background: red;
                     font-family: lato-light;
                     margin-bottom: 9.58vh;
@@ -357,8 +290,7 @@ header
             }
         }
         //to do respons ico
-        .right
-        {
+        .right {
             //border: 2px dashed orangered;
             width: 50%;
             color: #081038;
@@ -366,37 +298,27 @@ header
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            .box 
-            {
+            .box {
                 //border: 1px dashed red;
-                
-                img
-                {
+                img {
                     margin-bottom: 3.6vh;
                 }
-
-                p:nth-child(even)
-                {
+                p:nth-child(even) {
                     //background: green;
                     font-family: lato-bold;
                     margin-bottom: 3.6vh;
                 }
-                p:nth-child(odd)
-                {
+                p:nth-child(odd) {
                     //background: red;
                     font-family: lato-light;
                     margin-bottom: 10.82vh;
                 }
-                
             }
-            
         }
-
     }
 }
 
-.company-img
-{
+.company-img {
     width: 100vw;
     max-width: 100%;
     height: 64vh;
@@ -405,8 +327,7 @@ header
     background-position: center center;
 }
 
-.company
-{
+.company {
     //border: 2px solid red;
     width: 100vw;
     max-width: 100%;
@@ -415,8 +336,7 @@ header
     background-image: url('images/companyBackground.png');
     background-size: cover;
     background-position: center center;
-    .content
-    {
+    .content {
         //border:1px solid green;
         width: 70vw;
         display: flex;
@@ -425,8 +345,7 @@ header
         color: #3cb4f9;
         font-family: lato-light;
         padding-top: 10.3vh;
-        .chain
-        {
+        .chain {
             //border:1px solid pink;
             width: 100%;
             display: flex;
@@ -434,8 +353,7 @@ header
             justify-content: space-around;
             margin-bottom: 5.15vh;
             margin-top: 3.81vh;
-            .wrap
-            {
+            .wrap {
                 //border: 1px solid white;
                 display: flex;
                 align-items: center;
@@ -443,94 +361,82 @@ header
                 position: relative;
                 white-space: nowrap;
                 font-family: lato-bold;
-                 // to remove from here 
+                // to remove from here 
             }
-            .wrap:nth-of-type(1)::after
-            {
+            .wrap:nth-of-type(1)::after {
                 content: 'Sales Department';
                 position: absolute;
                 left: 50%;
                 top: 50%;
-                transform: translate(-50%,-50%);
+                transform: translate(-50%, -50%);
                 color: white;
                 text-align: center;
             }
-            .wrap:nth-of-type(2)::after
-            {
+            .wrap:nth-of-type(2)::after {
                 content: 'Human Resources';
                 position: absolute;
                 left: 50%;
                 top: 50%;
-                transform: translate(-50%,-50%);
+                transform: translate(-50%, -50%);
                 color: white;
                 text-align: center;
             }
-            .wrap:nth-of-type(3)::after
-            {
+            .wrap:nth-of-type(3)::after {
                 content: 'Development Teams';
                 position: absolute;
                 left: 50%;
                 top: 50%;
-                transform: translate(-50%,-50%);
+                transform: translate(-50%, -50%);
                 color: white;
                 text-align: center;
             }
-            .wrap:nth-of-type(4)::after
-            {
+            .wrap:nth-of-type(4)::after {
                 content: 'Legal Department';
                 position: absolute;
                 left: 50%;
                 top: 50%;
-                transform: translate(-50%,-50%);
+                transform: translate(-50%, -50%);
                 color: white;
                 text-align: center;
             }
-            .wrap:nth-of-type(5)::after
-            {
+            .wrap:nth-of-type(5)::after {
                 content: 'Accountancy';
                 position: absolute;
                 left: 50%;
                 top: 50%;
-                transform: translate(-50%,-50%);
+                transform: translate(-50%, -50%);
                 color: white;
                 text-align: center;
             }
         }
-        .article
-        {
+        .article {
             display: flex;
             font-family: lato-light;
             color: #3cb4f9;
             //border: 2px solid white;
             margin-bottom: 11.35vh;
-            .left
-            {
+            .left {
                 //border: 2px dashed red;
-                span
-                {
+                span {
                     font-family: lato-bold;
                 }
             }
-            .right
-            {
+            .right {
                 //border: 2px solid darkviolet;
                 color: white;
                 margin-left: 5.04vw;
-                span
-                {
+                span {
                     font-family: lato-bold;
                 }
             }
         }
-        .char
-        {
+        .char {
             //border: 2px dashed white;
             width: 100%;
             display: flex;
             justify-content: space-around;
             margin-bottom: 10.3vh;
-            .box
-            {
+            .box {
                 //border:1px solid red;
                 display: flex;
                 flex-direction: column;
@@ -541,92 +447,80 @@ header
                 text-align: center;
                 font-family: lato-bold;
             }
-            .box:nth-of-type(1) .wrap
-            {
+            .box:nth-of-type(1) .wrap {
                 //border:3px solid royalblue;
                 position: relative;
             }
-            .box:nth-of-type(1) .wrap::after
-            {
+            .box:nth-of-type(1) .wrap::after {
                 content: '10+';
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%,-50%);
+                transform: translate(-50%, -50%);
                 color: white;
-                
             }
-            .box:nth-of-type(2) .wrap
-            {
+            .box:nth-of-type(2) .wrap {
                 position: relative;
             }
-            .box:nth-of-type(2) .wrap::after
-            {
+            .box:nth-of-type(2) .wrap::after {
                 content: '40+';
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%,-50%);
+                transform: translate(-50%, -50%);
                 color: white;
             }
-            .box:nth-of-type(3) .wrap
-            {
+            .box:nth-of-type(3) .wrap {
                 position: relative;
             }
-            .box:nth-of-type(3) .wrap::after
-            {
+            .box:nth-of-type(3) .wrap::after {
                 content: '50+';
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%,-50%);
+                transform: translate(-50%, -50%);
                 color: white;
             }
         }
     }
 }
 
-.company-article 
-{
+.company-article {
     //border: 1px solid red;
     width: 100vw;
     max-width: 100%;
     display: flex;
     justify-content: center;
-    .content
-    {
+    .content {
         //border: 1px solid green;
         width: 70vw;
         display: flex;
         padding: 12.35vh 0 12.35vh 0;
-        .left
-        {
+        .left {
             //border:2px solid darkviolet;
         }
-        .right
-        {
+        .right {
             //border: 2px solid orange;
+            margin-left: 2.1vw;
         }
         .left p:nth-of-type(1),
-        .right p:nth-of-type(1)
-        {
+        .right p:nth-of-type(1) {
             font-family: lato-bold;
             color: #3fb2f9;
             margin-bottom: 2.06vh;
         }
         .left p:nth-of-type(2),
-        .right p:nth-of-type(2)
-        {
+        .right p:nth-of-type(2) {
             color: #7d85ae;
             margin-bottom: 4.63vh;
         }
-        .left,.right
-        {
+        .left,
+        .right {
             font-family: lato-light;
             color: #081038;
         }
-        .left button,.right button
-        {
+        .left button,
+        .right button {
             font-family: lato-bold;
             color: #3fb2f9;
             border: 3px solid #3fb2f9;
@@ -636,36 +530,31 @@ header
             width: 9.45vw;
             margin-top: 7.21vh;
         }
-
     }
 }
 
-.careers
-{
+.careers {
     //border: 2px solid red;
     display: flex;
     justify-content: center;
     background-image: url('images/careers-background.png');
     background-position: center center;
     background-size: cover;
-    .content
-    {
+    .content {
         width: 70vw;
         //border:1px solid green;
         display: flex;
         flex-wrap: wrap;
         color: white;
         padding-top: 10.3vh;
-        p
-        {
+        p {
             width: 100%;
             //border: 2px solid brown;
             text-align: center;
             font-family: lato-light;
             margin-bottom: 4.5vh;
         }
-        .left
-        {
+        .left {
             width: 50%;
             display: flex;
             flex-direction: column;
@@ -673,19 +562,16 @@ header
             justify-content: center;
             //border:1px dashed blue;
         }
-        .left img:nth-of-type(2)
-        {
+        .left img:nth-of-type(2) {
             //border: 1px solid white;
             margin-bottom: 5.15vh;
         }
-        .right
-        {
+        .right {
             width: 50%;
             //border:1px dashed black;
             font-family: lato-regular;
             padding: 3.09vh 0 0 2.20vw;
-            button
-            {
+            button {
                 font-family: lato-bold;
                 color: white;
                 background: transparent;
@@ -699,8 +585,7 @@ header
     }
 }
 
-.contact
-{
+.contact {
     //border: 1px solid red;
     width: 100vw;
     max-width: 100%;
@@ -711,13 +596,11 @@ header
     background-size: cover;
     background-position: center top;
     padding-top: 8.86vh;
-    .content
-    {
+    .content {
         //border: 1px solid green;
         width: 70%;
         color: white;
-        .content-header
-        {
+        .content-header {
             //border: 1px solid white;
             display: flex;
             flex-direction: column;
@@ -725,99 +608,103 @@ header
             font-family: lato-light;
             margin-bottom: 8.24vh;
         }
-        .wrap-info-form
-        {
+        .wrap-info-form {
             //border: 3px solid yellow;
             height: 32.37vh;
             display: flex;
-            .left
-            {
+            .left {
                 //border: 3px dashed green;
                 width: 32%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                .left-row
-                {
+                .left-row {
                     //border: 1px solid blue;
                     display: flex;
-                    img
-                    {
-                        height: 25px;
-                        width: 25px;
+                    img {
+                        //height: 25px;
+                        //width: 25px;
                         margin-right: 0.8vw;
                     }
                 }
-                .left-row:nth-of-type(1),
-                .left-row:nth-of-type(4)
+                .left-row:nth-of-type(3) img 
                 {
+                    //border: 1px solid red;
+                    height: 25px;
+                }
+                .left-row:nth-of-type(1),
+                .left-row:nth-of-type(4) {
                     font-family: lato-regular;
                 }
                 .left-row:nth-of-type(2),
-                .left-row:nth-of-type(3)
-                {
+                .left-row:nth-of-type(3) {
                     font-family: lato-light;
                 }
             }
-            .right
-            {
+            .right {
                 //border: 2px solid red;
                 width: 68%;
-                p:first-of-type
-                {
+                p:first-of-type {
                     font-family: lato-regular;
                     margin-bottom: 4.12vh;
                 }
-                form
-                {
+                form {
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: space-between;
                 }
-                form input
-                {
+                form input {
                     background: transparent;
                     border: none;
                     border-bottom: 2px solid #2989c5;
                     margin-bottom: 5.15vh;
                 }
-                form .form-left
-                {
+                form .form-left {
                     //background: #081038;
                     width: 48%;
                     display: flex;
                     flex-direction: column;
                     font-family: lato-regular;
+                    select {
+                        //border: 1px solid red;
+                        background: transparent;
+                        border: none;
+                        border-bottom: 2px solid #2989c5;
+                        -webkit-appearance: none;
+                        background: url('images/down-arrow.svg');
+                        background-position: 96% 15%;
+                        background-repeat: no-repeat;
+                        option {
+                            border-bottom: 2px solid #2989c5;
+                            //color: white;
+                            font-family: lato-regular;
+                        }
+                    }
                 }
-                form .form-right
-                {
+                form .form-right {
                     //background: red;
                     width: 48%;
                     display: flex;
                     flex-direction: column;
                     font-family: lato-regular;
                 }
-                form .form-bottom
-                {
+                form .form-bottom {
                     //background: wheat;
                     width: 100%;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     font-family: lato-regular;
-                    label
-                    {
+                    label {
                         //border:1px solid red;
                         width: 100%;
                     }
                 }
-                form .form-bottom input:nth-of-type(1)
-                {
+                form .form-bottom input:nth-of-type(1) {
                     width: 100%;
                 }
-                form .form-bottom input:nth-of-type(2)
-                {
-                    border:3px solid white;
+                form .form-bottom input:nth-of-type(2) {
+                    border: 3px solid white;
                     background: transparent;
                     border-radius: 50px;
                     width: 9.45vw;
@@ -836,503 +723,437 @@ header
 
 
 
-
-
-
 // Media Queries for font size
 // !!!!!TO DO !!!!!!!!!!!! ALL rwd IMG in web!~!!!!!!!!!!!!!!
-@media only screen and (min-width: 768px){ // mobile
+@media only screen and (max-width: 768px) {
+    //mobile
+    // mobile style
+    header nav {
+        display: none;
+    }
+    header .content {
+        justify-content: center;
+        p {
+            text-align: center;
+        }
+    }
+    .services-boxs {
+        flex-direction: column;
+        .box {
+            width: 100%;
+        }
+    }
+    .company-article .content {
+        flex-direction: column;
+    }
+    .contact .content .wrap-info-form {
+        flex-direction: column;
+        .left,
+        .right {
+            width: 100%;
+        }
+    }
+    //mobile font size
     //to do 
 }
 
-@media only screen and (min-width: 1024px){
+@media only screen and (min-width: 1024px) {
     //to do
 }
 
-@media only screen and (min-width: 1366px){
-    nav ul li a
-    {
+@media only screen and (min-width: 1366px) {
+    nav ul li a {
         font-size: 1.07rem;
     }
-
-    header .content p , header .content p span
-    {
+    header .content p,
+    header .content p span {
         font-size: 3.77rem;
-    } 
-
-    .services .content .left p , .services .content .left p span
-    {
+    }
+    .services .content .left p,
+    .services .content .left p span {
         font-size: 1.82rem;
     }
-
-    .services .content .right p
-    {
+    .services .content .right p {
         font-size: 1.10rem;
     }
-
-    .services-boxs .box p
-    {
+    .services-boxs .box p {
         font-size: 2.91rem;
     }
-
-    .services-boxs .box button
-    {
+    .services-boxs .box button {
         font-size: 0.92rem;
     }
     //to do styl flag and logo
-    .services-different-content-header p
-    {
+    .services-different-content-header p {
         font-size: 3.35rem;
     }
-    
-    .services-different .content .right p:nth-child(even) , .services-different .content .left p:nth-child(even)
-    {
+    .services-different .content .right p:nth-child(even),
+    .services-different .content .left p:nth-child(even) {
         font-size: 1.82rem;
     }
-
-    .services-different .content .right p:nth-child(odd) , .services-different .content .left p:nth-child(odd)
-    {
+    .services-different .content .right p:nth-child(odd),
+    .services-different .content .left p:nth-child(odd) {
         font-size: 1.09rem;
     }
-
-    .company .content
-    {
+    .company .content {
         font-size: 3.35rem;
     }
-
-    .company .content .chain
-    {
+    .company .content .chain {
         font-size: 1.10rem;
     }
-
-    .company .content .article .left
-    {
+    .company .content .article .left {
         font-size: 1.82rem;
     }
-    .company .content .article .right
-    {
+    .company .content .article .right {
         font-size: 1.09rem;
     }
-
-    .company .content .char .box 
-    {
+    .company .content .char .box {
         font-size: 1.82rem;
     }
-
-    .company .content .char .box .wrap::after
-    {
+    .company .content .char .box .wrap::after {
         font-size: 3.35rem;
     }
-
     .company-article .content .left p:nth-of-type(1),
-    .company-article .content .right p:nth-of-type(1)
-    {
+    .company-article .content .right p:nth-of-type(1) {
         font-size: 1.82rem;
     }
-
     .company-article .content .left p:nth-of-type(2),
-    .company-article .content .right p:nth-of-type(2)
-    {
+    .company-article .content .right p:nth-of-type(2) {
         font-size: 0.91rem;
     }
-
     .company-article .content .left,
-    .company-article .content .right
-    {
+    .company-article .content .right {
         font-size: 1.09rem;
     }
-
     .company-article .content .left button,
-    .company-article .content .right button
-    {
+    .company-article .content .right button {
         font-size: 0.91rem;
     }
-
-    .careers .content p
-    {
+    .careers .content p {
         font-size: 3.35rem;
     }
-    
-    .careers .content .right
-    {
+    .careers .content .right {
         font-size: 1.52rem;
     }
-
-    .careers .content .right button
+    .careers .content .right button {
+        font-size: 0.91rem;
+    }
+    //contact
+    .contact .content .content-header p:nth-of-type(1) {
+        font-size: 3.27rem;
+    }
+    .contact .content .content-header p:nth-of-type(2) {
+        font-size: 1.82rem;
+    }
+    .contact .content .wrap-info-form .left {
+        font-size: 1.09rem;
+    }
+    .contact .content .wrap-info-form .right {
+        font-size: 0.91rem;
+    }
+    .contact .content .wrap-info-form .right p:first-of-type {
+        font-size: 1.09rem;
+    }
+    .contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(2)
     {
         font-size: 0.91rem;
     }
 }
 
 //currently default res on project
-@media only screen and (min-width: 1920px) { // FULL HD
-
-    nav ul li a
-    {
+@media only screen and (min-width: 1920px) {
+    // FULL HD
+    nav ul li a {
         font-size: 1.5rem;
     }
-
-    header .content p , header .content p span
-    {
+    header .content p,
+    header .content p span {
         font-size: 5.3rem;
-    } 
-
-    .services .content .left p , .services .content .left p span
-    {
+    }
+    .services .content .left p,
+    .services .content .left p span {
         font-size: 2.56rem;
     }
-
-    .services .content .right p
-    {
+    .services .content .right p {
         font-size: 1.55rem;
     }
-
-    .services-boxs .box p
-    {
+    .services-boxs .box p {
         font-size: 4.1rem;
     }
-
-    .services-boxs .box button
-    {
+    .services-boxs .box button {
         font-size: 1.3rem;
     }
     //to do styl flag and logo
-    .services-different-content-header p
-    {
+    .services-different-content-header p {
         font-size: 4.71rem;
     }
-    
-    .services-different .content .right p:nth-child(even) , .services-different .content .left p:nth-child(even)
-    {
+    .services-different .content .right p:nth-child(even),
+    .services-different .content .left p:nth-child(even) {
         font-size: 2.56rem;
     }
-
-    .services-different .content .right p:nth-child(odd) , .services-different .content .left p:nth-child(odd)
-    {
+    .services-different .content .right p:nth-child(odd),
+    .services-different .content .left p:nth-child(odd) {
         font-size: 1.54rem;
     }
-
-    .company .content
-    {
+    .company .content {
         font-size: 4.71rem;
     }
-
-    .company .content .chain
-    {
+    .company .content .chain {
         font-size: 1.55rem;
     }
-
-    .company .content .article .left
-    {
+    .company .content .article .left {
         font-size: 2.57rem;
     }
-    .company .content .article .right
-    {
+    .company .content .article .right {
         font-size: 1.54rem;
     }
-
-    .company .content .char .box 
-    {
+    .company .content .char .box {
         font-size: 2.57rem;
     }
-
-    .company .content .char .box .wrap::after
-    {
+    .company .content .char .box .wrap::after {
         font-size: 4.71rem;
     }
-
     .company-article .content .left p:nth-of-type(1),
-    .company-article .content .right p:nth-of-type(1)
-    {
+    .company-article .content .right p:nth-of-type(1) {
         font-size: 2.57rem;
     }
-
     .company-article .content .left p:nth-of-type(2),
-    .company-article .content .right p:nth-of-type(2)
-    {
+    .company-article .content .right p:nth-of-type(2) {
         font-size: 1.28rem;
     }
-
     .company-article .content .left,
-    .company-article .content .right
-    {
+    .company-article .content .right {
         font-size: 1.54rem;
     }
-
     .company-article .content .left button,
-    .company-article .content .right button
-    {
+    .company-article .content .right button {
         font-size: 1.28rem;
     }
-
-    .careers .content p
-    {
+    .careers .content p {
         font-size: 4.71rem;
     }
-    
-    .careers .content .right
-    {
+    .careers .content .right {
         font-size: 2.14rem;
     }
-
-    .careers .content .right button
-    {
+    .careers .content .right button {
         font-size: 1.28rem;
     }
     //contact
-    .contact .content .content-header p:nth-of-type(1)
-    {
+    .contact .content .content-header p:nth-of-type(1) {
         font-size: 4.71rem;
     }
-    .contact .content .content-header p:nth-of-type(2)
-    {
+    .contact .content .content-header p:nth-of-type(2) {
         font-size: 2.57rem;
     }
-    .contact .content .wrap-info-form .left
-    {
+    .contact .content .wrap-info-form .left {
         font-size: 1.54rem;
     }
-    .contact .content .wrap-info-form .right 
+    .contact .content .wrap-info-form .right {
+        font-size: 1.28rem;
+    }
+    .contact .content .wrap-info-form .right p:first-of-type {
+        font-size: 1.54rem;
+    }
+    .contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(2)
     {
         font-size: 1.28rem;
     }
-    .contact .content .wrap-info-form .right p:first-of-type
-    {
-        font-size: 1.54rem;
-    }
     
-
 }
 
-@media only screen and (min-width: 2560px) {  // 2k
+@media only screen and (min-width: 2560px) {
+    // 2k
     //TO DO SET DIMENSION ALL IMG 
-    
     //
-    nav ul li a
-    {
+    nav ul li a {
         font-size: 2rem;
     }
-
-    header .content p , header .content p span
-    {
+    header .content p,
+    header .content p span {
         font-size: 7.1rem;
-    } 
-
-    .services .content .left p , .services .content .left p span
-    {
+    }
+    .services .content .left p,
+    .services .content .left p span {
         font-size: 3.41rem;
     }
-
-    .services .content .right p
-    {
+    .services .content .right p {
         font-size: 2.06rem;
     }
-
-    .services-boxs .box p
-    {
+    .services-boxs .box p {
         font-size: 5.46rem;
     }
-
-    .services-boxs .box button
-    {
+    .services-boxs .box button {
         font-size: 1.73rem;
     }
-
-    .services-different-content-header p
-    {
+    .services-different-content-header p {
         font-size: 6.28rem;
     }
-    
-    .services-different .content .right p:nth-child(even) , .services-different .content .left p:nth-child(even)
-    {
+    .services-different .content .right p:nth-child(even),
+    .services-different .content .left p:nth-child(even) {
         font-size: 3.41rem;
     }
-
-    .services-different .content .right p:nth-child(odd) , .services-different .content .left p:nth-child(odd)
-    {
+    .services-different .content .right p:nth-child(odd),
+    .services-different .content .left p:nth-child(odd) {
         font-size: 2.05rem;
     }
-
-    .company .content
-    {
+    .company .content {
         font-size: 6.28rem;
     }
-
-    .company .content .chain
-    {
+    .company .content .chain {
         font-size: 2.06rem;
     }
-
-    .company .content .article .left
-    {
+    .company .content .article .left {
         font-size: 3.42rem;
     }
-    .company .content .article .right
-    {
+    .company .content .article .right {
         font-size: 2.05rem;
     }
-
-    .company .content .char .box 
-    {
+    .company .content .char .box {
         font-size: 3.42rem;
     }
-
-    .company .content .char .box .wrap::after
-    {
+    .company .content .char .box .wrap::after {
         font-size: 6.28rem;
     }
-
     .company-article .content .left p:nth-of-type(1),
-    .company-article .content .right p:nth-of-type(1)
-    {
+    .company-article .content .right p:nth-of-type(1) {
         font-size: 3.42rem;
     }
-
     .company-article .content .left p:nth-of-type(2),
-    .company-article .content .right p:nth-of-type(2)
-    {
+    .company-article .content .right p:nth-of-type(2) {
         font-size: 1.70rem;
     }
-
     .company-article .content .left,
-    .company-article .content .right
-    {
+    .company-article .content .right {
         font-size: 2.05rem;
     }
-
     .company-article .content .left button,
-    .company-article .content .right button
-    {
+    .company-article .content .right button {
         font-size: 1.66rem;
     }
-
-    .careers .content p
-    {
+    .careers .content p {
         font-size: 6.28rem;
     }
-    
-    .careers .content .right
-    {
+    .careers .content .right {
         font-size: 2.85rem;
     }
-
-    .careers .content .right button
+    .careers .content .right button {
+        font-size: 1.70rem;
+    }
+    //contact
+    .contact .content .content-header p:nth-of-type(1) {
+        font-size: 6.28rem;
+    }
+    .contact .content .content-header p:nth-of-type(2) {
+        font-size: 3.42rem;
+    }
+    .contact .content .wrap-info-form .left {
+        font-size: 2.05rem;
+    }
+    .contact .content .wrap-info-form .right {
+        font-size: 1.70rem;
+    }
+    .contact .content .wrap-info-form .right p:first-of-type {
+        font-size: 2.05rem;
+    }
+    .contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(2)
     {
         font-size: 1.70rem;
     }
 }
 
-@media only screen and (min-width: 4096px) {  // 4k
+@media only screen and (min-width: 3800px) {
+    // 4k
     //TO DO SET DIMENSION ALL IMG 
-    nav ul li a
-    {
+    nav ul li a {
         font-size: 3.2rem;
     }
-
-    header .content p , header .content p span
-    {
+    header .content p,
+    header .content p span {
         font-size: 11.3rem;
-    } 
-
-    .services .content .left p , .services .content .left p span
-    {
+    }
+    .services .content .left p,
+    .services .content .left p span {
         font-size: 5.46rem;
     }
-
-    .services .content .right p
-    {
+    .services .content .right p {
         font-size: 3.3rem;
     }
-
-    .services-boxs .box p
-    {
+    .services-boxs .box p {
         font-size: 8.74rem;
     }
-
-    .services-boxs .box button
-    {
+    .services-boxs .box button {
         font-size: 2.77rem;
     }
-
-    .services-different-content-header p
-    {
+    .services-different-content-header p {
         font-size: 10.04rem;
     }
-    
-    .services-different .content .right p:nth-child(even) , .services-different .content .left p:nth-child(even)
-    {
+    .services-different .content .right p:nth-child(even),
+    .services-different .content .left p:nth-child(even) {
         font-size: 5.46rem;
     }
-
-    .services-different .content .right p:nth-child(odd) , .services-different .content .left p:nth-child(odd)
-    {
+    .services-different .content .right p:nth-child(odd),
+    .services-different .content .left p:nth-child(odd) {
         font-size: 3.28rem;
     }
-
-    .company .content
-    {
+    .company .content {
         font-size: 10.04rem;
     }
-
-    .company .content .chain
-    {
+    .company .content .chain {
         font-size: 3.30rem;
     }
-
-    .company .content .article .left
-    {
+    .company .content .article .left {
         font-size: 5.48rem;
     }
-    .company .content .article .right
-    {
+    .company .content .article .right {
         font-size: 3.28rem;
     }
-
-    .company .content .char .box 
-    {
+    .company .content .char .box {
         font-size: 5.48rem;
     }
-
-    .company .content .char .box .wrap::after
-    {
+    .company .content .char .box .wrap::after {
         font-size: 10.04rem;
     }
-
     .company-article .content .left p:nth-of-type(1),
-    .company-article .content .right p:nth-of-type(1)
-    {
+    .company-article .content .right p:nth-of-type(1) {
         font-size: 5.48rem;
     }
-
     .company-article .content .left p:nth-of-type(2),
-    .company-article .content .right p:nth-of-type(2)
-    {
+    .company-article .content .right p:nth-of-type(2) {
         font-size: 2.73rem;
     }
-
     .company-article .content .left,
-    .company-article .content .right
-    {
+    .company-article .content .right {
         font-size: 3.28rem;
     }
-
     .company-article .content .left button,
-    .company-article .content .right button
-    {
+    .company-article .content .right button {
         font-size: 2.73rem;
     }
-
-    .careers .content p
-    {
+    .careers .content p {
         font-size: 10.04rem;
     }
-    
-    .careers .content .right
-    {
+    .careers .content .right {
         font-size: 4.56rem;
     }
-
-    .careers .content .right button
+    .careers .content .right button {
+        font-size: 2.73rem;
+    }
+    //contact
+    .contact .content .content-header p:nth-of-type(1) {
+        font-size: 10.04rem;
+    }
+    .contact .content .content-header p:nth-of-type(2) {
+        font-size: 5.48rem;
+    }
+    .contact .content .wrap-info-form .left {
+        font-size: 3.28rem;
+    }
+    .contact .content .wrap-info-form .right {
+        font-size: 2.73rem;
+    }
+    .contact .content .wrap-info-form .right p:first-of-type {
+        font-size: 3.28rem;
+    }
+    .contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(2)
     {
         font-size: 2.73rem;
     }

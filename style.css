@@ -67,7 +67,7 @@ header nav {
           justify-content: space-between;
   width: 100vw;
   max-width: 100%;
-  padding: 0  3.7vw;
+  padding: 0 3.7vw;
   padding-top: 5.7vh;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
@@ -624,6 +624,10 @@ header .content p span {
   padding: 12.35vh 0 12.35vh 0;
 }
 
+.company-article .content .right {
+  margin-left: 2.1vw;
+}
+
 .company-article .content .left p:nth-of-type(1),
 .company-article .content .right p:nth-of-type(1) {
   font-family: lato-bold;
@@ -637,12 +641,14 @@ header .content p span {
   margin-bottom: 4.63vh;
 }
 
-.company-article .content .left, .company-article .content .right {
+.company-article .content .left,
+.company-article .content .right {
   font-family: lato-light;
   color: #081038;
 }
 
-.company-article .content .left button, .company-article .content .right button {
+.company-article .content .left button,
+.company-article .content .right button {
   font-family: lato-bold;
   color: #3fb2f9;
   border: 3px solid #3fb2f9;
@@ -785,9 +791,11 @@ header .content p span {
 }
 
 .contact .content .wrap-info-form .left .left-row img {
-  height: 25px;
-  width: 25px;
   margin-right: 0.8vw;
+}
+
+.contact .content .wrap-info-form .left .left-row:nth-of-type(3) img {
+  height: 25px;
 }
 
 .contact .content .wrap-info-form .left .left-row:nth-of-type(1),
@@ -839,6 +847,21 @@ header .content p span {
   font-family: lato-regular;
 }
 
+.contact .content .wrap-info-form .right form .form-left select {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #2989c5;
+  -webkit-appearance: none;
+  background: url("images/down-arrow.svg");
+  background-position: 96% 15%;
+  background-repeat: no-repeat;
+}
+
+.contact .content .wrap-info-form .right form .form-left select option {
+  border-bottom: 2px solid #2989c5;
+  font-family: lato-regular;
+}
+
 .contact .content .wrap-info-form .right form .form-right {
   width: 48%;
   display: -webkit-box;
@@ -886,14 +909,55 @@ header .content p span {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 768px) {
+  header nav {
+    display: none;
+  }
+  header .content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .content p {
+    text-align: center;
+  }
+  .services-boxs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .services-boxs .box {
+    width: 100%;
+  }
+  .company-article .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .content .wrap-info-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .content .wrap-info-form .left,
+  .contact .content .wrap-info-form .right {
+    width: 100%;
+  }
+}
+
 @media only screen and (min-width: 1366px) {
   nav ul li a {
     font-size: 1.07rem;
   }
-  header .content p, header .content p span {
+  header .content p,
+  header .content p span {
     font-size: 3.77rem;
   }
-  .services .content .left p, .services .content .left p span {
+  .services .content .left p,
+  .services .content .left p span {
     font-size: 1.82rem;
   }
   .services .content .right p {
@@ -908,10 +972,12 @@ header .content p span {
   .services-different-content-header p {
     font-size: 3.35rem;
   }
-  .services-different .content .right p:nth-child(even), .services-different .content .left p:nth-child(even) {
+  .services-different .content .right p:nth-child(even),
+  .services-different .content .left p:nth-child(even) {
     font-size: 1.82rem;
   }
-  .services-different .content .right p:nth-child(odd), .services-different .content .left p:nth-child(odd) {
+  .services-different .content .right p:nth-child(odd),
+  .services-different .content .left p:nth-child(odd) {
     font-size: 1.09rem;
   }
   .company .content {
@@ -957,16 +1023,36 @@ header .content p span {
   .careers .content .right button {
     font-size: 0.91rem;
   }
+  .contact .content .content-header p:nth-of-type(1) {
+    font-size: 3.27rem;
+  }
+  .contact .content .content-header p:nth-of-type(2) {
+    font-size: 1.82rem;
+  }
+  .contact .content .wrap-info-form .left {
+    font-size: 1.09rem;
+  }
+  .contact .content .wrap-info-form .right {
+    font-size: 0.91rem;
+  }
+  .contact .content .wrap-info-form .right p:first-of-type {
+    font-size: 1.09rem;
+  }
+  .contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(2) {
+    font-size: 0.91rem;
+  }
 }
 
 @media only screen and (min-width: 1920px) {
   nav ul li a {
     font-size: 1.5rem;
   }
-  header .content p, header .content p span {
+  header .content p,
+  header .content p span {
     font-size: 5.3rem;
   }
-  .services .content .left p, .services .content .left p span {
+  .services .content .left p,
+  .services .content .left p span {
     font-size: 2.56rem;
   }
   .services .content .right p {
@@ -981,10 +1067,12 @@ header .content p span {
   .services-different-content-header p {
     font-size: 4.71rem;
   }
-  .services-different .content .right p:nth-child(even), .services-different .content .left p:nth-child(even) {
+  .services-different .content .right p:nth-child(even),
+  .services-different .content .left p:nth-child(even) {
     font-size: 2.56rem;
   }
-  .services-different .content .right p:nth-child(odd), .services-different .content .left p:nth-child(odd) {
+  .services-different .content .right p:nth-child(odd),
+  .services-different .content .left p:nth-child(odd) {
     font-size: 1.54rem;
   }
   .company .content {
@@ -1045,16 +1133,21 @@ header .content p span {
   .contact .content .wrap-info-form .right p:first-of-type {
     font-size: 1.54rem;
   }
+  .contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(2) {
+    font-size: 1.28rem;
+  }
 }
 
 @media only screen and (min-width: 2560px) {
   nav ul li a {
     font-size: 2rem;
   }
-  header .content p, header .content p span {
+  header .content p,
+  header .content p span {
     font-size: 7.1rem;
   }
-  .services .content .left p, .services .content .left p span {
+  .services .content .left p,
+  .services .content .left p span {
     font-size: 3.41rem;
   }
   .services .content .right p {
@@ -1069,10 +1162,12 @@ header .content p span {
   .services-different-content-header p {
     font-size: 6.28rem;
   }
-  .services-different .content .right p:nth-child(even), .services-different .content .left p:nth-child(even) {
+  .services-different .content .right p:nth-child(even),
+  .services-different .content .left p:nth-child(even) {
     font-size: 3.41rem;
   }
-  .services-different .content .right p:nth-child(odd), .services-different .content .left p:nth-child(odd) {
+  .services-different .content .right p:nth-child(odd),
+  .services-different .content .left p:nth-child(odd) {
     font-size: 2.05rem;
   }
   .company .content {
@@ -1118,16 +1213,36 @@ header .content p span {
   .careers .content .right button {
     font-size: 1.70rem;
   }
+  .contact .content .content-header p:nth-of-type(1) {
+    font-size: 6.28rem;
+  }
+  .contact .content .content-header p:nth-of-type(2) {
+    font-size: 3.42rem;
+  }
+  .contact .content .wrap-info-form .left {
+    font-size: 2.05rem;
+  }
+  .contact .content .wrap-info-form .right {
+    font-size: 1.70rem;
+  }
+  .contact .content .wrap-info-form .right p:first-of-type {
+    font-size: 2.05rem;
+  }
+  .contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(2) {
+    font-size: 1.70rem;
+  }
 }
 
-@media only screen and (min-width: 4096px) {
+@media only screen and (min-width: 3800px) {
   nav ul li a {
     font-size: 3.2rem;
   }
-  header .content p, header .content p span {
+  header .content p,
+  header .content p span {
     font-size: 11.3rem;
   }
-  .services .content .left p, .services .content .left p span {
+  .services .content .left p,
+  .services .content .left p span {
     font-size: 5.46rem;
   }
   .services .content .right p {
@@ -1142,10 +1257,12 @@ header .content p span {
   .services-different-content-header p {
     font-size: 10.04rem;
   }
-  .services-different .content .right p:nth-child(even), .services-different .content .left p:nth-child(even) {
+  .services-different .content .right p:nth-child(even),
+  .services-different .content .left p:nth-child(even) {
     font-size: 5.46rem;
   }
-  .services-different .content .right p:nth-child(odd), .services-different .content .left p:nth-child(odd) {
+  .services-different .content .right p:nth-child(odd),
+  .services-different .content .left p:nth-child(odd) {
     font-size: 3.28rem;
   }
   .company .content {
@@ -1189,6 +1306,24 @@ header .content p span {
     font-size: 4.56rem;
   }
   .careers .content .right button {
+    font-size: 2.73rem;
+  }
+  .contact .content .content-header p:nth-of-type(1) {
+    font-size: 10.04rem;
+  }
+  .contact .content .content-header p:nth-of-type(2) {
+    font-size: 5.48rem;
+  }
+  .contact .content .wrap-info-form .left {
+    font-size: 3.28rem;
+  }
+  .contact .content .wrap-info-form .right {
+    font-size: 2.73rem;
+  }
+  .contact .content .wrap-info-form .right p:first-of-type {
+    font-size: 3.28rem;
+  }
+  .contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(2) {
     font-size: 2.73rem;
   }
 }
