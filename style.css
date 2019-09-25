@@ -917,6 +917,9 @@ header .content p span {
   header .content p {
     text-align: center;
   }
+  .services .content .left {
+    margin-bottom: 2vh;
+  }
   .services-boxs {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -926,11 +929,74 @@ header .content p span {
   .services-boxs .box {
     width: 100%;
   }
+  .services-boxs .box button {
+    width: 20vw;
+  }
+  .services-different .content .left {
+    width: 100%;
+    border: 1px solid red;
+    -webkit-box-pack: none;
+        -ms-flex-pack: none;
+            justify-content: none;
+  }
+  .services-different .content .left .box img {
+    margin-bottom: 1vh;
+  }
+  .services-different .content .left .box p:nth-child(2n) {
+    margin-bottom: 1.5vh;
+  }
+  .services-different .content .left .box p:nth-child(2n+1) {
+    margin-bottom: 2vh;
+  }
+  .services-different .content .right {
+    width: 100%;
+    -webkit-box-pack: none;
+        -ms-flex-pack: none;
+            justify-content: none;
+    border: 1px solid green;
+  }
+  .services-different .content .right .box img {
+    margin-bottom: 1vh;
+  }
+  .services-different .content .right .box p:nth-child(2n) {
+    margin-bottom: 1.5vh;
+  }
+  .services-different .content .right .box p:nth-child(2n+1) {
+    margin-bottom: 2vh;
+  }
+  .company .content .chain {
+    display: none;
+  }
+  .company .content .article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .company .content .article .left {
+    margin-bottom: 2vh;
+  }
+  .company .content .article .right {
+    margin-left: 0;
+  }
+  .company .content .char {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .company .content .char .box {
+    margin-bottom: 2vh;
+  }
   .company-article .content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .company-article .content .left button, .company-article .content .right button {
+    width: 20vw;
+    margin-bottom: 2vh;
   }
   .contact .content .wrap-info-form {
     -webkit-box-orient: vertical;
@@ -941,6 +1007,22 @@ header .content p span {
   .contact .content .wrap-info-form .left,
   .contact .content .wrap-info-form .right {
     width: 100%;
+  }
+  .contact .content .wrap-info-form .left form .form-left,
+  .contact .content .wrap-info-form .right form .form-left {
+    width: 100%;
+  }
+  .contact .content .wrap-info-form .left form .form-left select,
+  .contact .content .wrap-info-form .right form .form-left select {
+    margin-bottom: 5.15vh;
+  }
+  .contact .content .wrap-info-form .left form .form-right,
+  .contact .content .wrap-info-form .right form .form-right {
+    width: 100%;
+  }
+  .contact .content .wrap-info-form .left form .form-bottom input:nth-of-type(2),
+  .contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(2) {
+    width: 20vw;
   }
   nav ul li a {
     font-size: 0.75rem;

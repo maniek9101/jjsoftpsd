@@ -743,22 +743,130 @@ header {
             text-align: center;
         }
     }
+    .services .content .left 
+    {
+        margin-bottom: 2vh;
+    }
     .services-boxs {
         flex-direction: column;
         .box {
             width: 100%;
+            button
+            {
+                width: 20vw;
+            }
         }
     }
+    .services-different .content 
+    {
+        .left{
+            width: 100%;
+            border: 1px solid red;
+            justify-content: none;
+            .box
+            {
+                img{
+                    margin-bottom: 1vh;
+                }
+                p:nth-child(2n)
+                {
+                    margin-bottom: 1.5vh;
+                }
+                p:nth-child(2n+1)
+                {
+                    margin-bottom: 2vh;
+                }
+            }
+        }
+        .right
+        {
+            width: 100%;
+            justify-content: none;
+            border: 1px solid green;
+            .box
+            {
+                img{
+                    margin-bottom: 1vh;
+                }
+                p:nth-child(2n)
+                {
+                    margin-bottom: 1.5vh;
+                }
+                p:nth-child(2n+1)
+                {
+                    margin-bottom: 2vh;
+                }
+            }
+        }
+    }
+    .company 
+    {
+        .content
+        {
+            .chain //TO DO 
+            {
+                display: none;
+            }
+            .article
+            {
+                flex-direction: column;
+                .left
+                {
+                    margin-bottom: 2vh;
+                }
+                .right
+                {
+                    margin-left: 0;
+                }
+            }
+            .char{
+                flex-direction: column;
+                .box
+                {
+                    margin-bottom: 2vh;
+                }
+            }
+        }
+    } 
     .company-article .content {
         flex-direction: column;
+            .left,.right
+            {
+                button
+                {
+                    width: 20vw;
+                    margin-bottom: 2vh;
+                }
+            }
     }
     .contact .content .wrap-info-form {
         flex-direction: column;
         .left,
         .right {
             width: 100%;
+            form 
+            {
+                .form-left
+                {
+                    width: 100%;
+                    select
+                    {
+                        margin-bottom: 5.15vh;
+                    }
+                }
+                .form-right
+                {
+                    width: 100%;
+                }
+                .form-bottom input:nth-of-type(2)
+                {
+                    width: 20vw;
+                }
+            }
+            
         }
     }
+    //
     //end mobile style//
     //mobile font size
     //to do 
