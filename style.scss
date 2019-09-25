@@ -804,6 +804,10 @@ header {
     {
         .content
         {
+            p:first-of-type
+            {
+                margin-bottom: 5vh;
+            }
             .chain //TO DO 
             {
                 display: none;
@@ -811,6 +815,7 @@ header {
             .article
             {
                 flex-direction: column;
+                margin-bottom: 5vh;
                 .left
                 {
                     margin-bottom: 2vh;
@@ -833,12 +838,29 @@ header {
         flex-direction: column;
             .left,.right
             {
+                margin-left: 0;
                 button
                 {
                     width: 20vw;
                     margin-bottom: 2vh;
                 }
             }
+    }
+    .careers .content
+    {
+        .left
+        {
+            display: none;
+        }
+        .right
+        {
+            width: 100%;
+            button
+            {
+                width: 20vw;
+                margin-bottom: 4vh;
+            }
+        }
     }
     .contact .content .wrap-info-form {
         flex-direction: column;
@@ -989,15 +1011,114 @@ header {
             }
         }
     }
-    .company-article .content .left button ,
-    .company-article .content .right button 
+    .services-different .content 
     {
-        width: 15vw;
+        .left{
+            width: 100%;
+            //border: 1px solid red;
+            justify-content: none;
+            .box
+            {
+                img{
+                    margin-bottom: 1vh;
+                }
+                p:nth-child(2n)
+                {
+                    margin-bottom: 1.5vh;
+                }
+                p:nth-child(2n+1)
+                {
+                    margin-bottom: 2vh;
+                }
+            }
+        }
+        .right
+        {
+            width: 100%;
+            justify-content: none;
+            padding-left: 0;
+            //border: 1px solid green;
+            .box
+            {
+                img{
+                    margin-bottom: 1vh;
+                }
+                p:nth-child(2n)
+                {
+                    margin-bottom: 1.5vh;
+                }
+                p:nth-child(2n+1)
+                {
+                    margin-bottom: 2vh;
+                }
+            }
+        }
     }
-    .careers .content .right button
+    .company 
     {
-        margin-top: 3vh;
+        .content
+        {
+            p:first-of-type
+            {
+                margin-bottom: 5vh;
+            }
+            .chain //TO DO 
+            {
+                display: none;
+            }
+            .article
+            {
+                flex-direction: column;
+                margin-bottom: 5vh;
+                .left
+                {
+                    margin-bottom: 2vh;
+                }
+                .right
+                {
+                    margin-left: 0;
+                }
+            }
+            .char{
+                flex-direction: column;
+                .box
+                {
+                    margin-bottom: 2vh;
+                }
+            }
+        }
     }
+    .company-article .content {
+        flex-direction: column;
+            .left,.right
+            {
+                margin-left: 0;
+                button
+                {
+                    width: 20vw;
+                    margin-bottom: 2vh;
+                }
+            }
+    }
+    
+    .careers .content
+    {
+        .left
+        {
+            display: none;
+        }
+        .right
+        {
+            width: 100%;
+            button
+            {
+                width: 20vw;
+                margin-top: 4vh;
+                margin-bottom: 4vh;
+            }
+        }
+    }
+    
     .contact .content .wrap-info-form
     {
         flex-direction: column;

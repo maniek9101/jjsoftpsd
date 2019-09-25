@@ -963,6 +963,9 @@ header .content p span {
   .services-different .content .right .box p:nth-child(2n+1) {
     margin-bottom: 2vh;
   }
+  .company .content p:first-of-type {
+    margin-bottom: 5vh;
+  }
   .company .content .chain {
     display: none;
   }
@@ -971,6 +974,7 @@ header .content p span {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-bottom: 5vh;
   }
   .company .content .article .left {
     margin-bottom: 2vh;
@@ -993,9 +997,22 @@ header .content p span {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .company-article .content .left, .company-article .content .right {
+    margin-left: 0;
+  }
   .company-article .content .left button, .company-article .content .right button {
     width: 20vw;
     margin-bottom: 2vh;
+  }
+  .careers .content .left {
+    display: none;
+  }
+  .careers .content .right {
+    width: 100%;
+  }
+  .careers .content .right button {
+    width: 20vw;
+    margin-bottom: 4vh;
   }
   .contact .content .wrap-info-form {
     -webkit-box-orient: vertical;
@@ -1138,12 +1155,88 @@ header .content p span {
   .services-boxs .box button {
     width: 15vw;
   }
-  .company-article .content .left button,
-  .company-article .content .right button {
-    width: 15vw;
+  .services-different .content .left {
+    width: 100%;
+    -webkit-box-pack: none;
+        -ms-flex-pack: none;
+            justify-content: none;
+  }
+  .services-different .content .left .box img {
+    margin-bottom: 1vh;
+  }
+  .services-different .content .left .box p:nth-child(2n) {
+    margin-bottom: 1.5vh;
+  }
+  .services-different .content .left .box p:nth-child(2n+1) {
+    margin-bottom: 2vh;
+  }
+  .services-different .content .right {
+    width: 100%;
+    -webkit-box-pack: none;
+        -ms-flex-pack: none;
+            justify-content: none;
+    padding-left: 0;
+  }
+  .services-different .content .right .box img {
+    margin-bottom: 1vh;
+  }
+  .services-different .content .right .box p:nth-child(2n) {
+    margin-bottom: 1.5vh;
+  }
+  .services-different .content .right .box p:nth-child(2n+1) {
+    margin-bottom: 2vh;
+  }
+  .company .content p:first-of-type {
+    margin-bottom: 5vh;
+  }
+  .company .content .chain {
+    display: none;
+  }
+  .company .content .article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 5vh;
+  }
+  .company .content .article .left {
+    margin-bottom: 2vh;
+  }
+  .company .content .article .right {
+    margin-left: 0;
+  }
+  .company .content .char {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .company .content .char .box {
+    margin-bottom: 2vh;
+  }
+  .company-article .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .company-article .content .left, .company-article .content .right {
+    margin-left: 0;
+  }
+  .company-article .content .left button, .company-article .content .right button {
+    width: 20vw;
+    margin-bottom: 2vh;
+  }
+  .careers .content .left {
+    display: none;
+  }
+  .careers .content .right {
+    width: 100%;
   }
   .careers .content .right button {
-    margin-top: 3vh;
+    width: 20vw;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
   }
   .contact .content .wrap-info-form {
     -webkit-box-orient: vertical;
