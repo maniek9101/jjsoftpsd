@@ -326,59 +326,58 @@
         //end fix nav while scroll//
 
         //smooth Scroll//
-        window.onload = function() {
+        function currentYPosition() {
+            // Firefox, Chrome, Opera, Safari
+            if (self.pageYOffset) return self.pageYOffset;
+            // Internet Explorer 6 - standards mode
+            if (document.documentElement && document.documentElement.scrollTop)
+                return document.documentElement.scrollTop;
+            // Internet Explorer 6, 7 and 8
+            if (document.body.scrollTop) return document.body.scrollTop;
+            return 0;
+        }
 
-                const easeInCubic = function(t) {
-                    return t * t * t
-                }
-                const scrollElems = document.getElementsByClassName('scroll');
-
-
-                //console.log(scrollElems);
-                const scrollToElem = (start, stamp, duration, scrollEndElemTop, startScrollOffset) => {
-                    //debugger;
-                    const runtime = stamp - start;
-                    let progress = runtime / duration;
-                    const ease = easeInCubic(progress);
-
-                    progress = Math.min(progress, 1);
-                    console.log(startScrollOffset, startScrollOffset + (scrollEndElemTop * ease));
-
-                    const newScrollOffset = startScrollOffset + (scrollEndElemTop * ease);
-                    window.scroll(0, startScrollOffset + ((scrollEndElemTop - document.querySelector('nav').offsetHeight) * ease));
-                    //console.log(document.querySelector('nav').offsetHeight);
-                    if (runtime < duration) {
-                        requestAnimationFrame((timestamp) => {
-                            const stamp = new Date().getTime();
-                            scrollToElem(start, stamp, duration, scrollEndElemTop, startScrollOffset);
-                        })
-                    }
-                }
-
-                for (let i = 0; i < scrollElems.length; i++) {
-                    const elem = scrollElems[i];
-
-                    elem.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        const scrollElemId = e.target.href.split('#')[1];
-                        const scrollEndElem = document.getElementById(scrollElemId);
-
-                        const anim = requestAnimationFrame(() => {
-                            const stamp = new Date().getTime();
-                            const duration = 1000;
-                            const start = stamp;
-
-                            const startScrollOffset = window.pageYOffset;
-
-                            const scrollEndElemTop = scrollEndElem.getBoundingClientRect().top;
-
-                            scrollToElem(start, stamp, duration, scrollEndElemTop, startScrollOffset);
-                            // scrollToElem(scrollEndElemTop);
-                        })
-                    })
-                }
+        function elmYPosition(eID) {
+            var elm = document.getElementById(eID);
+            var y = elm.offsetTop;
+            var node = elm;
+            while (node.offsetParent && node.offsetParent != document.body) {
+                node = node.offsetParent;
+                y += node.offsetTop;
             }
-            //end smooth scroll//
+            return y;
+        }
+
+        function smoothScroll(eID) {
+            var startY = currentYPosition();
+            var stopY = elmYPosition(eID);
+            var distance = stopY > startY ? stopY - startY : startY - stopY;
+            if (distance < 100) {
+                scrollTo(0, stopY);
+                return;
+            }
+            var speed = Math.round(distance / 100);
+            if (speed >= 20) speed = 20;
+            var step = Math.round(distance / 25);
+            var leapY = stopY > startY ? startY + step : startY - step;
+            var timer = 0;
+            if (stopY > startY) {
+                for (var i = startY; i < stopY; i += step) {
+                    setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
+                    leapY += step;
+                    if (leapY > stopY) leapY = stopY;
+                    timer++;
+                }
+                return;
+            }
+            for (var i = startY; i > stopY; i -= step) {
+                setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
+                leapY -= step;
+                if (leapY < stopY) leapY = stopY;
+                timer++;
+            }
+        }
+        //end smooth scroll//
     </script>
 </body>
 

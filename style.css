@@ -23,6 +23,10 @@
   src: url("fonts/futura-bold-bt.ttf");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 *:before,
 *:after {
@@ -997,10 +1001,12 @@ header .content p span {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .company-article .content .left, .company-article .content .right {
+  .company-article .content .left,
+  .company-article .content .right {
     margin-left: 0;
   }
-  .company-article .content .left button, .company-article .content .right button {
+  .company-article .content .left button,
+  .company-article .content .right button {
     width: 20vw;
     margin-bottom: 2vh;
   }
@@ -1220,10 +1226,12 @@ header .content p span {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .company-article .content .left, .company-article .content .right {
+  .company-article .content .left,
+  .company-article .content .right {
     margin-left: 0;
   }
-  .company-article .content .left button, .company-article .content .right button {
+  .company-article .content .left button,
+  .company-article .content .right button {
     width: 20vw;
     margin-bottom: 2vh;
   }
