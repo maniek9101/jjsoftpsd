@@ -16,12 +16,12 @@
             <img src="images/logo.png" alt="logo" id="logo" srcset="images/logo.png 1920w">
             <ul>
                 <!--TO DO SEMANTIC TAG HTML5-->
-                <li><a href="#home" class="scroll">Home</a></li>
+                <li><a href="#home" class="active-section">Home</a></li>
                 <!--class= active-section hrefHome-->
-                <li><a href="#services" class="scroll">Services</a></li>
-                <li><a href="#company" class="scroll">Company</a></li>
-                <li><a href="#careers" class="scroll">Careers</a></li>
-                <li><a href="#contact" class="scroll">Contact</a></li>
+                <li><a href="#services" class="">Services</a></li>
+                <li><a href="#company" class="">Company</a></li>
+                <li><a href="#careers" class="">Careers</a></li>
+                <li><a href="#contact" class="">Contact</a></li>
                 <li>
                     <a href="#" id="select-language"><img src="images/GBflag.png" alt="English" srcset="images/GBflag.png 1920w"></a>
                     <ul>
@@ -57,12 +57,12 @@
             </div>
             <div class="icons">
                 <!--coments img-->
-                <img src="images/ico1.png" alt="" srcset="images/ico1.png 1920w">
-                <img src="images/ico2.png" alt="" srcset="images/ico2.png 1920w">
-                <img src="images/ico3.png" alt="" srcset="images/ico3.png 1920w">
-                <img src="images/ico4.png" alt="" srcset="images/ico4.png 1920w">
-                <img src="images/ico5.png" alt="" srcset="images/ico5.png 1920w">
-                <img src="images/ico6.png" alt="" srcset="images/ico6.png 1920w">
+                <img src="images/ico1.png" sizes="(max-width: 768px) .25vw, 100vw" alt="" srcset="images/ico1.png 1920w">
+                <img src="images/ico2.png" sizes="(max-width: 768px) .25vw, 100vw" alt="" srcset="images/ico2.png 1920w">
+                <img src="images/ico3.png" sizes="(max-width: 768px) .25vw, 100vw" alt="" srcset="images/ico3.png 1920w">
+                <img src="images/ico4.png" sizes="(max-width: 768px) .25vw, 100vw" alt="" srcset="images/ico4.png 1920w">
+                <img src="images/ico5.png" sizes="(max-width: 768px) .25vw, 100vw" alt="" srcset="images/ico5.png 1920w">
+                <img src="images/ico6.png" sizes="(max-width: 768px) .25vw, 100vw" alt="" srcset="images/ico6.png 1920w">
             </div>
         </div>
     </section>
@@ -299,6 +299,41 @@
 
 
     <script>
+        //active section//
+        const home = document.getElementById('home');
+        const services = document.getElementById('services');
+        const company = document.getElementById('company');
+        const careers = document.getElementById('careers');
+        const contact = document.getElementById('contact');
+        console.log('header Y:', home.offsetTop, '\n', 'services Y:', services.offsetTop, '\n', 'comapny Y:', company.offsetTop, '\n', 'careers Y:', careers.offsetTop, '\n', 'contactY', contact.offsetTop);
+
+
+        window.addEventListener('scroll', function() {
+            console.log('windows.offsettop:', window.pageYOffset);
+            console.log('header Y:', home.offsetTop, '\n', 'services Y:', services.offsetTop, '\n', 'comapny Y:', company.offsetTop, '\n', 'careers Y:', careers.offsetTop, '\n', 'contactY', contact.offsetTop);
+
+            const currenPositin = window.pageYOffset;
+            if (currenPositin >= home.offsetTop && currenPositin < services.offsetTop) {
+                console.log('you are in home');
+            }
+            if (currenPositin >= services.offsetTop && currenPositin < company.offsetTop) {
+                console.log('you are in services');
+            }
+            if ((currenPositin + 1) >= company.offsetTop && currenPositin < careers.offsetTop) {
+                console.log('you are in company');
+            }
+            if ((currenPositin + 1) >= careers.offsetTop && currenPositin < contact.offsetTop) {
+                console.log('you are in careers');
+            }
+            if ((currenPositin + 1) >= contact.offsetTop) {
+                console.log('you are in contact');
+            }
+
+        });
+
+
+        //end active section//
+
         //fix nav while scroll//
         const nav = document.querySelector('nav')
         const ul = document.querySelector('nav ul');
