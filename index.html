@@ -11,16 +11,17 @@
 
 <body>
 
-    <header>
+    <header id="home">
         <nav>
             <img src="images/logo.png" alt="logo" id="logo" srcset="images/logo.png 1920w">
             <ul>
                 <!--TO DO SEMANTIC TAG HTML5-->
-                <li><a href="#" class="hrefHome active-section">Home</a></li>
-                <li><a href="#" class="hrefServices">Services</a></li>
-                <li><a href="#" class="hrefCompany">Company</a></li>
-                <li><a href="#" class="hrefCareers">Careers</a></li>
-                <li><a href="#" class="hrefContact">Contact</a></li>
+                <li><a href="#home" class="scroll">Home</a></li>
+                <!--class= active-section hrefHome-->
+                <li><a href="#services" class="scroll">Services</a></li>
+                <li><a href="#company" class="scroll">Company</a></li>
+                <li><a href="#careers" class="scroll">Careers</a></li>
+                <li><a href="#contact" class="scroll">Contact</a></li>
                 <li>
                     <a href="#" id="select-language"><img src="images/GBflag.png" alt="English" srcset="images/GBflag.png 1920w"></a>
                     <ul>
@@ -45,7 +46,7 @@
         </div>
     </header>
 
-    <section class="services">
+    <section class="services" id="services">
         <div class="content">
             <div class="left">
                 <p> <span> JJ Soft </span> specializes in IT <br> Professional outsourcing, <br> software development and <br> recruitment.</p>
@@ -60,7 +61,7 @@
                 <img src="images/ico2.png" alt="" srcset="images/ico2.png 1920w">
                 <img src="images/ico3.png" alt="" srcset="images/ico3.png 1920w">
                 <img src="images/ico4.png" alt="" srcset="images/ico4.png 1920w">
-                <img src="images/ico5.png" alt="" srcset="images/ico5.png 1920w"> 
+                <img src="images/ico5.png" alt="" srcset="images/ico5.png 1920w">
                 <img src="images/ico6.png" alt="" srcset="images/ico6.png 1920w">
             </div>
         </div>
@@ -135,7 +136,7 @@
     <div class="company-img">
         <!--swap backgroundimg to non stock-->
     </div>
-    <section class="company">
+    <section class="company" id="company">
         <div class="content">
             <p>Our Team & Company</p>
             <div class="chain">
@@ -197,7 +198,7 @@
         </div>
     </section>
 
-    <section class="careers">
+    <section class="careers" id="careers">
         <div class="content">
             <p>Work with us</p>
             <div class="left">
@@ -217,7 +218,7 @@
         </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <!--TO DO !!!!!!!!!!!!!!!!!-->
         <div class="content">
             <div class="content-header">
@@ -228,23 +229,31 @@
                 <div class="left">
                     <div class="left-row">
                         <img src="images/contact-ico-1.png" alt="" srcset="images/contact-ico-1.png 1920w">
-                        <div class="wrap-p"><p>office@jjsoft.pl</p></div>
-                        
+                        <div class="wrap-p">
+                            <p>office@jjsoft.pl</p>
+                        </div>
+
                     </div>
                     <div class="left-row">
                         <img src="images/contact-ico-2.png" alt="" srcset="images/contact-ico-2.png 1920w">
-                        <div class="wrap-p"><p>(+48) 504 780 986</p></div>
-                        
+                        <div class="wrap-p">
+                            <p>(+48) 504 780 986</p>
+                        </div>
+
                     </div>
                     <div class="left-row">
                         <img src="images/contact-ico-3.png" alt="" srcset="images/contact-ico-3.png 1920w">
-                        <div class="wrap-p"><p>JJ Soft <br> ul. Kijowska 5 <br> 40-753 Katowice <br> NIP 634-261-47-60</p></div>
-                        
+                        <div class="wrap-p">
+                            <p>JJ Soft <br> ul. Kijowska 5 <br> 40-753 Katowice <br> NIP 634-261-47-60</p>
+                        </div>
+
                     </div>
                     <div class="left-row">
                         <img src="images/contact-ico-4.png" alt="" srcset="images/contact-ico-4.png 1920w">
-                        <div class="wrap-p"><p>Verify us at VIES</p></div>
-                        
+                        <div class="wrap-p">
+                            <p>Verify us at VIES</p>
+                        </div>
+
                     </div>
                 </div>
                 <div class="right">
@@ -290,6 +299,7 @@
 
 
     <script>
+        //fix nav while scroll//
         const nav = document.querySelector('nav')
         const ul = document.querySelector('nav ul');
         //const topOfNav = nav.offsetTop;
@@ -313,41 +323,62 @@
         }
 
         window.addEventListener('scroll', fixNav);
+        //end fix nav while scroll//
 
-        //smooth Scroll
-        /*function smoothScroll(target,duration)
-        {
-            var target = document.querySelector(target);
-            var targetPosition = target.getBoundingClientRect().top;
-            var startPostion = window.pageYOffset;
-            var distance = targetPosition - startPostion;
-            var startTime = null;
-            
-            function animation(currentTime)
-            {
-                if(startTime === null)startTime = currentTime;
-                var timeElapsed = currentTime - startTime;
-                var run = ease(timeElapsed,startPostion,distance,duration);
-                window.scrollTo(0,run);
-                if(timeElapsed < duration) requestAnimationFrame(animation);
+        //smooth Scroll//
+        window.onload = function() {
+
+                const easeInCubic = function(t) {
+                    return t * t * t
+                }
+                const scrollElems = document.getElementsByClassName('scroll');
+
+
+                //console.log(scrollElems);
+                const scrollToElem = (start, stamp, duration, scrollEndElemTop, startScrollOffset) => {
+                    //debugger;
+                    const runtime = stamp - start;
+                    let progress = runtime / duration;
+                    const ease = easeInCubic(progress);
+
+                    progress = Math.min(progress, 1);
+                    console.log(startScrollOffset, startScrollOffset + (scrollEndElemTop * ease));
+
+                    const newScrollOffset = startScrollOffset + (scrollEndElemTop * ease);
+                    window.scroll(0, startScrollOffset + ((scrollEndElemTop - document.querySelector('nav').offsetHeight) * ease));
+                    //console.log(document.querySelector('nav').offsetHeight);
+                    if (runtime < duration) {
+                        requestAnimationFrame((timestamp) => {
+                            const stamp = new Date().getTime();
+                            scrollToElem(start, stamp, duration, scrollEndElemTop, startScrollOffset);
+                        })
+                    }
+                }
+
+                for (let i = 0; i < scrollElems.length; i++) {
+                    const elem = scrollElems[i];
+
+                    elem.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const scrollElemId = e.target.href.split('#')[1];
+                        const scrollEndElem = document.getElementById(scrollElemId);
+
+                        const anim = requestAnimationFrame(() => {
+                            const stamp = new Date().getTime();
+                            const duration = 1000;
+                            const start = stamp;
+
+                            const startScrollOffset = window.pageYOffset;
+
+                            const scrollEndElemTop = scrollEndElem.getBoundingClientRect().top;
+
+                            scrollToElem(start, stamp, duration, scrollEndElemTop, startScrollOffset);
+                            // scrollToElem(scrollEndElemTop);
+                        })
+                    })
+                }
             }
-
-            function ease(t,b,c,d)
-            {
-                t /= d/2;
-	            if (t < 1) return c/2*t*t + b;
-	            t--;
-	            return -c/2 * (t*(t-2) - 1) + b;
-            }
-
-            requestAnimationFrame(animation);
-        }
-
-        var goTo = document.querySelector('.ser');
-        goTo.addEventListener('click',function(){
-            smoothScroll('.services-boxs',1000);
-        });
-        */
+            //end smooth scroll//
     </script>
 </body>
 
