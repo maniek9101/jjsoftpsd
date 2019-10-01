@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: lato-light;
   src: url("fonts/lato-light.ttf");
@@ -21,6 +22,10 @@
 @font-face {
   font-family: futura-bold-bt;
   src: url("fonts/futura-bold-bt.ttf");
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 *,
@@ -128,17 +133,42 @@ header ul li ul:hover {
 }
 
 header #deutsch::after {
-  content: 'Deu';
+  content: 'Deutsch';
   position: absolute;
   top: 0;
-  right: -100%;
-  width: 100%;
+  left: -240%;
+  width: 200%;
   height: 100%;
   display: none;
+  background: #2989c5;
 }
 
-header #deutsch:hover::after {
+header #deutsch:hover::after,
+header #français:hover::after,
+header #polski:hover::after {
   display: block;
+}
+
+header #français::after {
+  content: 'Français';
+  position: absolute;
+  top: 0;
+  left: -240%;
+  width: 200%;
+  height: 100%;
+  display: none;
+  background: #2989c5;
+}
+
+header #polski::after {
+  content: 'Polski';
+  position: absolute;
+  top: 0;
+  left: -240%;
+  width: 200%;
+  height: 100%;
+  display: none;
+  background: #2989c5;
 }
 
 header .fix-nav {
@@ -249,10 +279,13 @@ header .content p span {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow: hidden;
 }
 
 .services-boxs .box p {
   color: white;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 .services-boxs .box p:nth-of-type(1) {
@@ -276,7 +309,14 @@ header .content p span {
   background: transparent;
   color: white;
   margin-top: 9.2vh;
+  -webkit-transition: all .5s;
+  transition: all .5s;
   cursor: pointer;
+}
+
+.services-boxs .box:hover p {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .services-boxs .box:nth-of-type(1) {
@@ -295,6 +335,10 @@ header .content p span {
   background-image: url("images/bg3.png");
   background-position: center center;
   background-size: cover;
+}
+
+.btn-active {
+  background: white;
 }
 
 .services-different {
@@ -848,7 +892,7 @@ header .content p span {
   border: none;
   border-bottom: 2px solid #2989c5;
   -webkit-appearance: none;
-  background: url("images/down-arrow.svg");
+  background: url("images/down-arrow.png");
   background-position: 96% 15%;
   background-repeat: no-repeat;
 }
@@ -997,10 +1041,12 @@ header .content p span {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .company-article .content .left, .company-article .content .right {
+  .company-article .content .left,
+  .company-article .content .right {
     margin-left: 0;
   }
-  .company-article .content .left button, .company-article .content .right button {
+  .company-article .content .left button,
+  .company-article .content .right button {
     width: 20vw;
     margin-bottom: 2vh;
   }
@@ -1135,127 +1181,124 @@ header .content p span {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1365px) {
-  header .content {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  header .content p {
-    text-align: center;
-  }
-  .services-boxs {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .services-boxs .box {
-    width: 100%;
-  }
-  .services-boxs .box button {
-    width: 15vw;
-  }
-  .services-different .content .left {
-    width: 100%;
-    -webkit-box-pack: none;
-        -ms-flex-pack: none;
+  /*
+    header .content {
+        justify-content: center;
+        p {
+            text-align: center;
+        }
+    }
+    .services-boxs {
+        flex-direction: column;
+        .box {
+            width: 100%;
+            button {
+                width: 15vw;
+            }
+        }
+    }
+    .services-different .content {
+        .left {
+            width: 100%;
+            //border: 1px solid red;
             justify-content: none;
-  }
-  .services-different .content .left .box img {
-    margin-bottom: 1vh;
-  }
-  .services-different .content .left .box p:nth-child(2n) {
-    margin-bottom: 1.5vh;
-  }
-  .services-different .content .left .box p:nth-child(2n+1) {
-    margin-bottom: 2vh;
-  }
-  .services-different .content .right {
-    width: 100%;
-    -webkit-box-pack: none;
-        -ms-flex-pack: none;
+            .box {
+                img {
+                    margin-bottom: 1vh;
+                }
+                p:nth-child(2n) {
+                    margin-bottom: 1.5vh;
+                }
+                p:nth-child(2n+1) {
+                    margin-bottom: 2vh;
+                }
+            }
+        }
+        .right {
+            width: 100%;
             justify-content: none;
-    padding-left: 0;
-  }
-  .services-different .content .right .box img {
-    margin-bottom: 1vh;
-  }
-  .services-different .content .right .box p:nth-child(2n) {
-    margin-bottom: 1.5vh;
-  }
-  .services-different .content .right .box p:nth-child(2n+1) {
-    margin-bottom: 2vh;
-  }
-  .company .content p:first-of-type {
-    margin-bottom: 5vh;
-  }
-  .company .content .chain {
-    display: none;
-  }
-  .company .content .article {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-bottom: 5vh;
-  }
-  .company .content .article .left {
-    margin-bottom: 2vh;
-  }
-  .company .content .article .right {
-    margin-left: 0;
-  }
-  .company .content .char {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .company .content .char .box {
-    margin-bottom: 2vh;
-  }
-  .company-article .content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .company-article .content .left, .company-article .content .right {
-    margin-left: 0;
-  }
-  .company-article .content .left button, .company-article .content .right button {
-    width: 20vw;
-    margin-bottom: 2vh;
-  }
-  .careers .content .left {
-    display: none;
-  }
-  .careers .content .right {
-    width: 100%;
-  }
-  .careers .content .right button {
-    width: 20vw;
-    margin-top: 4vh;
-    margin-bottom: 4vh;
-  }
-  .contact .content .wrap-info-form {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .contact .content .wrap-info-form .left {
-    width: 100%;
-  }
-  .contact .content .wrap-info-form .left .left-row {
-    margin-bottom: 1vh;
-  }
-  .contact .content .wrap-info-form .right {
-    width: 100%;
-  }
-  .contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(2) {
-    width: 15vw;
-  }
+            padding-left: 0;
+            //border: 1px solid green;
+            .box {
+                img {
+                    margin-bottom: 1vh;
+                }
+                p:nth-child(2n) {
+                    margin-bottom: 1.5vh;
+                }
+                p:nth-child(2n+1) {
+                    margin-bottom: 2vh;
+                }
+            }
+        }
+    }
+    .company {
+        .content {
+            p:first-of-type {
+                margin-bottom: 5vh;
+            }
+            .chain //TO DO 
+            {
+                display: none;
+            }
+            .article {
+                flex-direction: column;
+                margin-bottom: 5vh;
+                .left {
+                    margin-bottom: 2vh;
+                }
+                .right {
+                    margin-left: 0;
+                }
+            }
+            .char {
+                flex-direction: column;
+                .box {
+                    margin-bottom: 2vh;
+                }
+            }
+        }
+    }
+    .company-article .content {
+        flex-direction: column;
+        .left,
+        .right {
+            margin-left: 0;
+            button {
+                width: 20vw;
+                margin-bottom: 2vh;
+            }
+        }
+    }
+    .careers .content {
+        .left {
+            display: none;
+        }
+        .right {
+            width: 100%;
+            button {
+                width: 20vw;
+                margin-top: 4vh;
+                margin-bottom: 4vh;
+            }
+        }
+    }
+    .contact .content .wrap-info-form {
+        flex-direction: column;
+        .left {
+            width: 100%;
+            .left-row {
+                margin-bottom: 1vh;
+            }
+        }
+        .right {
+            width: 100%;
+            form .form-bottom input:nth-of-type(2) {
+                width: 15vw;
+            }
+        }
+    }
+    */
   nav ul li a {
     font-size: 0.75rem;
   }
