@@ -7,6 +7,7 @@
     <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+
     <title>JJ Soft</title>
 </head>
 
@@ -68,16 +69,25 @@
 
     <section class="services-boxs">
         <div class="box">
-            <p>IT Professional <br> outsourcing</p>
-            <button>SEE MORE</button>
+            <div class="wrap-text">
+                <p>IT Professional <br> outsourcing</p>
+                <p>A perfect business solution for you to increase your own team without having to introduce expensive and time-consuming changes in the organization structure.</p>
+            </div>
+            <a href="#" hreflang="en"><button>SEE MORE</button></a>
         </div>
         <div class="box">
-            <p>Software <br> development </p>
-            <button>SEE MORE</button>
+            <div class="wrap-text">
+                <p>Software <br> development </p>
+                <p>Our effective agile software development team with experience in a variety of skill-set and complex projects ensures success to your projects.  </p>
+            </div>
+           <a href="#" hreflang="en"><button>SEE MORE</button></a>
         </div>
         <div class="box">
-            <p>Recruitment</p>
-            <button>SEE MORE</button>
+            <div class="wrap-text">
+                <p>Recruitment</p>
+                <p>You get desirable candidates within a specified time and budget with the help of our recruitment process.</p>
+            </div>
+            <a href="#" hreflang="en"><button>SEE MORE</button></a>
         </div>
     </section>
 
@@ -86,26 +96,24 @@
             <div class="services-different-content-header">
                 <p>What makes us different</p>
             </div>
-            <!--TO DO ALT-->
-            <!--coments img-->
             <div class="left">
-                <div class="box">
-                    <img src="images/ico-left-1.png" sizes="(max-width: 768px) 150vw " alt="time-zone" srcset="images/ico-left-1.png 1920w">
+                <div class="box" >
+                    <img src="images/ico-left-1.png"  sizes="(max-width: 768px) 150vw " alt="time-zone" srcset="images/ico-left-1.png 1920w"><!--class="slide-in"-->
                     <p>Time Zone</p>
                     <p>Being in Europe, we share the same time-zone and our developers can also visit your office on request.</p>
                 </div>
-                <div class="box">
-                    <img src="images/ico-left-2.png" sizes="(max-width: 768px) 150vw " alt="reasonable-cost" srcset="images/ico-left-2.png 1920w">
+                <div class="box ">
+                    <img src="images/ico-left-2.png"  sizes="(max-width: 768px) 150vw " alt="reasonable-cost" srcset="images/ico-left-2.png 1920w">
                     <p>Reasonable Cost</p>
                     <p>We have developers from various countries across Europe at a good price. (feel free to request for our price chart)</p>
                 </div>
-                <div class="box">
-                    <img src="images/ico-left-3.png" sizes="(max-width: 768px) 150vw " alt="fast&flexible" srcset="images/ico-left-3.png 1920w">
+                <div class="box ">
+                    <img src="images/ico-left-3.png"  sizes="(max-width: 768px) 150vw " alt="fast&flexible" srcset="images/ico-left-3.png 1920w">
                     <p>Fast & flexible approach</p>
                     <p>We follow Agile Management: The Fast and Flexible Approach to Continuous Improvement and Innovation in Organizations.</p>
                 </div>
-                <div class="box">
-                    <img src="images/ico-left-4.png" sizes="(max-width: 768px) 150vw " alt="cooperation" srcset="images/ico-left-4.png 1920w">
+                <div class="box ">
+                    <img src="images/ico-left-4.png"  sizes="(max-width: 768px) 150vw " alt="cooperation" srcset="images/ico-left-4.png 1920w">
                     <p>Cooperation</p>
                     <p>We are experienced in remote development and have the necessary tools to manage work effectively. We cooperate with 10 partners. Together we have about 600 developers.</p>
                 </div>
@@ -255,11 +263,13 @@
                 </div>
                 <div class="right">
                     <p>Say hello!</p>
-                    <form action="#">
+                    <form action="#" method="POST" enctype="multipart/form-data">
                         <div class="form-left">
                             <label for="name">Name</label>
                             <input type="text" id="name">
-                            <label for="subject">Subject</label>
+                            <label for="subject" id="labelSubject">Subject
+                                <img src="images/down-arrow.png" sizes="(max-width: 768px) 200vw" alt="down-arrow" srcset="images/down-arrow.png 1920w">
+                            </label>
                             <select name="subject" id="subject">
                                 <option value="" selected disabled hidden></option>
                                 <option value="">1</option>
@@ -270,11 +280,13 @@
                         <div class="form-right">
                             <label for="email">Email</label>
                             <input type="text" id="email">
-                            <label for="">Attachment</label>
-                            <input type="file">
+                            <label for="attachment">Attachment
+                                <img src="images/plus-attachment.png" sizes="(max-width: 768px) 200vw" alt="plus-attachment" srcset="images/plus-attachment.png 1920w">
+                            </label>
+                            <input type="file" id="attachment" multiple>
                         </div>
                         <div class="form-bottom">
-                            <label for="message">Message</label>
+                            <label for="message">Message</label><!--CHANGE TO TEXTAREA !!-->
                             <input type="text" id="message">
                             <input type="submit" value="SEND">
                         </div>
@@ -296,62 +308,82 @@
 
 
     <script>
+        const sliderImages = document.querySelectorAll('.services-different .content .left img');
+        console.log(sliderImages);
+        const leftBoxes = document.querySelectorAll('.services-different .content .left .box');
+        console.log(leftBoxes);
 
-        //button boxes click
+        function checkSlide(e) {
+            console.log(e);
+            leftBoxes.forEach(slideImage => {
+                const slideInAt = (window.scrollY + window.innerHeight) - slideImage.height / 2;
+                const imageBottom = slideImage.offsetTop + slideImage.height;
+                const isHalfShown = slideInAt > slideImage.offsetTop;
+                const isNotScrolledPast = window.scrollY < imageBottom;
+                if (isHalfShown && isNotScrolledPast) {
+                    //slideImage.classList.add('active-img');
+                    slideImage.classList.add('active-slide-in-box');
+                }
+                //else {
+                //   slideImage.classList.remove('active-img')
+                //}
+            });
+        }
+
+        window.addEventListener('scroll', checkSlide);
+        //button boxes click    
+        //88
         /*
         var btns = document.querySelectorAll('.services-boxs .box button');
-        btns[0].addEventListener('click',function(){
+        btns[0].addEventListener('click', function() {
             var colorBtn = btns[0].style.background;
-            if(colorBtn=='white')
-            {
+            if (colorBtn == 'white') {
                 btns[0].style.background = 'transparent';
                 btns[0].style.color = 'white';
                 btns[0].innerHTML = 'SEE MORE';
                 document.querySelector('.services-boxs .box:nth-of-type(1) p').style.fontSize = '40px';
-                setTimeout(function(){
-                    document.querySelector('.services-boxs .box:nth-of-type(1) p').innerHTML = 'IT Professional outsourcing';   
+                setTimeout(function() {
+                    document.querySelector('.services-boxs .box:nth-of-type(1) p').innerHTML = 'IT Professional outsourcing';
                 });
-            }
-            else
-            {
+            } else {
                 btns[0].style.background = 'white';
                 btns[0].style.color = '#3ca4f2';
                 btns[0].innerHTML = 'BACK';
                 document.querySelector('.services-boxs .box:nth-of-type(1) p').style.fontSize = '16px';
-                setTimeout(function(){
-                    document.querySelector('.services-boxs .box:nth-of-type(1) p').innerHTML = 'A perfect business solution for you to increase your own team without having to introduce expensive and time-consuming changes in the organization structure.';   
-                },500);
+
+                setTimeout(function() {
+                    document.querySelector('.services-boxs .box:nth-of-type(1) p').innerHTML = 'A perfect business solution for you to increase your own team without having to introduce expensive and time-consuming changes in the organization structure.';
+                }, 500);
             }
         });
-        btns[1].addEventListener('click',function(){
+        btns[1].addEventListener('click', function() {
             var colorBtn = btns[1].style.background;
-            if(colorBtn=='white')
-            {
+            if (colorBtn == 'white') {
                 btns[1].style.background = 'transparent';
                 btns[1].style.color = 'white';
                 btns[1].innerHTML = 'SEE MORE';
-                document.querySelector('.services-boxs .box:nth-of-type(1) p').style.fontSize = '40px';
-                setTimeout(function(){
-                    document.querySelector('.services-boxs .box:nth-of-type(1) p').innerHTML = 'IT Professional outsourcing';   
+                document.querySelector('.services-boxs .box:nth-of-type(2) p').style.fontSize = '40px';
+                setTimeout(function() {
+                    document.querySelector('.services-boxs .box:nth-of-type(2) p').innerHTML = 'IT Professional outsourcing';
                 });
-            }
-            else
-            {
+            } else {
                 btns[1].style.background = 'white';
                 btns[1].style.color = '#3ca4f2';
                 btns[1].innerHTML = 'BACK';
-                document.querySelector('.services-boxs .box:nth-of-type(1) p').style.fontSize = '16px';
-                setTimeout(function(){
-                    document.querySelector('.services-boxs .box:nth-of-type(1) p').innerHTML = 'Our effective agile software development team with experience in a variety of skill-set and complex projects ensures success to your projects.  ';   
-                },500);
+                document.querySelector('.services-boxs .box:nth-of-type(2) p').style.fontSize = '16px';
+                setTimeout(function() {
+                    document.querySelector('.services-boxs .box:nth-of-type(2) p').innerHTML = 'Our effective agile software development team with experience in a variety of skill-set and complex projects ensures success to your projects.  ';
+                }, 500);
             }
         });
-        btns[2].addEventListener('click',function(){
+        btns[2].addEventListener('click', function() {
             btns[2].style.background = 'white';
             btns[2].style.color = '#1c3584';
         });
-        //end button click
         */
+        //end button click
+
+
 
 
 
@@ -519,6 +551,17 @@
             }
         }
         //end smooth scroll//
+        //form//
+        var heightInputFile = document.getElementById('attachment').offsetHeight;
+        var heightSelect = document.getElementById('subject').offsetHeight;
+        console.log('height select: ' , heightSelect , ' ' , 'height Input File: ' , heightInputFile);
+        document.addEventListener('DOMContentLoaded',()=>{
+            var select = document.getElementById('subject');
+            select.style.height = heightInputFile + 'px';
+        });
+        //-->
+        
+        //end form//
     </script>
 </body>
 

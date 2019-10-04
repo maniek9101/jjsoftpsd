@@ -97,6 +97,18 @@ header nav ul li {
   -webkit-transition-duration: .5s;
           transition-duration: .5s;
   position: relative;
+  /*#select-language {
+                    margin-left: 1.05vw;
+                }*/
+}
+
+header nav ul li:nth-of-type(6) a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header nav ul li img {
@@ -105,14 +117,13 @@ header nav ul li img {
 
 header nav ul li ul {
   position: absolute;
-  left: 1.05vw;
-  top: 30%;
-  /*border: 1px solid white;*/
+  right: 0;
+  top: 50%;
   display: none;
 }
 
 header nav ul li ul li a {
-  margin-left: 0;
+  margin-bottom: 0.6vh;
   position: relative;
 }
 
@@ -121,10 +132,6 @@ header nav ul li a {
   text-decoration: none;
   font-family: lato-bold;
   margin-left: 3.7vw;
-}
-
-header nav ul li #select-language {
-  margin-left: 1.05vw;
 }
 
 header ul li:hover > ul,
@@ -136,11 +143,11 @@ header #deutsch::after {
   content: 'Deutsch';
   position: absolute;
   top: 0;
-  left: -240%;
-  width: 200%;
+  left: -350%;
+  width: 350%;
   height: 100%;
   display: none;
-  background: #2989c5;
+  background: #0a3e7d;
 }
 
 header #deutsch:hover::after,
@@ -153,27 +160,27 @@ header #français::after {
   content: 'Français';
   position: absolute;
   top: 0;
-  left: -240%;
-  width: 200%;
+  left: -350%;
+  width: 350%;
   height: 100%;
   display: none;
-  background: #2989c5;
+  background: #0a3e7d;
 }
 
 header #polski::after {
   content: 'Polski';
   position: absolute;
   top: 0;
-  left: -240%;
-  width: 200%;
+  left: -350%;
+  width: 350%;
   height: 100%;
   display: none;
-  background: #2989c5;
+  background: #0a3e7d;
 }
 
 header .fix-nav {
-  padding-top: 0.6vh;
-  padding-bottom: 0.6vh;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
   background: #3fb2f9;
 }
 
@@ -264,11 +271,15 @@ header .content p span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  /*.box:hover p {
+        transform: scale(1.05);
+    }*/
 }
 
 .services-boxs .box {
   width: 33.33%;
-  padding: 9.3vh 0 4.6vh 3.7vw;
+  height: 41.75vh;
+  padding: 9.3vh 3.7vw 4.6vh 3.7vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -280,24 +291,33 @@ header .content p span {
       -ms-flex-pack: justify;
           justify-content: space-between;
   overflow: hidden;
+  /*p:nth-of-type(3) {
+            font-family: futura-light-bt;
+        }*/
 }
 
-.services-boxs .box p {
+.services-boxs .box .wrap-text {
+  position: relative;
+}
+
+.services-boxs .box .wrap-text p {
   color: white;
   -webkit-transition: all .5s;
   transition: all .5s;
+  position: absolute;
 }
 
-.services-boxs .box p:nth-of-type(1) {
+.services-boxs .box .wrap-text p:nth-of-type(1) {
   font-family: lato-light;
 }
 
-.services-boxs .box p:nth-of-type(2) {
+.services-boxs .box .wrap-text p:nth-of-type(2) {
   font-family: futura-light-bt;
+  opacity: 0;
 }
 
-.services-boxs .box p:nth-of-type(3) {
-  font-family: futura-light-bt;
+.services-boxs .box a {
+  width: 9.45vw;
 }
 
 .services-boxs .box button {
@@ -308,15 +328,73 @@ header .content p span {
   border: 3px solid white;
   background: transparent;
   color: white;
-  margin-top: 9.2vh;
   -webkit-transition: all .5s;
   transition: all .5s;
   cursor: pointer;
 }
 
-.services-boxs .box:hover p {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+.services-boxs .box:hover p:nth-of-type(2) {
+  -webkit-animation: myAnimationSecond 1s;
+          animation: myAnimationSecond 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.services-boxs .box:hover p:nth-of-type(1) {
+  -webkit-animation: myAnimation 1s;
+          animation: myAnimation 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes myAnimation {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+
+@keyframes myAnimation {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+
+@-webkit-keyframes myAnimationSecond {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes myAnimationSecond {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .services-boxs .box:nth-of-type(1) {
@@ -325,10 +403,20 @@ header .content p span {
   background-size: cover;
 }
 
+.services-boxs .box:nth-of-type(1) button:hover {
+  background: white;
+  color: #3da5f3;
+}
+
 .services-boxs .box:nth-of-type(2) {
   background-image: url("images/bg2.png");
   background-position: center center;
   background-size: cover;
+}
+
+.services-boxs .box:nth-of-type(2) button:hover {
+  background: white;
+  color: #ffc057;
 }
 
 .services-boxs .box:nth-of-type(3) {
@@ -337,10 +425,14 @@ header .content p span {
   background-size: cover;
 }
 
-.btn-active {
+.services-boxs .box:nth-of-type(3) button:hover {
   background: white;
+  color: #1d3686;
 }
 
+/*.btn-active {
+    background: white;
+}*/
 .services-different {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -387,8 +479,15 @@ header .content p span {
           justify-content: space-between;
 }
 
+.services-different .content .left .box {
+  -webkit-transition: all 1.25s ease-in;
+  transition: all 1.25s ease-in;
+}
+
 .services-different .content .left .box img {
   margin-bottom: 2.57vh;
+  -webkit-transition: all 1.25s ease-in;
+  transition: all 1.25s ease-in;
 }
 
 .services-different .content .left .box p:nth-child(even) {
@@ -429,6 +528,28 @@ header .content p span {
 .services-different .content .right .box p:nth-child(odd) {
   font-family: lato-light;
   margin-bottom: 10.82vh;
+}
+
+.slide-in {
+  -webkit-transform: translateX(-170%) scale(0.95);
+          transform: translateX(-170%) scale(0.95);
+  opacity: 0;
+}
+
+.slide-in-box {
+  -webkit-transform: translateX(-50%) scale(0.8);
+          transform: translateX(-50%) scale(0.8);
+}
+
+.active-slide-in-box {
+  -webkit-transform: translateX(0%) scale(1);
+          transform: translateX(0%) scale(1);
+}
+
+.active-img {
+  -webkit-transform: translateX(0%) scale(1);
+          transform: translateX(0%) scale(1);
+  opacity: 1;
 }
 
 .company-img {
@@ -585,6 +706,10 @@ header .content p span {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-bottom: 10.3vh;
+  /*.box:nth-of-type(1) .wrap:hover
+            {
+                transform: rotate(360deg);
+            }*/
 }
 
 .company .content .char .box {
@@ -619,6 +744,7 @@ header .content p span {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   color: white;
+  pointer-events: none;
 }
 
 .company .content .char .box:nth-of-type(2) .wrap {
@@ -701,6 +827,15 @@ header .content p span {
   height: 6.18vh;
   width: 9.45vw;
   margin-top: 7.21vh;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  cursor: pointer;
+}
+
+.company-article .content .left button:hover,
+.company-article .content .right button:hover {
+  background: #3fb2f9;
+  color: white;
 }
 
 .careers {
@@ -769,6 +904,14 @@ header .content p span {
   height: 6.18vh;
   width: 18.12vw;
   margin-top: 7.21vh;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  cursor: pointer;
+}
+
+.careers .content .right button:hover {
+  background: white;
+  color: #1d3686;
 }
 
 .contact {
@@ -887,19 +1030,36 @@ header .content p span {
   font-family: lato-regular;
 }
 
+.contact .content .wrap-info-form .right form .form-left input {
+  color: white;
+}
+
+.contact .content .wrap-info-form .right form .form-left label:nth-of-type(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
 .contact .content .wrap-info-form .right form .form-left select {
   background: transparent;
   border: none;
   border-bottom: 2px solid #2989c5;
   -webkit-appearance: none;
-  background: url("images/down-arrow.png");
-  background-position: 96% 15%;
-  background-repeat: no-repeat;
+  color: white;
 }
 
 .contact .content .wrap-info-form .right form .form-left select option {
-  border-bottom: 2px solid #2989c5;
+  color: white;
   font-family: lato-regular;
+  background-color: #2989c5;
+  border-bottom: 2px solid white;
 }
 
 .contact .content .wrap-info-form .right form .form-right {
@@ -912,6 +1072,26 @@ header .content p span {
       -ms-flex-direction: column;
           flex-direction: column;
   font-family: lato-regular;
+}
+
+.contact .content .wrap-info-form .right form .form-right label:nth-of-type(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact .content .wrap-info-form .right form .form-right input:nth-of-type(1) {
+  color: white;
+}
+
+.contact .content .wrap-info-form .right form .form-right input:nth-of-type(2)::-webkit-file-upload-button {
+  visibility: hidden;
 }
 
 .contact .content .wrap-info-form .right form .form-bottom {
@@ -935,6 +1115,8 @@ header .content p span {
 
 .contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(1) {
   width: 100%;
+  color: white;
+  font-family: lato-light;
 }
 
 .contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(2) {
@@ -947,6 +1129,13 @@ header .content p span {
   font-family: lato-bold;
   margin-top: 5.15vh;
   cursor: pointer;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(2):hover {
+  background: white;
+  color: #2989c5;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1100,8 +1289,11 @@ header .content p span {
   .services .content .right p {
     font-size: 0.77rem;
   }
-  .services-boxs .box p {
+  .services-boxs .box .wrap-text p:nth-of-type(1) {
     font-size: 2.05rem;
+  }
+  .services-boxs .box .wrap-text p:nth-of-type(2) {
+    font-size: 0.65rem;
   }
   .services-boxs .box button {
     font-size: 0.65rem;
@@ -1313,8 +1505,11 @@ header .content p span {
   .services .content .right p {
     font-size: 0.77rem;
   }
-  .services-boxs .box p {
+  .services-boxs .box .wrap-text p:nth-of-type(1) {
     font-size: 2.05rem;
+  }
+  .services-boxs .box .wrap-text p:nth-of-type(2) {
+    font-size: 0.65rem;
   }
   .services-boxs .box button {
     font-size: 0.65rem;
@@ -1408,8 +1603,11 @@ header .content p span {
   .services .content .right p {
     font-size: 1.10rem;
   }
-  .services-boxs .box p {
+  .services-boxs .box .wrap-text p:nth-of-type(1) {
     font-size: 2.91rem;
+  }
+  .services-boxs .box .wrap-text p:nth-of-type(2) {
+    font-size: 1.1rem;
   }
   .services-boxs .box button {
     font-size: 0.92rem;
@@ -1503,8 +1701,11 @@ header .content p span {
   .services .content .right p {
     font-size: 1.55rem;
   }
-  .services-boxs .box p {
+  .services-boxs .box .wrap-text p:nth-of-type(1) {
     font-size: 4.1rem;
+  }
+  .services-boxs .box .wrap-text p:nth-of-type(2) {
+    font-size: 1.54rem;
   }
   .services-boxs .box button {
     font-size: 1.3rem;
@@ -1598,8 +1799,11 @@ header .content p span {
   .services .content .right p {
     font-size: 2.06rem;
   }
-  .services-boxs .box p {
+  .services-boxs .box .wrap-text p:nth-of-type(1) {
     font-size: 5.46rem;
+  }
+  .services-boxs .box .wrap-text p:nth-of-type(2) {
+    font-size: 2.05rem;
   }
   .services-boxs .box button {
     font-size: 1.73rem;
@@ -1693,8 +1897,11 @@ header .content p span {
   .services .content .right p {
     font-size: 3.3rem;
   }
-  .services-boxs .box p {
+  .services-boxs .box .wrap-text p:nth-of-type(1) {
     font-size: 8.74rem;
+  }
+  .services-boxs .box .wrap-text p:nth-of-type(2) {
+    font-size: 3.28rem;
   }
   .services-boxs .box button {
     font-size: 2.77rem;
