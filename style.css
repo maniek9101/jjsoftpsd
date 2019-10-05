@@ -480,8 +480,8 @@ header .content p span {
 }
 
 .services-different .content .left .box {
-  -webkit-transition: all 1.25s ease-in;
-  transition: all 1.25s ease-in;
+  -webkit-transition: all 2s ease-in;
+  transition: all 2s ease-in;
 }
 
 .services-different .content .left .box img {
@@ -531,8 +531,8 @@ header .content p span {
 }
 
 .slide-in {
-  -webkit-transform: translateX(-170%) scale(0.95);
-          transform: translateX(-170%) scale(0.95);
+  -webkit-transform: translateY(170%) scale(0.7);
+          transform: translateY(170%) scale(0.7);
   opacity: 0;
 }
 
@@ -547,8 +547,8 @@ header .content p span {
 }
 
 .active-img {
-  -webkit-transform: translateX(0%) scale(1);
-          transform: translateX(0%) scale(1);
+  -webkit-transform: translateY(0%) scale(1);
+          transform: translateY(0%) scale(1);
   opacity: 1;
 }
 
@@ -971,9 +971,30 @@ header .content p span {
           justify-content: space-between;
 }
 
-.contact .content .wrap-info-form .left .left-row img {
-  margin-right: 0.8vw;
-  display: inline-block;
+.contact .content .wrap-info-form .left .left-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact .content .wrap-info-form .left .left-row:nth-of-type(3) .wrap-img {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.contact .content .wrap-info-form .left .left-row .wrap-img {
+  width: 2vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 1vw;
 }
 
 .contact .content .wrap-info-form .left .left-row .wrap-p {
@@ -981,13 +1002,13 @@ header .content p span {
   top: 0;
 }
 
-.contact .content .wrap-info-form .left .left-row:nth-of-type(1),
-.contact .content .wrap-info-form .left .left-row:nth-of-type(4) {
+.contact .content .wrap-info-form .left .left-row:nth-of-type(1) .wrap-p,
+.contact .content .wrap-info-form .left .left-row:nth-of-type(4) .wrap-p {
   font-family: lato-regular;
 }
 
-.contact .content .wrap-info-form .left .left-row:nth-of-type(2),
-.contact .content .wrap-info-form .left .left-row:nth-of-type(3) {
+.contact .content .wrap-info-form .left .left-row:nth-of-type(2) .wrap-p,
+.contact .content .wrap-info-form .left .left-row:nth-of-type(3) .wrap-p {
   font-family: lato-light;
 }
 

@@ -394,7 +394,7 @@ header {
             justify-content: space-between;
             .box {
                 //border: 1px solid black;
-                transition: all 1.25s ease-in; //temp
+                transition: all 2s ease-in; //temp
                 img {
                     margin-bottom: 2.57vh;
                     //border: 1px solid red;
@@ -442,7 +442,7 @@ header {
 }
 
 .slide-in {
-    transform: translateX(-170%) scale(0.95);
+    transform: translateY(170%) scale(0.7);
     opacity: 0;
 }
 .slide-in-box
@@ -457,7 +457,7 @@ header {
 }
 
 .active-img {
-    transform: translateX(0%) scale(1);
+    transform: translateY(0%) scale(1);
     opacity: 1;
 }
 
@@ -785,28 +785,43 @@ header {
                 justify-content: space-between;
                 .left-row {
                     //border: 1px solid blue;
-                    //display: flex;
-                    img {
-                        //height: 25px;
-                        //width: 25px;
-                        margin-right: 0.8vw;
-                        display: inline-block;
+                    display: flex;
+                    &:nth-of-type(3)
+                    {
+                        .wrap-img
+                        {
+                            align-items: flex-start;
+                        }
                     }
+                    .wrap-img
+                    {
+                        width: 2vw;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        //border: 2px solid gold;
+                        margin-right: 1vw;
+                        img {
+                            //border: 1px solid white;
+                        }
+                    }
+                    
                     .wrap-p {
                         display: inline-block;
                         top: 0;
+                        //border: 1px solid orangered;
                     }
                 }
                 .left-row:nth-of-type(3) img {
                     //border: 1px solid red;
                     //height: 25px;
                 }
-                .left-row:nth-of-type(1),
-                .left-row:nth-of-type(4) {
+                .left-row:nth-of-type(1) .wrap-p,
+                .left-row:nth-of-type(4) .wrap-p{
                     font-family: lato-regular;
                 }
-                .left-row:nth-of-type(2),
-                .left-row:nth-of-type(3) {
+                .left-row:nth-of-type(2) .wrap-p,
+                .left-row:nth-of-type(3) .wrap-p{
                     font-family: lato-light;
                 }
             }

@@ -97,22 +97,22 @@
                 <p>What makes us different</p>
             </div>
             <div class="left">
-                <div class="box" >
+                <div class="box slide-in" >
                     <img src="images/ico-left-1.png"  sizes="(max-width: 768px) 150vw " alt="time-zone" srcset="images/ico-left-1.png 1920w"><!--class="slide-in"-->
                     <p>Time Zone</p>
                     <p>Being in Europe, we share the same time-zone and our developers can also visit your office on request.</p>
                 </div>
-                <div class="box ">
+                <div class="box slide-in">
                     <img src="images/ico-left-2.png"  sizes="(max-width: 768px) 150vw " alt="reasonable-cost" srcset="images/ico-left-2.png 1920w">
                     <p>Reasonable Cost</p>
                     <p>We have developers from various countries across Europe at a good price. (feel free to request for our price chart)</p>
                 </div>
-                <div class="box ">
+                <div class="box slide-in">
                     <img src="images/ico-left-3.png"  sizes="(max-width: 768px) 150vw " alt="fast&flexible" srcset="images/ico-left-3.png 1920w">
                     <p>Fast & flexible approach</p>
                     <p>We follow Agile Management: The Fast and Flexible Approach to Continuous Improvement and Innovation in Organizations.</p>
                 </div>
-                <div class="box ">
+                <div class="box slide-in">
                     <img src="images/ico-left-4.png"  sizes="(max-width: 768px) 150vw " alt="cooperation" srcset="images/ico-left-4.png 1920w">
                     <p>Cooperation</p>
                     <p>We are experienced in remote development and have the necessary tools to manage work effectively. We cooperate with 10 partners. Together we have about 600 developers.</p>
@@ -233,32 +233,36 @@
             <div class="wrap-info-form">
                 <div class="left">
                     <div class="left-row">
-                        <img src="images/contact-ico-1.png" sizes="(max-width: 768px) 200vw" alt="email" srcset="images/contact-ico-1.png 1920w">
+                        <div class="wrap-img">
+                            <img src="images/contact-ico-1.png" sizes="(max-width: 768px) 200vw" alt="email" srcset="images/contact-ico-1.png 1920w">
+                        </div>
                         <div class="wrap-p">
                             <p>office@jjsoft.pl</p>
                         </div>
-
                     </div>
                     <div class="left-row">
-                        <img src="images/contact-ico-2.png" sizes="(max-width: 768px) 200vw" alt="phone" srcset="images/contact-ico-2.png 1920w">
+                            <div class="wrap-img">
+                                <img src="images/contact-ico-2.png" sizes="(max-width: 768px) 200vw" alt="phone" srcset="images/contact-ico-2.png 1920w">
+                            </div>
                         <div class="wrap-p">
                             <p>(+48) 504 780 986</p>
                         </div>
-
                     </div>
                     <div class="left-row">
-                        <img src="images/contact-ico-3.png" sizes="(max-width: 768px) 200vw" alt="location" srcset="images/contact-ico-3.png 1920w">
+                        <div class="wrap-img">
+                            <img src="images/contact-ico-3.png" sizes="(max-width: 768px) 200vw" alt="location" srcset="images/contact-ico-3.png 1920w">
+                        </div>
                         <div class="wrap-p">
                             <p>JJ Soft <br> ul. Kijowska 5 <br> 40-753 Katowice <br> NIP 634-261-47-60</p>
                         </div>
-
                     </div>
                     <div class="left-row">
-                        <img src="images/contact-ico-4.png" sizes="(max-width: 768px) 200vw" alt="Verify" srcset="images/contact-ico-4.png 1920w">
+                        <div class="wrap-img">
+                            <img src="images/contact-ico-4.png" sizes="(max-width: 768px) 200vw" alt="Verify" srcset="images/contact-ico-4.png 1920w">
+                        </div>
                         <div class="wrap-p">
                             <p>Verify us at VIES</p>
                         </div>
-
                     </div>
                 </div>
                 <div class="right">
@@ -308,21 +312,25 @@
 
 
     <script>
-        const sliderImages = document.querySelectorAll('.services-different .content .left img');
+        /*const sliderImages = document.querySelectorAll('.services-different .content .left img');
         console.log(sliderImages);
         const leftBoxes = document.querySelectorAll('.services-different .content .left .box');
         console.log(leftBoxes);
 
         function checkSlide(e) {
-            console.log(e);
+            //console.log(e);
             leftBoxes.forEach(slideImage => {
                 const slideInAt = (window.scrollY + window.innerHeight) - slideImage.height / 2;
+                console.log('slideInAt: ' ,slideInAt);
                 const imageBottom = slideImage.offsetTop + slideImage.height;
+                console.log('imageBottom: ',imageBottom);
                 const isHalfShown = slideInAt > slideImage.offsetTop;
+                console.log('isHalfShown: ' ,isHalfShown);
                 const isNotScrolledPast = window.scrollY < imageBottom;
+                console.log('isNotScrolledPast: ' , isNotScrolledPast);
                 if (isHalfShown && isNotScrolledPast) {
                     //slideImage.classList.add('active-img');
-                    slideImage.classList.add('active-slide-in-box');
+                    slideImage.classList.add('active-img');
                 }
                 //else {
                 //   slideImage.classList.remove('active-img')
@@ -331,60 +339,30 @@
         }
 
         window.addEventListener('scroll', checkSlide);
-        //button boxes click    
-        //88
-        /*
-        var btns = document.querySelectorAll('.services-boxs .box button');
-        btns[0].addEventListener('click', function() {
-            var colorBtn = btns[0].style.background;
-            if (colorBtn == 'white') {
-                btns[0].style.background = 'transparent';
-                btns[0].style.color = 'white';
-                btns[0].innerHTML = 'SEE MORE';
-                document.querySelector('.services-boxs .box:nth-of-type(1) p').style.fontSize = '40px';
-                setTimeout(function() {
-                    document.querySelector('.services-boxs .box:nth-of-type(1) p').innerHTML = 'IT Professional outsourcing';
-                });
-            } else {
-                btns[0].style.background = 'white';
-                btns[0].style.color = '#3ca4f2';
-                btns[0].innerHTML = 'BACK';
-                document.querySelector('.services-boxs .box:nth-of-type(1) p').style.fontSize = '16px';
-
-                setTimeout(function() {
-                    document.querySelector('.services-boxs .box:nth-of-type(1) p').innerHTML = 'A perfect business solution for you to increase your own team without having to introduce expensive and time-consuming changes in the organization structure.';
-                }, 500);
-            }
-        });
-        btns[1].addEventListener('click', function() {
-            var colorBtn = btns[1].style.background;
-            if (colorBtn == 'white') {
-                btns[1].style.background = 'transparent';
-                btns[1].style.color = 'white';
-                btns[1].innerHTML = 'SEE MORE';
-                document.querySelector('.services-boxs .box:nth-of-type(2) p').style.fontSize = '40px';
-                setTimeout(function() {
-                    document.querySelector('.services-boxs .box:nth-of-type(2) p').innerHTML = 'IT Professional outsourcing';
-                });
-            } else {
-                btns[1].style.background = 'white';
-                btns[1].style.color = '#3ca4f2';
-                btns[1].innerHTML = 'BACK';
-                document.querySelector('.services-boxs .box:nth-of-type(2) p').style.fontSize = '16px';
-                setTimeout(function() {
-                    document.querySelector('.services-boxs .box:nth-of-type(2) p').innerHTML = 'Our effective agile software development team with experience in a variety of skill-set and complex projects ensures success to your projects.  ';
-                }, 500);
-            }
-        });
-        btns[2].addEventListener('click', function() {
-            btns[2].style.background = 'white';
-            btns[2].style.color = '#1c3584';
-        });
         */
-        //end button click
+        //tempo
+        const leftBoxes = document.querySelectorAll('.services-different .content .left .box');
+        console.log(leftBoxes);
 
+        function checkSlide(e) {
+            //console.log(e);
+            leftBoxes.forEach(slideImage => {
+                const slideInAt = (window.scrollY + window.innerHeight) - slideImage.offsetHeight / 2;
+                const imageBottom = slideImage.offsetTop + slideImage.offsetHeight;
+                const isHalfShown = slideInAt > slideImage.offsetTop;
+                const isNotScrolledPast = window.scrollY < imageBottom;
+                if (isHalfShown && isNotScrolledPast) {
+                    //slideImage.classList.add('active-img');
+                    slideImage.classList.add('active-img');
+                }
+                //else {
+                //   slideImage.classList.remove('active-img')
+                //}
+            });
+        }
 
-
+        window.addEventListener('scroll', checkSlide);
+        //end tempo
 
 
 
