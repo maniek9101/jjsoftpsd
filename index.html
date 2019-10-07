@@ -7,11 +7,15 @@
     <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-
     <title>JJ Soft</title>
 </head>
 
 <body>
+
+    <div class="cookies-info">
+        <p>Strona korzysta z plików cookies. Pozostając na niej, wyrażasz zgodę na wykorzystanie plików cookies</p>
+        <span id="scross">❌</span>
+    </div>
 
     <header id="home">
         <nav>
@@ -119,19 +123,19 @@
                 </div>
             </div>
             <div class="right">
-                <div class="box">
+                <div class="box slide-in">
                     <img src="images/ico-right-1.png" sizes="(max-width: 768px) 150vw " alt="real-quality" srcset="images/ico-right-1.png 1920w">
                     <p>Real Quality</p>
                     <p>Q stands for Quality for JJ Soft and our team focus to be productive and efficient at work. By this, we mean that clients and partners should be satisfied with our efforts based on the latest technological knowledge and our continuous
                         follow ups on each activity. At JJ Soft, we set ourselves high quality standards, in order to increase client confidence and reduce total cost. This also helps us in rapid delivery of software solution.</p>
                 </div>
-                <div class="box">
+                <div class="box slide-in">
                     <img src="images/ico-right-2.png" sizes="(max-width: 768px) 150vw " alt="full-professionalism" srcset="images/ico-right-1.png 1920w">
                     <p>Full professionalism</p>
                     <p>We invest in developing professionalism within our teams. That means ethical behaviour, altruistic attitudes, responsible conduct, theoretical foundations, intellectual development, and committed convictions, skills and knowledge competence
                         are being aimed to be built in every employee.</p>
                 </div>
-                <div class="box">
+                <div class="box slide-in">
                     <img src="images/ico-right-3.png" sizes="(max-width: 768px) 150vw " alt="friendly-cooperation" srcset="images/ico-right-1.png 1920w">
                     <p>Friendly & long-term cooperation</p>
                     <p>Our team is friendly and fully open to discuss with you any technical topic and has the ability to build a long-term cooperation with your company.</p>
@@ -309,9 +313,11 @@
 
 
 
-
-
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="cookies.js"></script>
     <script>
+        
+        
         /*const sliderImages = document.querySelectorAll('.services-different .content .left img');
         console.log(sliderImages);
         const leftBoxes = document.querySelectorAll('.services-different .content .left .box');
@@ -342,12 +348,15 @@
         */
         //tempo
         const leftBoxes = document.querySelectorAll('.services-different .content .left .box');
-        console.log(leftBoxes);
+        const rightBoxes = document.querySelectorAll('.services-different .content .right .box')
+        //console.log(leftBoxes);
 
         function checkSlide(e) {
             //console.log(e);
+            //left
             leftBoxes.forEach(slideImage => {
-                const slideInAt = (window.scrollY + window.innerHeight) - slideImage.offsetHeight / 2;
+                const slideInAt = (window.scrollY + window.innerHeight) - slideImage.offsetHeight / 4;
+                //const slideInAt = (window.scrollY + window.innerHeight) - slideImage.offsetHeight;
                 const imageBottom = slideImage.offsetTop + slideImage.offsetHeight;
                 const isHalfShown = slideInAt > slideImage.offsetTop;
                 const isNotScrolledPast = window.scrollY < imageBottom;
@@ -358,6 +367,20 @@
                 //else {
                 //   slideImage.classList.remove('active-img')
                 //}
+            });
+
+            //right
+            
+            rightBoxes.forEach(rightBox => {
+                const slideInAt = (window.scrollY + window.innerHeight) - rightBox.offsetHeight / 4;
+                //const slideInAt = (window.scrollY + window.innerHeight) - slideImage.offsetHeight;
+                const imageBottom = rightBox.offsetTop + rightBox.offsetHeight;
+                const isHalfShown = slideInAt > rightBox.offsetTop;
+                const isNotScrolledPast = window.scrollY < imageBottom;
+                if (isHalfShown && isNotScrolledPast) {
+                    //slideImage.classList.add('active-img');
+                    rightBox.classList.add('active-img');
+                }
             });
         }
 
@@ -532,7 +555,7 @@
         //form//
         var heightInputFile = document.getElementById('attachment').offsetHeight;
         var heightSelect = document.getElementById('subject').offsetHeight;
-        console.log('height select: ' , heightSelect , ' ' , 'height Input File: ' , heightInputFile);
+        //console.log('height select: ' , heightSelect , ' ' , 'height Input File: ' , heightInputFile);
         document.addEventListener('DOMContentLoaded',()=>{
             var select = document.getElementById('subject');
             select.style.height = heightInputFile + 'px';
