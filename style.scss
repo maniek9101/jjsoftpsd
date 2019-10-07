@@ -542,6 +542,7 @@ header {
                 position: relative;
                 white-space: nowrap;
                 font-family: lato-bold;
+                transition: all 1.25s;
                 // to remove from here 
             }
             .wrap:nth-of-type(1)::after {
@@ -672,6 +673,16 @@ header {
             }
         }
     }
+}
+.hiden-chain
+{
+    transform: translateX(-100vw);
+    opacity: 0;
+}
+.apper-chain
+{
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .company-article {

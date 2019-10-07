@@ -149,16 +149,15 @@
         <div class="content">
             <p>Our Team & Company</p>
             <div class="chain">
-                <!--ADD ALT-->
-                <div class="wrap"><img src="images/circleBasic.png" alt="circle" srcset="images/circleBasic.png 1920w"></div>
+                <div class="wrap hiden-chain"><img src="images/circleBasic.png" alt="circle" srcset="images/circleBasic.png 1920w"></div>
                 <img src="images/chain.png" alt="chain">
-                <div class="wrap"><img src="images/circleBasic.png" alt="circle" srcset="images/circleBasic.png 1920w"></div>
+                <div class="wrap hiden-chain"><img src="images/circleBasic.png" alt="circle" srcset="images/circleBasic.png 1920w"></div>
                 <img src="images/chain.png" alt="chain">
-                <div class="wrap"><img src="images/circle.png" alt="circle" srcset="images/circle.png 1920w"></div>
+                <div class="wrap hiden-chain"><img src="images/circle.png" alt="circle" srcset="images/circle.png 1920w"></div>
                 <img src="images/chain.png" alt="chain">
-                <div class="wrap"><img src="images/circleBasic.png" alt="circle" srcset="images/circleBasic.png 1920w"></div>
+                <div class="wrap hiden-chain"><img src="images/circleBasic.png" alt="circle" srcset="images/circleBasic.png 1920w"></div>
                 <img src="images/chain.png" alt="chain">
-                <div class="wrap"><img src="images/circleBasic.png" alt="circle" srcset="images/circleBasic.png 1920w"></div>
+                <div class="wrap hiden-chain"><img src="images/circleBasic.png" alt="circle" srcset="images/circleBasic.png 1920w"></div>
             </div>
             <div class="article">
                 <div class="left">
@@ -348,7 +347,9 @@
         */
         //tempo
         const leftBoxes = document.querySelectorAll('.services-different .content .left .box');
-        const rightBoxes = document.querySelectorAll('.services-different .content .right .box')
+        const rightBoxes = document.querySelectorAll('.services-different .content .right .box');
+        const chains = document.querySelectorAll('.company .content .chain .wrap');
+        //console.log(chain);
         //console.log(leftBoxes);
 
         function checkSlide(e) {
@@ -380,6 +381,20 @@
                 if (isHalfShown && isNotScrolledPast) {
                     //slideImage.classList.add('active-img');
                     rightBox.classList.add('active-img');
+                }
+            });
+
+            //chain
+
+            chains.forEach(chain => {
+                const slideInAt = (window.scrollY + window.innerHeight) - chain.offsetHeight / 4;
+                //const slideInAt = (window.scrollY + window.innerHeight) - slideImage.offsetHeight;
+                const imageBottom = chain.offsetTop + chain.offsetHeight;
+                const isHalfShown = slideInAt > chain.offsetTop;
+                const isNotScrolledPast = window.scrollY < imageBottom;
+                if (isHalfShown && isNotScrolledPast) {
+                    //slideImage.classList.add('active-img');
+                    chain.classList.add('apper-chain');
                 }
             });
         }
