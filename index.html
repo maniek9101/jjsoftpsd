@@ -12,37 +12,46 @@
 
 <body>
 
-    <div class="cookies-info">
-        <p>Strona korzysta z plików cookies. Pozostając na niej, wyrażasz zgodę na wykorzystanie plików cookies</p>
-        <span id="scross">❌</span>
-    </div>
-
     <header id="home">
-        <nav>
-            <img src="images/logo.png" alt="logo" id="logo" srcset="images/logo.png 1920w">
-            <ul>
-                <!--TO DO SEMANTIC TAG HTML5-->
-                <li><a href="#home" hreflang="en" class="active-section" id="homeID">Home</a></li>
-                <li><a href="#services" hreflang="en" id="servicesID">Services</a></li>
-                <li><a href="#company" hreflang="en" id="companyID">Company</a></li>
-                <li><a href="#careers" hreflang="en" id="careersID">Careers</a></li>
-                <li><a href="#contact" hreflang="en" id="contactID">Contact</a></li>
-                <li>
-                    <a href="#" hreflang="en" id="select-language"><img src="images/GBflag.png" alt="English" srcset="images/GBflag.png 1920w"></a>
-                    <ul>
-                        <li>
-                            <a href="#" hreflang="deu" id="deutsch"><img src="images/GERflag.png" alt="Deutsch" srcset="images/GERflag.png 1920w"></a>
-                        </li>
-                        <li>
-                            <a href="#" hreflang="fran" id="français"><img src="images/FRflag.png" alt="Français" srcset="images/FRflag.png 1920w"></a>
-                        </li>
-                        <li>
-                            <a href="#" hreflang="pl" id="polski"><img src="images/PLflag.png" alt="Polski" srcset="images/PLflag.png 1920w"></a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+        <div class="cookies-info">
+            <p>Strona korzysta z plików cookies. Pozostając na niej, wyrażasz zgodę na wykorzystanie plików cookies</p>
+            <span id="scross">❌</span>
+        </div>
+        <div class="header-nav">
+            <div class="header-nav-mobile">
+                <a class="empty main-page"><img src="images/logo.png"></a>
+                <button>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <nav>
+                <img src="images/logo.png" alt="logo" id="logo" srcset="images/logo.png 1920w">
+                <ul>
+                    <li><a href="#home" hreflang="en" class="active-section" id="homeID">Home</a></li>
+                    <li><a href="#services" hreflang="en" id="servicesID">Services</a></li>
+                    <li><a href="#company" hreflang="en" id="companyID">Company</a></li>
+                    <li><a href="#careers" hreflang="en" id="careersID">Careers</a></li>
+                    <li><a href="#contact" hreflang="en" id="contactID">Contact</a></li>
+                    <li>
+                        <a href="#" hreflang="en" id="select-language"><img src="images/GBflag.png" alt="English" srcset="images/GBflag.png 1920w"></a>
+                        <ul>
+                            <li>
+                                <a href="#" hreflang="deu" id="deutsch"><img src="images/GERflag.png" alt="Deutsch" srcset="images/GERflag.png 1920w"></a>
+                            </li>
+                            <li>
+                                <a href="#" hreflang="fran" id="français"><img src="images/FRflag.png" alt="Français" srcset="images/FRflag.png 1920w"></a>
+                            </li>
+                            <li>
+                                <a href="#" hreflang="pl" id="polski"><img src="images/PLflag.png" alt="Polski" srcset="images/PLflag.png 1920w"></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
 
         <div class="content">
             <p>We help companies <br> achieve their <span>software <br> development goals</span></p>
@@ -84,7 +93,7 @@
                 <p>Software <br> development </p>
                 <p>Our effective agile software development team with experience in a variety of skill-set and complex projects ensures success to your projects.  </p>
             </div>
-           <a href="#" hreflang="en"><button>SEE MORE</button></a>
+            <a href="#" hreflang="en"><button>SEE MORE</button></a>
         </div>
         <div class="box">
             <div class="wrap-text">
@@ -101,23 +110,24 @@
                 <p>What makes us different</p>
             </div>
             <div class="left">
-                <div class="box slide-in" >
-                    <img src="images/ico-left-1.png"  sizes="(max-width: 768px) 150vw " alt="time-zone" srcset="images/ico-left-1.png 1920w"><!--class="slide-in"-->
+                <div class="box slide-in">
+                    <img src="images/ico-left-1.png" sizes="(max-width: 768px) 150vw " alt="time-zone" srcset="images/ico-left-1.png 1920w">
+                    <!--class="slide-in"-->
                     <p>Time Zone</p>
                     <p>Being in Europe, we share the same time-zone and our developers can also visit your office on request.</p>
                 </div>
                 <div class="box slide-in">
-                    <img src="images/ico-left-2.png"  sizes="(max-width: 768px) 150vw " alt="reasonable-cost" srcset="images/ico-left-2.png 1920w">
+                    <img src="images/ico-left-2.png" sizes="(max-width: 768px) 150vw " alt="reasonable-cost" srcset="images/ico-left-2.png 1920w">
                     <p>Reasonable Cost</p>
                     <p>We have developers from various countries across Europe at a good price. (feel free to request for our price chart)</p>
                 </div>
                 <div class="box slide-in">
-                    <img src="images/ico-left-3.png"  sizes="(max-width: 768px) 150vw " alt="fast&flexible" srcset="images/ico-left-3.png 1920w">
+                    <img src="images/ico-left-3.png" sizes="(max-width: 768px) 150vw " alt="fast&flexible" srcset="images/ico-left-3.png 1920w">
                     <p>Fast & flexible approach</p>
                     <p>We follow Agile Management: The Fast and Flexible Approach to Continuous Improvement and Innovation in Organizations.</p>
                 </div>
                 <div class="box slide-in">
-                    <img src="images/ico-left-4.png"  sizes="(max-width: 768px) 150vw " alt="cooperation" srcset="images/ico-left-4.png 1920w">
+                    <img src="images/ico-left-4.png" sizes="(max-width: 768px) 150vw " alt="cooperation" srcset="images/ico-left-4.png 1920w">
                     <p>Cooperation</p>
                     <p>We are experienced in remote development and have the necessary tools to manage work effectively. We cooperate with 10 partners. Together we have about 600 developers.</p>
                 </div>
@@ -244,9 +254,9 @@
                         </div>
                     </div>
                     <div class="left-row">
-                            <div class="wrap-img">
-                                <img src="images/contact-ico-2.png" sizes="(max-width: 768px) 200vw" alt="phone" srcset="images/contact-ico-2.png 1920w">
-                            </div>
+                        <div class="wrap-img">
+                            <img src="images/contact-ico-2.png" sizes="(max-width: 768px) 200vw" alt="phone" srcset="images/contact-ico-2.png 1920w">
+                        </div>
                         <div class="wrap-p">
                             <p>(+48) 504 780 986</p>
                         </div>
@@ -270,19 +280,26 @@
                 </div>
                 <div class="right">
                     <p>Say hello!</p>
-                    <form action="#" method="POST" enctype="multipart/form-data">
+                    <form action="#" method="POST" enctype="multipart/form-data" onsubmit="return confirm('Are you sure you want to submit?');">
                         <div class="form-left">
                             <label for="name">Name</label>
                             <input type="text" id="name">
                             <label for="subject" id="labelSubject">Subject
                                 <img src="images/down-arrow.png" sizes="(max-width: 768px) 200vw" alt="down-arrow" srcset="images/down-arrow.png 1920w">
                             </label>
-                            <select name="subject" id="subject">
+                            <input type="text" id="subject" readonly>
+                            <ul>
+                                <li>One</li>
+                                <li>Two</li>
+                                <li>Three</li>
+                            </ul>
+                            <!--<select name="subject" id="subject">
                                 <option value="" selected disabled hidden></option>
                                 <option value="">1</option>
                                 <option value="">2</option>
                                 <option value="">3</option>
-                            </select>
+                            </select>-->
+
                         </div>
                         <div class="form-right">
                             <label for="email">Email</label>
@@ -293,7 +310,8 @@
                             <input type="file" id="attachment" multiple>
                         </div>
                         <div class="form-bottom">
-                            <label for="message">Message</label><!--CHANGE TO TEXTAREA !!-->
+                            <label for="message">Message</label>
+                            <!--CHANGE TO TEXTAREA !!-->
                             <input type="text" id="message">
                             <input type="submit" value="SEND">
                         </div>
@@ -311,41 +329,31 @@
 
 
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="cookies.js"></script>
     <script>
-        
-        
-        /*const sliderImages = document.querySelectorAll('.services-different .content .left img');
-        console.log(sliderImages);
-        const leftBoxes = document.querySelectorAll('.services-different .content .left .box');
-        console.log(leftBoxes);
 
-        function checkSlide(e) {
-            //console.log(e);
-            leftBoxes.forEach(slideImage => {
-                const slideInAt = (window.scrollY + window.innerHeight) - slideImage.height / 2;
-                console.log('slideInAt: ' ,slideInAt);
-                const imageBottom = slideImage.offsetTop + slideImage.height;
-                console.log('imageBottom: ',imageBottom);
-                const isHalfShown = slideInAt > slideImage.offsetTop;
-                console.log('isHalfShown: ' ,isHalfShown);
-                const isNotScrolledPast = window.scrollY < imageBottom;
-                console.log('isNotScrolledPast: ' , isNotScrolledPast);
-                if (isHalfShown && isNotScrolledPast) {
-                    //slideImage.classList.add('active-img');
-                    slideImage.classList.add('active-img');
-                }
-                //else {
-                //   slideImage.classList.remove('active-img')
-                //}
-            });
+
+        /*document.getElementById('labelSubject').addEventListener('click',()=>{
+            document.getElementById('subject').click();
+        });*/
+
+        //end jQuery
+        //navigacja !!
+        var w=window,
+        d=document,
+        e=d.documentElement,
+        g=d.getElementsByTagName('body')[0],
+        x=w.innerWidth||e.clientWidth||g.clientWidth,
+        y=w.innerHeight||e.clientHeight||g.clientHeight;
+        console.log('width: ',x,' height: ',y);
+        if(x >= 768)
+        {
+            console.log('mobile verion');
+            //if()
         }
-
-        window.addEventListener('scroll', checkSlide);
-        */
-        //tempo
+        //end navigacja !!
         const leftBoxes = document.querySelectorAll('.services-different .content .left .box');
         const rightBoxes = document.querySelectorAll('.services-different .content .right .box');
         const chains = document.querySelectorAll('.company .content .chain .wrap');
@@ -371,7 +379,7 @@
             });
 
             //right
-            
+
             rightBoxes.forEach(rightBox => {
                 const slideInAt = (window.scrollY + window.innerHeight) - rightBox.offsetHeight / 4;
                 //const slideInAt = (window.scrollY + window.innerHeight) - slideImage.offsetHeight;
@@ -499,13 +507,16 @@
             //temp.innerHTML = window.scrollY + ' ' + topOfImg;
             //console.log(topOfNav, ' ' , window.scrollY);
             //console.log(topOfImg, ' ' , window.scrollY);
-            if (window.scrollY >= topOfImg) {
+            
+            if (window.scrollY >= (topOfImg )) {
                 //fix
                 nav.classList.add('fix-nav');
                 ul.style.paddingTop = 0;
+                home.style.paddingTop = nav.offsetHeight + 'px';
             } else {
                 nav.classList.remove('fix-nav');
                 ul.style.paddingTop = '2vh';
+                home.style.paddingTop = '0px';
             }
         }
 
@@ -571,12 +582,12 @@
         var heightInputFile = document.getElementById('attachment').offsetHeight;
         var heightSelect = document.getElementById('subject').offsetHeight;
         //console.log('height select: ' , heightSelect , ' ' , 'height Input File: ' , heightInputFile);
-        document.addEventListener('DOMContentLoaded',()=>{
+        document.addEventListener('DOMContentLoaded', () => {
             var select = document.getElementById('subject');
             select.style.height = heightInputFile + 'px';
         });
         //-->
-        
+
         //end form//
     </script>
 </body>
