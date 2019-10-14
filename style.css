@@ -58,6 +58,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
 header .cookies-info {
@@ -75,6 +76,9 @@ header .cookies-info {
       -ms-flex-align: center;
           align-items: center;
   z-index: 999;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  visibility: hidden;
 }
 
 header .cookies-info p {
@@ -97,7 +101,6 @@ header .header-nav {
 
 header .header-nav .header-nav-mobile {
   display: none;
-  height: 75px;
   width: 100vw;
   max-width: 100%;
   position: relative;
@@ -108,9 +111,6 @@ header .header-nav .header-nav-mobile img {
 }
 
 header .header-nav .header-nav-mobile button {
-  position: absolute;
-  right: 50px;
-  top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -192,6 +192,10 @@ header .header-nav nav ul li ul li a {
   position: relative;
 }
 
+header .header-nav nav ul li ul li a:hover {
+  color: white;
+}
+
 header .header-nav nav ul li a {
   color: white;
   text-decoration: none;
@@ -247,7 +251,68 @@ header .header-nav #polski::after {
   background: #0a3e7d;
 }
 
-header .header-nav .fix-nav {
+header .active-section {
+  color: #e5aa28;
+}
+
+header .content {
+  width: 70vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+header .content p {
+  color: white;
+  font-family: futura-light-bt;
+  -webkit-transform: all 1s;
+          transform: all 1s;
+  -webkit-animation: scaleText  5s infinite;
+          animation: scaleText  5s infinite;
+}
+
+header .content p span {
+  font-family: futura-bold-bt;
+}
+
+@-webkit-keyframes scaleText {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaleText {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+#fix-nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -256,30 +321,15 @@ header .header-nav .fix-nav {
   background: #08123b;
 }
 
-header .active-section {
-  color: #e5aa28;
+#fix-nav-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-header .content {
-  height: 100%;
-  width: 70vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-header .content p {
-  color: white;
-  font-family: futura-light-bt;
-  -webkit-transform: all 1s;
-          transform: all 1s;
-}
-
-header .content p span {
-  font-family: futura-bold-bt;
+#active-nav {
+  display: block;
+  top: 100px;
 }
 
 .services {
@@ -546,6 +596,10 @@ header .content p span {
   padding: 10.3vh 0 10.3vh 0;
 }
 
+.services-different .content .left .box img, .services-different .content .right .box img {
+  margin-bottom: 3.60vh;
+}
+
 .services-different .content .left {
   width: 50%;
   color: #081038;
@@ -566,20 +620,14 @@ header .content p span {
   transition: all 1.25s ease-in;
 }
 
-.services-different .content .left .box img {
-  margin-bottom: 2.57vh;
-  -webkit-transition: all 1.25s ease-in;
-  transition: all 1.25s ease-in;
-}
-
 .services-different .content .left .box p:nth-child(even) {
   font-family: lato-bold;
-  margin-bottom: 3.5vh;
+  margin-bottom: 4.64vh;
 }
 
 .services-different .content .left .box p:nth-child(odd) {
   font-family: lato-light;
-  margin-bottom: 9.58vh;
+  margin-bottom: 8.76vh;
 }
 
 .services-different .content .right {
@@ -603,18 +651,14 @@ header .content p span {
   transition: all 1.25s ease-in;
 }
 
-.services-different .content .right .box img {
-  margin-bottom: 3.6vh;
-}
-
 .services-different .content .right .box p:nth-child(even) {
   font-family: lato-bold;
-  margin-bottom: 3.6vh;
+  margin-bottom: 4.64vh;
 }
 
 .services-different .content .right .box p:nth-child(odd) {
   font-family: lato-light;
-  margin-bottom: 10.82vh;
+  margin-bottom: 11.65vh;
 }
 
 .slide-in {
@@ -898,7 +942,6 @@ header .content p span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 12.35vh 0 12.35vh 0;
 }
 
 .company-article .content .right {
@@ -915,7 +958,6 @@ header .content p span {
 .company-article .content .left p:nth-of-type(2),
 .company-article .content .right p:nth-of-type(2) {
   color: #7d85ae;
-  margin-bottom: 4.63vh;
 }
 
 .company-article .content .left,
@@ -933,7 +975,6 @@ header .content p span {
   background: transparent;
   height: 6.18vh;
   width: 9.45vw;
-  margin-top: 7.21vh;
   -webkit-transition: all .5s;
   transition: all .5s;
   cursor: pointer;
@@ -977,22 +1018,14 @@ header .content p span {
 
 .careers .content .left {
   width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+.careers .content .left img:nth-of-type(1) {
+  margin-left: 1.26vw;
 }
 
 .careers .content .left img:nth-of-type(2) {
+  margin-left: 6.3vw;
   margin-bottom: 5.15vh;
 }
 
@@ -1306,49 +1339,68 @@ header .content p span {
 }
 
 @media only screen and (max-width: 768px) {
-  .header-nav {
+  header .header-nav {
     background: transparent;
+    position: relative;
   }
-  .header-nav nav {
+  header .header-nav nav {
+    position: fixed;
+    top: 100px;
+    left: 0;
     display: none;
     background: #3fb2f9;
     opacity: .8;
+    padding: 0;
   }
-  .header-nav nav ul {
+  header .header-nav nav #logo {
+    display: none;
+  }
+  header .header-nav nav ul {
+    padding: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .header-nav nav ul li {
+  header .header-nav nav ul li {
     width: 100%;
-    background: #3fb2f9;
-    border-bottom: 1px solid #081038;
+    background: #081038;
+    border-bottom: 1px solid #3fb2f9;
+    font-size: 1.5rem;
   }
-  .header-nav nav ul li a {
+  header .header-nav nav ul li a {
     border: none;
+    font-size: 1.4rem;
   }
-  .header-nav .header-nav-mobile {
-    display: block;
-    background: #3fb2f9;
+  header .header-nav .header-nav-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 100px;
+    padding: 0 15px 0 15px;
+    background: #08123b;
   }
-  .header-nav .header-nav-mobile button {
-    right: 10px;
-    top: 0;
+  header .header-nav .header-nav-mobile button {
     width: 50px;
     height: 50px;
     background: transparent;
     border: none;
   }
-  .header-nav .header-nav-mobile button:focus {
+  header .header-nav .header-nav-mobile button:focus {
     outline: none;
   }
-  header .content {
+  header header .content {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  header .content p {
+  header header .content p {
     text-align: center;
   }
   .services .content .left {
@@ -1495,11 +1547,9 @@ header .content p span {
   }
   .services-boxs .box .wrap-text p:nth-of-type(1) {
     font-size: 2.05rem;
-    border: 3px solid orangered;
   }
   .services-boxs .box .wrap-text p:nth-of-type(2) {
     font-size: 0.65rem;
-    border: 3px solid orangered;
   }
   .services-boxs .box button {
     font-size: 0.65rem;
@@ -1718,7 +1768,7 @@ header .content p span {
     font-size: 2.05rem;
   }
   .services-boxs .box .wrap-text p:nth-of-type(2) {
-    font-size: 0.65rem;
+    font-size: 0.90rem;
   }
   .services-boxs .box button {
     font-size: 0.65rem;
@@ -1752,6 +1802,10 @@ header .content p span {
   .company .content .char .box .wrap::after {
     font-size: 2.35rem;
   }
+  .company-article .content {
+    padding-top: 4.50rem;
+    padding-bottom: 4.50rem;
+  }
   .company-article .content .left p:nth-of-type(1),
   .company-article .content .right p:nth-of-type(1) {
     font-size: 1.28rem;
@@ -1759,6 +1813,7 @@ header .content p span {
   .company-article .content .left p:nth-of-type(2),
   .company-article .content .right p:nth-of-type(2) {
     font-size: 0.64rem;
+    margin-bottom: 1.60rem;
   }
   .company-article .content .left,
   .company-article .content .right {
@@ -1767,6 +1822,7 @@ header .content p span {
   .company-article .content .left button,
   .company-article .content .right button {
     font-size: 0.64rem;
+    margin-top: 2.80rem;
   }
   .careers .content p {
     font-size: 2.35rem;
@@ -1828,7 +1884,7 @@ header .content p span {
     font-size: 2.91rem;
   }
   .services-boxs .box .wrap-text p:nth-of-type(2) {
-    font-size: 1.1rem;
+    font-size: 1.50rem;
   }
   .services-boxs .box button {
     font-size: 0.92rem;
@@ -1862,6 +1918,10 @@ header .content p span {
   .company .content .char .box .wrap::after {
     font-size: 3.35rem;
   }
+  .company-article .content {
+    padding-top: 5.50rem;
+    padding-bottom: 5.50rem;
+  }
   .company-article .content .left p:nth-of-type(1),
   .company-article .content .right p:nth-of-type(1) {
     font-size: 1.82rem;
@@ -1869,6 +1929,7 @@ header .content p span {
   .company-article .content .left p:nth-of-type(2),
   .company-article .content .right p:nth-of-type(2) {
     font-size: 0.91rem;
+    margin-bottom: 1.95rem;
   }
   .company-article .content .left,
   .company-article .content .right {
@@ -1877,6 +1938,7 @@ header .content p span {
   .company-article .content .left button,
   .company-article .content .right button {
     font-size: 0.91rem;
+    margin-top: 3.10rem;
   }
   .careers .content p {
     font-size: 3.35rem;
@@ -1963,6 +2025,10 @@ header .content p span {
   .company .content .char .box .wrap::after {
     font-size: 4.71rem;
   }
+  .company-article .content {
+    padding-top: 7.75rem;
+    padding-bottom: 7.75rem;
+  }
   .company-article .content .left p:nth-of-type(1),
   .company-article .content .right p:nth-of-type(1) {
     font-size: 2.57rem;
@@ -1970,6 +2036,7 @@ header .content p span {
   .company-article .content .left p:nth-of-type(2),
   .company-article .content .right p:nth-of-type(2) {
     font-size: 1.28rem;
+    margin-bottom: 2.75rem;
   }
   .company-article .content .left,
   .company-article .content .right {
@@ -1978,6 +2045,7 @@ header .content p span {
   .company-article .content .left button,
   .company-article .content .right button {
     font-size: 1.28rem;
+    margin-top: 4.37rem;
   }
   .careers .content p {
     font-size: 4.71rem;
@@ -2064,6 +2132,10 @@ header .content p span {
   .company .content .char .box .wrap::after {
     font-size: 6.28rem;
   }
+  .company-article .content {
+    padding-top: 10.33rem;
+    padding-bottom: 10.33rem;
+  }
   .company-article .content .left p:nth-of-type(1),
   .company-article .content .right p:nth-of-type(1) {
     font-size: 3.42rem;
@@ -2071,6 +2143,7 @@ header .content p span {
   .company-article .content .left p:nth-of-type(2),
   .company-article .content .right p:nth-of-type(2) {
     font-size: 1.70rem;
+    margin-bottom: 3.66rem;
   }
   .company-article .content .left,
   .company-article .content .right {
@@ -2079,6 +2152,7 @@ header .content p span {
   .company-article .content .left button,
   .company-article .content .right button {
     font-size: 1.66rem;
+    margin-top: 5.82rem;
   }
   .careers .content p {
     font-size: 6.28rem;
@@ -2165,6 +2239,10 @@ header .content p span {
   .company .content .char .box .wrap::after {
     font-size: 10.04rem;
   }
+  .company-article .content {
+    padding-top: 15.33rem;
+    padding-bottom: 15.33rem;
+  }
   .company-article .content .left p:nth-of-type(1),
   .company-article .content .right p:nth-of-type(1) {
     font-size: 5.48rem;
@@ -2172,6 +2250,7 @@ header .content p span {
   .company-article .content .left p:nth-of-type(2),
   .company-article .content .right p:nth-of-type(2) {
     font-size: 2.73rem;
+    margin-bottom: 5.44rem;
   }
   .company-article .content .left,
   .company-article .content .right {
@@ -2180,6 +2259,7 @@ header .content p span {
   .company-article .content .left button,
   .company-article .content .right button {
     font-size: 2.73rem;
+    margin-bottom: 8.64rem;
   }
   .careers .content p {
     font-size: 10.04rem;

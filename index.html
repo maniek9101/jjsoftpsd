@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <title>JJ Soft</title>
@@ -140,13 +139,13 @@
                         follow ups on each activity. At JJ Soft, we set ourselves high quality standards, in order to increase client confidence and reduce total cost. This also helps us in rapid delivery of software solution.</p>
                 </div>
                 <div class="box slide-in">
-                    <img src="images/ico-right-2.png" sizes="(max-width: 768px) 150vw " alt="full-professionalism" srcset="images/ico-right-1.png 1920w">
+                    <img src="images/ico-right-2.png" sizes="(max-width: 768px) 150vw " alt="full-professionalism" srcset="images/ico-right-2.png 1920w">
                     <p>Full professionalism</p>
                     <p>We invest in developing professionalism within our teams. That means ethical behaviour, altruistic attitudes, responsible conduct, theoretical foundations, intellectual development, and committed convictions, skills and knowledge competence
                         are being aimed to be built in every employee.</p>
                 </div>
                 <div class="box slide-in">
-                    <img src="images/ico-right-3.png" sizes="(max-width: 768px) 150vw " alt="friendly-cooperation" srcset="images/ico-right-1.png 1920w">
+                    <img src="images/ico-right-3.png" sizes="(max-width: 768px) 150vw " alt="friendly-cooperation" srcset="images/ico-right-3.png 1920w">
                     <p>Friendly & long-term cooperation</p>
                     <p>Our team is friendly and fully open to discuss with you any technical topic and has the ability to build a long-term cooperation with your company.</p>
                 </div>
@@ -293,13 +292,6 @@
                                 <li>Two</li>
                                 <li>Three</li>
                             </ul>
-                            <!--<select name="subject" id="subject">
-                                <option value="" selected disabled hidden></option>
-                                <option value="">1</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
-                            </select>-->
-
                         </div>
                         <div class="form-right">
                             <label for="email">Email</label>
@@ -329,7 +321,6 @@
 
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="cookies.js"></script>
     <script>
@@ -339,7 +330,10 @@
             document.getElementById('subject').click();
         });*/
 
-        //end jQuery
+        const headerNavMobile = document.querySelector('.header-nav .header-nav-mobile');
+        const btnMobile = document.querySelector('.header-nav .header-nav-mobile button');
+        const nav = document.querySelector('nav')
+        const navUlLanguage = document.querySelector('nav ul li ul');
         //navigacja !!
         var w=window,
         d=document,
@@ -348,10 +342,22 @@
         x=w.innerWidth||e.clientWidth||g.clientWidth,
         y=w.innerHeight||e.clientHeight||g.clientHeight;
         console.log('width: ',x,' height: ',y);
-        if(x >= 768)
+        if(x <= 768)
         {
             console.log('mobile verion');
-            //if()
+            headerNavMobile.setAttribute('id','fix-nav-mobile');
+            btnMobile.addEventListener('click',()=>{
+                console.log('click mobile btn');
+                if(nav.getAttribute('id')=='active-nav')
+                {
+                    nav.setAttribute('id','');
+                }
+                else
+                {
+                    nav.setAttribute('id','active-nav');
+                }
+                
+            });
         }
         //end navigacja !!
         const leftBoxes = document.querySelectorAll('.services-different .content .left .box');
@@ -412,7 +418,7 @@
 
 
 
-        const nav = document.querySelector('nav')
+        
             //ref to section//
         const home = document.getElementById('home');
         const services = document.getElementById('services');
@@ -495,28 +501,47 @@
         //end active section//
 
         //fix nav while scroll//
-        //const nav = document.querySelector('nav')
-        const ul = document.querySelector('nav ul');
-        //const topOfNav = nav.offsetTop;
-        const img = document.getElementById('logo');
-        const topOfImg = img.offsetTop;
+        let navToTop ,imgInNavToTop;
 
-        //const temp = document.getElementById('temp');
-
-        function fixNav() {
-            //temp.innerHTML = window.scrollY + ' ' + topOfImg;
-            //console.log(topOfNav, ' ' , window.scrollY);
-            //console.log(topOfImg, ' ' , window.scrollY);
+        window.onload = function()
+        {
+            navToTop = document.querySelector('nav').offsetTop;
+            imgInNavToTop = document.querySelector('nav img').offsetTop;
+            console.log('nav to top: ',navToTop);
+        }
+        
+        function fixNav() {            
             
-            if (window.scrollY >= (topOfImg )) {
-                //fix
-                nav.classList.add('fix-nav');
-                ul.style.paddingTop = 0;
-                home.style.paddingTop = nav.offsetHeight + 'px';
-            } else {
-                nav.classList.remove('fix-nav');
-                ul.style.paddingTop = '2vh';
-                home.style.paddingTop = '0px';
+            if(x > 768) //more then mobile 
+            {
+                if(localStorage.getItem('cookie')=='true')
+                {
+                    //nie ma cookies info 
+                    //console.log('YOU ARE IN TRUE COOKIE');
+                    if(window.scrollY > 0)
+                    {
+                        nav.setAttribute('id','fix-nav');
+                    }
+                    else
+                    {
+                        nav.setAttribute('id','');
+                    }
+                }
+                else
+                {
+                    if (window.scrollY >= navToTop) {
+                        //fix
+                        //nav.classList.add('fix-nav');
+                        //ul.style.paddingTop = 0;
+                        nav.setAttribute('id','fix-nav');
+                        //console.log('fixed');
+                    } else {
+                        //nav.classList.remove('fix-nav');
+                        nav.setAttribute('id','');
+                        //ul.style.paddingTop = '2vh';
+                        //console.log('NOOO fixed');
+                    }
+                }
             }
         }
 

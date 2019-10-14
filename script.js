@@ -3,7 +3,7 @@ var ulDropDownList = document.querySelector('.form-left ul');
 var lisDropDownList = document.querySelectorAll('.form-left ul li');
 
 var inputForDropDownList = document.querySelector('.form-left input:nth-of-type(2)').addEventListener('click',(e)=>{
-    console.log('click in label - input');
+    //console.log('click in label - input');
     ulDropDownList.classList.toggle('drop-down-list');
     e.stopPropagation();
 });
@@ -27,14 +27,14 @@ window.addEventListener('click',(event)=>{
     //{
     //    console.log('cos innego niz input');
     //}
-    /*if(ulDropDownList.classList.contains('drop-down-list'))
+    if(ulDropDownList.classList.contains('drop-down-list'))
     {
         console.log('zawiera!!');
         //ulDropDownList.classList.toggle('drop-down-list');
     }
     else{
         console.log('nie zawiera');
-    }*/
+    }
 });
 
-//**end**
+//end

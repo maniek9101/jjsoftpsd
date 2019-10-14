@@ -14,7 +14,15 @@ else
 document.addEventListener('DOMContentLoaded',()=>{
     cross.addEventListener('click',()=>{
         cookies.style.display = 'none';
+        //cookies.style.transform = 'translateY(-100%)';
+        //nav.style.transform = 'translateY(-100%)';
+        //setTimeout(function(){
+        //    cookies.style.display = 'none';
+        //},500);
+        //nav.setAttribute('id','');
         localStorage.setItem('cookie','true');
-        //navigatione.style.paddingTop = '5.7vh';
+        //console.log('nav to top: ' ,navToTop);
+        //console.log('window Y: ' ,window.scrollY);
+        //console.log('local storage: ',localStorage.getItem('cookie'));
     });
 });
