@@ -87,7 +87,6 @@ header {
             //height: 75px;
             width: 100vw;
             max-width: 100%;
-            position: relative;
             //border: 2px solid gold;
             img {
                 cursor: pointer;
@@ -286,12 +285,13 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    height: 70px;
 }
 
 #active-nav
 {
     display: block;
-    top: 100px;
+    top: 70px;
 }
 
 
@@ -1120,8 +1120,9 @@ header {
             background: transparent;
             position: relative;
             nav {
+                //border: 2px solid red;
                 position: fixed;
-                top: 100px;
+                top: 50%;
                 left: 0;
                 display: none;
                 background: #3fb2f9;
@@ -1154,9 +1155,10 @@ header {
                         }
                         ul
                         {
+                            display: block;
                             position: absolute;
                             left: 0;
-                            top: 105%;
+                            top: 102%;
                             //border: 2px solid white;
                             li
                             {
@@ -1178,18 +1180,22 @@ header {
                 align-items: center;
                 justify-content: space-between;
                 //border: 2px solid white;
-                height: 100px;
-                padding: 0 15px 0 0;
+                //height: 100px;
+                padding: 0 15px 0 15px;
                 background:#08123b;
+
                 img {
                     //border: 1px solid white;
-                    transform: scale(0.5);
-                    left: 0;
+                    //transform: scale(0.5);
+                    width: 152px;
+                    height: 33px;
                 }
+                
                 button {
                     //@at-rootborder: 1px solid red;
                     //right: 10px;
                     //top: 0;
+                    
                     width: 50px;
                     height: 50px;
                     background: transparent;
@@ -1261,7 +1267,7 @@ header {
         .box {
             width: 100%;
             button {
-                width: 20vw;
+                width: 10rem;
             }
         }
     }
@@ -1454,8 +1460,9 @@ header {
         //border: 3px solid orangered;
     }
     .services-boxs .box .wrap-text p:nth-of-type(2) {
-        font-size: 0.65rem;
+        //font-size: 0.65rem;
         //border: 3px solid orangered;
+        font-size: 1.5rem;
     }
     .services-boxs .box button {
         font-size: 0.65rem;

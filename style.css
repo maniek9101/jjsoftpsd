@@ -103,7 +103,6 @@ header .header-nav .header-nav-mobile {
   display: none;
   width: 100vw;
   max-width: 100%;
-  position: relative;
 }
 
 header .header-nav .header-nav-mobile img {
@@ -325,11 +324,12 @@ header .content p span {
   position: fixed;
   top: 0;
   left: 0;
+  height: 70px;
 }
 
 #active-nav {
   display: block;
-  top: 100px;
+  top: 70px;
 }
 
 .services {
@@ -1345,7 +1345,7 @@ header .content p span {
   }
   header .header-nav nav {
     position: fixed;
-    top: 100px;
+    top: 50%;
     left: 0;
     display: none;
     background: #3fb2f9;
@@ -1379,9 +1379,10 @@ header .content p span {
     font-size: 1.8rem;
   }
   header .header-nav nav ul li ul {
+    display: block;
     position: absolute;
     left: 0;
-    top: 105%;
+    top: 102%;
   }
   header .header-nav nav ul li ul li {
     padding: 0.4rem 0 0.4rem 0;
@@ -1399,14 +1400,12 @@ header .content p span {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    height: 100px;
-    padding: 0 15px 0 0;
+    padding: 0 15px 0 15px;
     background: #08123b;
   }
   header .header-nav .header-nav-mobile img {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-    left: 0;
+    width: 152px;
+    height: 33px;
   }
   header .header-nav .header-nav-mobile button {
     width: 50px;
@@ -1475,7 +1474,7 @@ header .content p span {
     width: 100%;
   }
   .services-boxs .box button {
-    width: 20vw;
+    width: 10rem;
   }
   .services-different .content .services-different-content-header {
     padding: 3rem 0 3rem 0;
@@ -1648,7 +1647,7 @@ header .content p span {
     font-size: 2.05rem;
   }
   .services-boxs .box .wrap-text p:nth-of-type(2) {
-    font-size: 0.65rem;
+    font-size: 1.5rem;
   }
   .services-boxs .box button {
     font-size: 0.65rem;

@@ -18,7 +18,7 @@
         </div>
         <div class="header-nav">
             <div class="header-nav-mobile">
-                <a class="empty main-page"><img src="images/logo.png"></a>
+                <img src="images/logo.png">
                 <button>
                     <span></span>
                     <span></span>
@@ -362,9 +362,9 @@
             window.addEventListener('click',()=>{
                 nav.setAttribute('id','');
             });
-            document.querySelector('nav ul li:nth-of-type(6)').addEventListener('click',(e)=>{
+            /*document.querySelector('nav ul li:nth-of-type(6)').addEventListener('click',(e)=>{
                 e.stopPropagation();
-            });
+            });*/
         }
         //end navigacja !!
         const leftBoxes = document.querySelectorAll('.services-different .content .left .box');
