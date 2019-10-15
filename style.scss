@@ -1415,19 +1415,44 @@ header {
                 flex-direction: column;
                 .left,
                 .right {
+                    p:first-of-type
+                    {
+                        margin-bottom: 1rem;
+                    }
                     width: 100%;
                     form {
                         .form-left {
                             width: 100%;
+                            input:first-of-type
+                            {
+                                //border: 1px solid white;
+                                margin-bottom: 1rem;
+                            }
+                            input:nth-of-type(2)
+                            {
+                                margin-bottom: 1rem;
+                            }
                             select {
                                 margin-bottom: 5.15vh;
                             }
                         }
                         .form-right {
                             width: 100%;
+                            input
+                            {
+                                margin-bottom: 1rem;
+                            }
                         }
-                        .form-bottom input:nth-of-type(2) {
-                            width: 20vw;
+                        .form-bottom 
+                        {
+                            input:nth-of-type(1)
+                            {
+                                margin-bottom: 1rem;
+                            }
+                            input:nth-of-type(2) {
+                                width: 10rem;
+                                margin: 1rem 0 1rem 0;
+                            }
                         }
                     }
                 }

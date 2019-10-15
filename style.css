@@ -1610,9 +1610,21 @@ header .content p span {
   .contact .content .wrap-info-form .right {
     width: 100%;
   }
+  .contact .content .wrap-info-form .left p:first-of-type,
+  .contact .content .wrap-info-form .right p:first-of-type {
+    margin-bottom: 1rem;
+  }
   .contact .content .wrap-info-form .left form .form-left,
   .contact .content .wrap-info-form .right form .form-left {
     width: 100%;
+  }
+  .contact .content .wrap-info-form .left form .form-left input:first-of-type,
+  .contact .content .wrap-info-form .right form .form-left input:first-of-type {
+    margin-bottom: 1rem;
+  }
+  .contact .content .wrap-info-form .left form .form-left input:nth-of-type(2),
+  .contact .content .wrap-info-form .right form .form-left input:nth-of-type(2) {
+    margin-bottom: 1rem;
   }
   .contact .content .wrap-info-form .left form .form-left select,
   .contact .content .wrap-info-form .right form .form-left select {
@@ -1622,9 +1634,18 @@ header .content p span {
   .contact .content .wrap-info-form .right form .form-right {
     width: 100%;
   }
+  .contact .content .wrap-info-form .left form .form-right input,
+  .contact .content .wrap-info-form .right form .form-right input {
+    margin-bottom: 1rem;
+  }
+  .contact .content .wrap-info-form .left form .form-bottom input:nth-of-type(1),
+  .contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(1) {
+    margin-bottom: 1rem;
+  }
   .contact .content .wrap-info-form .left form .form-bottom input:nth-of-type(2),
   .contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(2) {
-    width: 20vw;
+    width: 10rem;
+    margin: 1rem 0 1rem 0;
   }
   .cookies-info p {
     font-size: 0.52rem;
