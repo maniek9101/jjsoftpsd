@@ -344,10 +344,11 @@
         console.log('width: ',x,' height: ',y);
         if(x <= 768)
         {
-            console.log('mobile verion');
+            //console.log('mobile verion');
             headerNavMobile.setAttribute('id','fix-nav-mobile');
-            btnMobile.addEventListener('click',()=>{
-                console.log('click mobile btn');
+            btnMobile.addEventListener('click',(e)=>{
+                //console.log('click mobile btn');
+                e.stopPropagation();
                 if(nav.getAttribute('id')=='active-nav')
                 {
                     nav.setAttribute('id','');
@@ -357,6 +358,12 @@
                     nav.setAttribute('id','active-nav');
                 }
                 
+            });
+            window.addEventListener('click',()=>{
+                nav.setAttribute('id','');
+            });
+            document.querySelector('nav ul li:nth-of-type(6)').addEventListener('click',(e)=>{
+                e.stopPropagation();
             });
         }
         //end navigacja !!

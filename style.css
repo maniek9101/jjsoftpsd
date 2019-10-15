@@ -1349,7 +1349,6 @@ header .content p span {
     left: 0;
     display: none;
     background: #3fb2f9;
-    opacity: .8;
     padding: 0;
   }
   header .header-nav nav #logo {
@@ -1368,9 +1367,27 @@ header .content p span {
     border-bottom: 1px solid #3fb2f9;
     font-size: 1.5rem;
   }
+  header .header-nav nav ul li:nth-of-type(6) {
+    padding: 0.4rem 0 0.4rem 0;
+  }
+  header .header-nav nav ul li:nth-of-type(6) a img {
+    width: 50px;
+    height: 25px;
+  }
   header .header-nav nav ul li a {
     border: none;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
+  }
+  header .header-nav nav ul li ul {
+    position: absolute;
+    left: 0;
+    top: 105%;
+  }
+  header .header-nav nav ul li ul li {
+    padding: 0.4rem 0 0.4rem 0;
+  }
+  header .header-nav nav ul li ul li a {
+    margin-bottom: 0;
   }
   header .header-nav .header-nav-mobile {
     display: -webkit-box;
@@ -1383,8 +1400,13 @@ header .content p span {
         -ms-flex-pack: justify;
             justify-content: space-between;
     height: 100px;
-    padding: 0 15px 0 15px;
+    padding: 0 15px 0 0;
     background: #08123b;
+  }
+  header .header-nav .header-nav-mobile img {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    left: 0;
   }
   header .header-nav .header-nav-mobile button {
     width: 50px;
@@ -1403,8 +1425,45 @@ header .content p span {
   header header .content p {
     text-align: center;
   }
+  #deutsch::after {
+    content: 'Deutsch';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 350%;
+    height: 100%;
+    display: none;
+    background: #0a3e7d;
+  }
+  #français::after {
+    content: 'Français';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350%;
+    height: 100%;
+    display: none;
+    background: #0a3e7d;
+  }
+  #polski::after {
+    content: 'Polski';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350%;
+    height: 100%;
+    display: none;
+    background: #0a3e7d;
+  }
+  .services {
+    padding-top: 3rem;
+  }
   .services .content .left {
     margin-bottom: 2vh;
+  }
+  .services .content .icons {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
   .services-boxs {
     -webkit-box-orient: vertical;
@@ -1417,6 +1476,9 @@ header .content p span {
   }
   .services-boxs .box button {
     width: 20vw;
+  }
+  .services-different .content .services-different-content-header {
+    padding: 3rem 0 3rem 0;
   }
   .services-different .content .left {
     width: 100%;
@@ -1449,10 +1511,16 @@ header .content p span {
   .services-different .content .right .box p:nth-child(2n+1) {
     margin-bottom: 2vh;
   }
+  .company .content {
+    padding-top: 3rem;
+  }
   .company .content p:first-of-type {
-    margin-bottom: 5vh;
+    margin-bottom: 3rem;
   }
   .company .content .chain {
+    display: none;
+  }
+  .company .content .char {
     display: none;
   }
   .company .content .article {
@@ -1460,10 +1528,10 @@ header .content p span {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-bottom: 5vh;
+    margin-bottom: 3rem;
   }
-  .company .content .article .left {
-    margin-bottom: 2vh;
+  .company .content .article .left p {
+    margin-bottom: 2rem;
   }
   .company .content .article .right {
     margin-left: 0;
@@ -1478,19 +1546,43 @@ header .content p span {
     margin-bottom: 2vh;
   }
   .company-article .content {
+    padding: 3rem 0 3rem 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .company-article .content .left,
+  .company-article .content .left {
+    margin-left: 0;
+  }
+  .company-article .content .left p:nth-of-type(2) {
+    margin-bottom: 1rem;
+  }
+  .company-article .content .left p:nth-of-type(3) {
+    margin-bottom: 1rem;
+  }
+  .company-article .content .left button {
+    width: 10rem;
+    margin-bottom: 2vh;
+  }
   .company-article .content .right {
     margin-left: 0;
   }
-  .company-article .content .left button,
+  .company-article .content .right p:nth-of-type(2) {
+    margin-bottom: 1rem;
+  }
+  .company-article .content .right p:nth-of-type(3) {
+    margin-bottom: 1rem;
+  }
   .company-article .content .right button {
-    width: 20vw;
-    margin-bottom: 2vh;
+    width: 10rem;
+    margin-bottom: 0;
+  }
+  .careers .content {
+    padding-top: 3rem;
+  }
+  .careers .content p {
+    margin-bottom: 0;
   }
   .careers .content .left {
     display: none;
@@ -1499,8 +1591,15 @@ header .content p span {
     width: 100%;
   }
   .careers .content .right button {
-    width: 20vw;
-    margin-bottom: 4vh;
+    width: 15rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  .contact {
+    padding-top: 3rem;
+  }
+  .contact .content .content-header {
+    margin-bottom: 3rem;
   }
   .contact .content .wrap-info-form {
     -webkit-box-orient: vertical;
