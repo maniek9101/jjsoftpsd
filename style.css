@@ -1455,13 +1455,16 @@ header .content p span {
     background: #0a3e7d;
   }
   .services {
-    padding-top: 3rem;
+    padding-top: 2rem;
+  }
+  .services .content {
+    width: 80vw;
   }
   .services .content .left {
-    margin-bottom: 2vh;
+    margin-bottom: 1rem;
   }
   .services .content .icons {
-    padding-top: 2rem;
+    padding-top: 1rem;
     padding-bottom: 2rem;
   }
   .services-boxs {
@@ -1476,8 +1479,11 @@ header .content p span {
   .services-boxs .box button {
     width: 10rem;
   }
+  .services-different .content {
+    width: 80vw;
+  }
   .services-different .content .services-different-content-header {
-    padding: 3rem 0 3rem 0;
+    padding: 2rem 0 2rem 0;
   }
   .services-different .content .left {
     width: 100%;
@@ -1486,13 +1492,13 @@ header .content p span {
             justify-content: none;
   }
   .services-different .content .left .box img {
-    margin-bottom: 1vh;
+    margin-bottom: 1rem;
   }
   .services-different .content .left .box p:nth-child(2n) {
-    margin-bottom: 1.5vh;
+    margin-bottom: 1rem;
   }
   .services-different .content .left .box p:nth-child(2n+1) {
-    margin-bottom: 2vh;
+    margin-bottom: 1.5rem;
   }
   .services-different .content .right {
     width: 100%;
@@ -1502,19 +1508,20 @@ header .content p span {
     padding-left: 0;
   }
   .services-different .content .right .box img {
-    margin-bottom: 1vh;
+    margin-bottom: 1rem;
   }
   .services-different .content .right .box p:nth-child(2n) {
-    margin-bottom: 1.5vh;
+    margin-bottom: 1rem;
   }
   .services-different .content .right .box p:nth-child(2n+1) {
-    margin-bottom: 2vh;
+    margin-bottom: 1.5rem;
   }
   .company .content {
-    padding-top: 3rem;
+    padding-top: 2rem;
+    width: 80vw;
   }
   .company .content p:first-of-type {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
   .company .content .chain {
     display: none;
@@ -1527,13 +1534,16 @@ header .content p span {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
   .company .content .article .left p {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   .company .content .article .right {
     margin-left: 0;
+  }
+  .company .content .article .right p {
+    margin-bottom: 0;
   }
   .company .content .char {
     -webkit-box-orient: vertical;
@@ -1545,11 +1555,12 @@ header .content p span {
     margin-bottom: 2vh;
   }
   .company-article .content {
-    padding: 3rem 0 3rem 0;
+    padding: 2rem 0 2rem 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 80vw;
   }
   .company-article .content .left {
     margin-left: 0;
@@ -1562,7 +1573,7 @@ header .content p span {
   }
   .company-article .content .left button {
     width: 10rem;
-    margin-bottom: 2vh;
+    margin-bottom: 2rem;
   }
   .company-article .content .right {
     margin-left: 0;
@@ -1578,7 +1589,8 @@ header .content p span {
     margin-bottom: 0;
   }
   .careers .content {
-    padding-top: 3rem;
+    padding-top: 2rem;
+    width: 80vw;
   }
   .careers .content p {
     margin-bottom: 0;
@@ -1587,24 +1599,40 @@ header .content p span {
     display: none;
   }
   .careers .content .right {
+    padding: 0;
     width: 100%;
   }
   .careers .content .right button {
     width: 15rem;
     margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
   .contact {
-    padding-top: 3rem;
+    padding-top: 2rem;
+  }
+  .contact .content {
+    width: 90vw;
   }
   .contact .content .content-header {
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
   }
   .contact .content .wrap-info-form {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .contact .content .wrap-info-form .left {
+    margin-bottom: 1rem;
+  }
+  .contact .content .wrap-info-form .left .left-row {
+    margin: 0.2rem 0 0.2rem 0;
+  }
+  .contact .content .wrap-info-form .left .left-row .wrap-img {
+    margin-right: 1rem;
+  }
+  .contact .content .wrap-info-form .left .left-row .wrap-p p {
+    margin-bottom: 0;
   }
   .contact .content .wrap-info-form .left,
   .contact .content .wrap-info-form .right {
@@ -1659,10 +1687,10 @@ header .content p span {
   }
   .services .content .left p,
   .services .content .left p span {
-    font-size: 1.28rem;
+    font-size: 1.5rem;
   }
   .services .content .right p {
-    font-size: 0.77rem;
+    font-size: 1.0rem;
   }
   .services-boxs .box .wrap-text p:nth-of-type(1) {
     font-size: 2.05rem;
@@ -1671,7 +1699,7 @@ header .content p span {
     font-size: 1.5rem;
   }
   .services-boxs .box button {
-    font-size: 0.65rem;
+    font-size: 0.9rem;
   }
   .services-different-content-header p {
     font-size: 2.35rem;
@@ -1682,7 +1710,7 @@ header .content p span {
   }
   .services-different .content .right p:nth-child(odd),
   .services-different .content .left p:nth-child(odd) {
-    font-size: 0.77rem;
+    font-size: 1rem;
   }
   .company .content {
     font-size: 2.35rem;
@@ -1691,10 +1719,10 @@ header .content p span {
     font-size: 0.77rem;
   }
   .company .content .article .left {
-    font-size: 1.28rem;
+    font-size: 1.5rem;
   }
   .company .content .article .right {
-    font-size: 0.77rem;
+    font-size: 1rem;
   }
   .company .content .char .box {
     font-size: 1.28rem;
@@ -1704,19 +1732,19 @@ header .content p span {
   }
   .company-article .content .left p:nth-of-type(1),
   .company-article .content .right p:nth-of-type(1) {
-    font-size: 1.28rem;
+    font-size: 1.5rem;
   }
   .company-article .content .left p:nth-of-type(2),
   .company-article .content .right p:nth-of-type(2) {
-    font-size: 0.64rem;
+    font-size: 0.85rem;
   }
   .company-article .content .left,
   .company-article .content .right {
-    font-size: 0.77rem;
+    font-size: 1rem;
   }
   .company-article .content .left button,
   .company-article .content .right button {
-    font-size: 0.64rem;
+    font-size: 0.9rem;
   }
   .careers .content p {
     font-size: 2.35rem;
@@ -1725,7 +1753,7 @@ header .content p span {
     font-size: 1.07rem;
   }
   .careers .content .right button {
-    font-size: 0.64rem;
+    font-size: 0.90rem;
   }
   .contact .content .content-header p:nth-of-type(1) {
     font-size: 2.35rem;

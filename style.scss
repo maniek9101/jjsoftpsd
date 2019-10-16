@@ -1248,15 +1248,16 @@ header {
 
     .services
     {
-        padding-top: 3rem;
+        padding-top: 2rem;
         .content
         {
+            width: 80vw;
             .left {
-                margin-bottom: 2vh;
+                margin-bottom: 1rem;
             }
             .icons
             {
-                padding-top: 2rem;
+                padding-top: 1rem;
                 padding-bottom: 2rem;
             }
         }
@@ -1273,9 +1274,10 @@ header {
     }
 
     .services-different .content {
+        width: 80vw;
         .services-different-content-header
         {
-            padding: 3rem 0 3rem 0;
+            padding: 2rem 0 2rem 0;
         }
         .left {
             width: 100%;
@@ -1283,13 +1285,16 @@ header {
             justify-content: none;
             .box {
                 img {
-                    margin-bottom: 1vh;
+                    //margin-bottom: 1vh;
+                    margin-bottom: 1rem;
                 }
                 p:nth-child(2n) {
-                    margin-bottom: 1.5vh;
+                    //margin-bottom: 1.5vh;
+                    margin-bottom: 1rem;
                 }
                 p:nth-child(2n+1) {
-                    margin-bottom: 2vh;
+                    //margin-bottom: 2vh;
+                    margin-bottom: 1.5rem;
                 }
             }
         }
@@ -1300,22 +1305,26 @@ header {
             //border: 1px solid green;
             .box {
                 img {
-                    margin-bottom: 1vh;
+                    //margin-bottom: 1vh;
+                    margin-bottom: 1rem;
                 }
                 p:nth-child(2n) {
-                    margin-bottom: 1.5vh;
+                    //margin-bottom: 1.5vh;
+                    margin-bottom: 1rem;
                 }
                 p:nth-child(2n+1) {
-                    margin-bottom: 2vh;
+                    //margin-bottom: 2vh;
+                    margin-bottom: 1.5rem;
                 }
             }
         }
     }
     .company {
         .content {
-            padding-top: 3rem;
+            padding-top: 2rem;
+            width: 80vw;
             p:first-of-type {
-                margin-bottom: 3rem;
+                margin-bottom: 2rem;
             }
             .chain //TO DO 
             {
@@ -1327,16 +1336,21 @@ header {
             }
             .article {
                 flex-direction: column;
-                margin-bottom: 3rem;
+                margin-bottom: 2rem;
                 .left {
                     //margin-bottom: 2vh;
                     p
                     {
-                        margin-bottom: 2rem;
+                        //margin-bottom: 2rem;
+                        margin-bottom: 1rem;
                     }
                 }
                 .right {
                     margin-left: 0;
+                    p
+                    {
+                        margin-bottom: 0;
+                    }
                 }
             }
             .char {
@@ -1350,8 +1364,9 @@ header {
 
     .company-article .content 
     {
-        padding: 3rem 0 3rem 0;
+        padding: 2rem 0 2rem 0;
         flex-direction: column;
+        width: 80vw;
         .left{
             p:nth-of-type(2)
             {
@@ -1365,7 +1380,8 @@ header {
             button {
                 //width: 20vw;
                 width: 10rem;
-                margin-bottom: 2vh;
+                //margin-bottom: 2vh;
+                margin-bottom: 2rem;
             }
         }
         .right {
@@ -1386,7 +1402,8 @@ header {
         }
     }
     .careers .content {
-        padding-top: 3rem;
+        padding-top: 2rem;
+        width: 80vw;
         p
         {
             margin-bottom: 0;
@@ -1395,24 +1412,50 @@ header {
             display: none;
         }
         .right {
+            padding: 0;
             width: 100%;
             button {
                 //width: 20vw;
                 width: 15rem;
                 margin-bottom: 2rem;
-                margin-top: 2rem;
+                margin-top: 1rem;
             }
         }
     }
     .contact {
-        padding-top: 3rem;
+        padding-top: 2rem;
         .content {
+            width: 90vw;
             .content-header
             {
-                margin-bottom: 3rem;
+                margin-bottom: 1rem;
             }
             .wrap-info-form {
+                //border: 1px solid red;
                 flex-direction: column;
+                .left
+                {
+                    margin-bottom: 1rem;
+                    //border: 1px solid aqua;
+                    .left-row
+                    {
+                        margin: 0.2rem 0 0.2rem 0;
+                        //border: 1px solid red;
+                        .wrap-img
+                        {
+                            margin-right: 1rem;
+                            //background: violet;
+                        }
+                        .wrap-p
+                        {
+                            //background: blue;
+                            p
+                            {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
                 .left,
                 .right {
                     p:first-of-type
@@ -1475,10 +1518,12 @@ header {
     }
     .services .content .left p,
     .services .content .left p span {
-        font-size: 1.28rem;
+        //font-size: 1.28rem;
+        font-size: 1.5rem;
     }
     .services .content .right p {
-        font-size: 0.77rem;
+        //font-size: 0.77rem;
+        font-size: 1.0rem;
     }
     .services-boxs .box .wrap-text p:nth-of-type(1) {
         font-size: 2.05rem;
@@ -1490,7 +1535,8 @@ header {
         font-size: 1.5rem;
     }
     .services-boxs .box button {
-        font-size: 0.65rem;
+        //font-size: 0.65rem;
+        font-size: 0.9rem;
     }
     //to do styl flag and logo
     .services-different-content-header p {
@@ -1502,7 +1548,8 @@ header {
     }
     .services-different .content .right p:nth-child(odd),
     .services-different .content .left p:nth-child(odd) {
-        font-size: 0.77rem;
+        //font-size: 0.77rem;
+        font-size: 1rem;
     }
     .company .content {
         font-size: 2.35rem;
@@ -1511,10 +1558,12 @@ header {
         font-size: 0.77rem;
     }
     .company .content .article .left {
-        font-size: 1.28rem;
+        //font-size: 1.28rem;
+        font-size: 1.5rem;
     }
     .company .content .article .right {
-        font-size: 0.77rem;
+        //font-size: 0.77rem;
+        font-size: 1rem;
     }
     .company .content .char .box {
         font-size: 1.28rem;
@@ -1524,19 +1573,23 @@ header {
     }
     .company-article .content .left p:nth-of-type(1),
     .company-article .content .right p:nth-of-type(1) {
-        font-size: 1.28rem;
+        //font-size: 1.28rem;
+        font-size: 1.5rem;
     }
     .company-article .content .left p:nth-of-type(2),
     .company-article .content .right p:nth-of-type(2) {
-        font-size: 0.64rem;
+        //font-size: 0.64rem;
+        font-size: 0.85rem;
     }
     .company-article .content .left,
     .company-article .content .right {
-        font-size: 0.77rem;
+        //font-size: 0.77rem;
+        font-size: 1rem;
     }
     .company-article .content .left button,
     .company-article .content .right button {
-        font-size: 0.64rem;
+        //font-size: 0.64rem;
+        font-size: 0.9rem;
     }
     .careers .content p {
         font-size: 2.35rem;
@@ -1545,7 +1598,8 @@ header {
         font-size: 1.07rem;
     }
     .careers .content .right button {
-        font-size: 0.64rem;
+        //font-size: 0.64rem;
+        font-size: 0.90rem;
     }
     //contact
     .contact .content .content-header p:nth-of-type(1) {
