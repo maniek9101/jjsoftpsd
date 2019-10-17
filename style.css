@@ -1761,16 +1761,16 @@ header .content p span {
     font-size: 1.28rem;
   }
   .contact .content .wrap-info-form .left {
-    font-size: 0.77rem;
+    font-size: 1rem;
   }
   .contact .content .wrap-info-form .right {
-    font-size: 0.64rem;
+    font-size: 0.9rem;
   }
   .contact .content .wrap-info-form .right p:first-of-type {
-    font-size: 0.77rem;
+    font-size: 1rem;
   }
   .contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(2) {
-    font-size: 0.64rem;
+    font-size: 0.9rem;
   }
 }
 
