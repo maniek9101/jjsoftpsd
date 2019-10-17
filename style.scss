@@ -982,8 +982,8 @@ header {
                     input {
                         color: white;
                         //background: red;
-                        -webkit-text-fill-color: white;
-                        transition: background-color 5000s ease-in-out 0s;
+                        //-webkit-text-fill-color: white;
+                        //transition: background-color 5000s ease-in-out 0s;
                         //-webkit-box-shadow: 0 0 0px 1000px #000 inset;
                         &:nth-of-type(2)
                         {
@@ -1464,7 +1464,7 @@ header {
                 .right {
                     p:first-of-type
                     {
-                        margin-bottom: 1rem;
+                        margin-bottom: 2rem;
                     }
                     width: 100%;
                     form {
@@ -1473,11 +1473,11 @@ header {
                             input:first-of-type
                             {
                                 //border: 1px solid white;
-                                margin-bottom: 1rem;
+                                margin-bottom: 2rem;
                             }
                             input:nth-of-type(2)
                             {
-                                margin-bottom: 1rem;
+                                margin-bottom: 2rem;
                             }
                             select {
                                 margin-bottom: 5.15vh;
@@ -1487,14 +1487,14 @@ header {
                             width: 100%;
                             input
                             {
-                                margin-bottom: 1rem;
+                                margin-bottom: 2rem;
                             }
                         }
                         .form-bottom 
                         {
                             input:nth-of-type(1)
                             {
-                                margin-bottom: 1rem;
+                                margin-bottom: 2rem;
                             }
                             input:nth-of-type(2) {
                                 width: 10rem;
