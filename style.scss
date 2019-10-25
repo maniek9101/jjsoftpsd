@@ -43,7 +43,7 @@ html {
 }
 
 header {
-    background-image: url('images/header-background.jpg');
+    background-image: url('images/main.png');
     background-size: cover;
     background-position: center center;
     height: 100vh;
@@ -53,6 +53,7 @@ header {
     align-items: center;
     flex-direction: column;
     position: relative;
+    overflow: hidden;
     //border: 3px solid white;
     .cookies-info {
         width: 100vw;
@@ -232,22 +233,43 @@ header {
         color: #e5aa28;
     }
     .content {
-        //border: 2px solid aqua;
         width: 70vw;
         display: flex;
         align-items: center;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+        //border: 2px solid red;
+        z-index: 1;
     }
     .content p {
         color: white;
         font-family: futura-light-bt;
         transform: all 1s;
         animation: scaleText  5s infinite;
+        position: relative;
     }
     .content p span {
         font-family: futura-bold-bt;
+        position: relative;
+    }
+    .left
+    {
+        //border: 1px solid green;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        z-index: 0;
+    }
+    .right
+    {
+        //border: 1px solid green;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        z-index: 0;
     }
 }
 

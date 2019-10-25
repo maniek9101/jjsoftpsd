@@ -56,6 +56,8 @@
             <p>We help companies <br> achieve their <span>software <br> development goals</span></p>
             <!--<p id="temp">x</p>-->
         </div>
+        <img src="images/left.png" alt="left-parallax" srcset="images/left.png 1920w" class="left rellax" data-rellax-speed="-8">
+        <img src="images/right.png" alt="right-parallax" srcset="images/right.png 1920w" class="right rellax" data-rellax-speed="-3">
     </header>
 
     <section class="services" id="services">
@@ -322,7 +324,9 @@
 
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="cookies.js"></script>
+    <script type="text/javascript" src="rellax.min.js"></script>
     <script>
+        var rellax = new Rellax('.rellax');
     /*        
         //ref to section//
         const home = document.getElementById('home');

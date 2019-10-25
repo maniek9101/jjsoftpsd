@@ -42,7 +42,7 @@ html {
 }
 
 header {
-  background-image: url("images/header-background.jpg");
+  background-image: url("images/main.png");
   background-size: cover;
   background-position: center center;
   height: 100vh;
@@ -59,6 +59,7 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+  overflow: hidden;
 }
 
 header .cookies-info {
@@ -266,6 +267,7 @@ header .content {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  z-index: 1;
 }
 
 header .content p {
@@ -275,10 +277,28 @@ header .content p {
           transform: all 1s;
   -webkit-animation: scaleText  5s infinite;
           animation: scaleText  5s infinite;
+  position: relative;
 }
 
 header .content p span {
   font-family: futura-bold-bt;
+  position: relative;
+}
+
+header .left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: 0;
+}
+
+header .right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: 0;
 }
 
 @-webkit-keyframes scaleText {
