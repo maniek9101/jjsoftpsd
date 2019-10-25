@@ -1107,7 +1107,7 @@ header .content p span {
 }
 
 .contact .content .wrap-info-form .left .left-row {
-  margin-bottom: 2.1rem;
+  margin-bottom: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1189,29 +1189,13 @@ header .content p span {
           flex-direction: column;
   font-family: lato-regular;
   position: relative;
-  /*select {
-                        //border: 1px solid red;
-                        background: transparent;
-                        border: none;
-                        border-bottom: 2px solid #2989c5;
-                        -webkit-appearance: none;
-                        color: white;
-                        //background: url('images/down-arrow.png');
-                        //background-position: 96% 15%;
-                        //background-repeat: no-repeat;
-                        //border: 1px solid red;
-                        option {
-                            //border-bottom: 2px solid #2989c5;
-                            color: white;
-                            font-family: lato-regular;
-                            background-color: #2989c5;
-                            border-bottom: 2px solid white;
-                        }
-                    }*/
 }
 
 .contact .content .wrap-info-form .right form .form-left input {
   color: white;
+  -webkit-text-fill-color: white;
+  -webkit-transition: background-color 9000s ease-in-out 0s;
+  transition: background-color 9000s ease-in-out 0s;
 }
 
 .contact .content .wrap-info-form .right form .form-left input:nth-of-type(2) {
@@ -1284,6 +1268,15 @@ header .content p span {
 
 .contact .content .wrap-info-form .right form .form-right input:nth-of-type(1) {
   color: white;
+  -webkit-text-fill-color: white;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.contact .content .wrap-info-form .right form .form-right input:nth-of-type(2) {
+  -webkit-text-fill-color: white;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .contact .content .wrap-info-form .right form .form-right input:nth-of-type(2)::-webkit-file-upload-button {
@@ -1309,13 +1302,18 @@ header .content p span {
   width: 100%;
 }
 
-.contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(1) {
+.contact .content .wrap-info-form .right form .form-bottom textarea {
   width: 100%;
   color: white;
-  font-family: lato-light;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  font-family: lato-regular;
+  resize: vertical;
+  max-height: 6rem;
 }
 
-.contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(2) {
+.contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(1) {
   border: 3px solid white;
   background: transparent;
   border-radius: 50px;
@@ -1329,7 +1327,7 @@ header .content p span {
   transition: all .5s;
 }
 
-.contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(2):hover {
+.contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(1):hover {
   background: white;
   color: #2989c5;
 }
@@ -2217,6 +2215,15 @@ header .content p span {
   .contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(2) {
     font-size: 1.28rem;
   }
+  .contact .content .wrap-info-form .right form .form-left input {
+    font-size: 1.2rem;
+  }
+  .contact .content .wrap-info-form .right form .form-right input {
+    font-size: 1.2rem;
+  }
+  .contact .content .wrap-info-form .right form .form-bottom textarea {
+    font-size: 1.2rem;
+  }
 }
 
 @media only screen and (min-width: 2560px) {
@@ -2324,6 +2331,15 @@ header .content p span {
   .contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(2) {
     font-size: 1.70rem;
   }
+  .contact .content .wrap-info-form .right form .form-left input {
+    font-size: 1.6rem;
+  }
+  .contact .content .wrap-info-form .right form .form-right input {
+    font-size: 1.6rem;
+  }
+  .contact .content .wrap-info-form .right form .form-bottom textarea {
+    font-size: 1.6rem;
+  }
 }
 
 @media only screen and (min-width: 3800px) {
@@ -2430,6 +2446,15 @@ header .content p span {
   }
   .contact .content .wrap-info-form .right form .form-bottom input:nth-of-type(2) {
     font-size: 2.73rem;
+  }
+  .contact .content .wrap-info-form .right form .form-left input {
+    font-size: 2.5rem;
+  }
+  .contact .content .wrap-info-form .right form .form-right input {
+    font-size: 2.5rem;
+  }
+  .contact .content .wrap-info-form .right form .form-bottom textarea {
+    font-size: 2.5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
