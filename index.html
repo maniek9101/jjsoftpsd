@@ -29,22 +29,22 @@
                 <img src="images/logo.png" alt="logo" id="logo" srcset="images/logo.png 1920w">
                 <ul>
                     <li><a href="#home" hreflang="en" class="active-section" id="homeID">Home</a></li>
-                    <li><a href="#services" hreflang="en" id="servicesID">Services</a></li>
+                    <li><a href="#services" hreflang="en" id="servicesID">Services</a>
+                        <ul>
+                            <li><a href="services.html" hreflang="en">IT Outsourcing</a></li>
+                            <li><a href="#" hreflang="en">Software development</a></li>
+                            <li><a href="#" hreflang="en">Recruitment</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#company" hreflang="en" id="companyID">Company</a></li>
                     <li><a href="#careers" hreflang="en" id="careersID">Careers</a></li>
                     <li><a href="#contact" hreflang="en" id="contactID">Contact</a></li>
                     <li>
                         <a href="#" hreflang="en" id="select-language"><img src="images/GBflag.png" alt="English" srcset="images/GBflag.png 1920w"></a>
                         <ul>
-                            <li>
-                                <a href="#" hreflang="deu" id="deutsch"><img src="images/GERflag.png" alt="Deutsch" srcset="images/GERflag.png 1920w"></a>
-                            </li>
-                            <li>
-                                <a href="#" hreflang="fran" id="français"><img src="images/FRflag.png" alt="Français" srcset="images/FRflag.png 1920w"></a>
-                            </li>
-                            <li>
-                                <a href="#" hreflang="pl" id="polski"><img src="images/PLflag.png" alt="Polski" srcset="images/PLflag.png 1920w"></a>
-                            </li>
+                            <li><a href="#" hreflang="deu" id="deutsch"><img src="images/GERflag.png" alt="Deutsch" srcset="images/GERflag.png 1920w"></a></li>
+                            <li><a href="#" hreflang="fran" id="français"><img src="images/FRflag.png" alt="Français" srcset="images/FRflag.png 1920w"></a></li>
+                            <li><a href="#" hreflang="pl" id="polski"><img src="images/PLflag.png" alt="Polski" srcset="images/PLflag.png 1920w"></a></li>
                         </ul>
                     </li>
                 </ul>
@@ -87,7 +87,7 @@
                 <p>IT Professional <br> outsourcing</p>
                 <p>A perfect business solution for you to increase your own team without having to introduce expensive and time-consuming changes in the organization structure.</p>
             </div>
-            <a href="#" hreflang="en"><button>SEE MORE</button></a>
+            <a href="services.html" hreflang="en"><button>SEE MORE</button></a>
         </div>
         <div class="box">
             <div class="wrap-text">
@@ -305,7 +305,7 @@
                         </div>
                         <div class="form-bottom">
                             <label for="message">Message</label>
-                            <textarea name="message"></textarea>
+                            <textarea name="message" id="text"></textarea>
                             <input type="submit" value="SEND">
                         </div>
                     </form>
@@ -316,16 +316,54 @@
 
 
 
-
-
-
-
-
-
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="cookies.js"></script>
     <script type="text/javascript" src="rellax.min.js"></script>
     <script>
+
+    var observe;
+    if (window.attachEvent) {
+        observe = function (element, event, handler) {
+        element.attachEvent('on'+event, handler);
+        };
+    }
+    else {
+        observe = function (element, event, handler) {
+        element.addEventListener(event, handler, false);
+        };
+    }
+    function init () {
+        var text = document.getElementById('text');
+    
+    function resize () {
+        text.style.height = 'auto';
+        text.style.height = text.scrollHeight+'px';
+    }
+    /* 0-timeout to get the already changed text */
+    function delayedResize () {
+        window.setTimeout(resize, 0);
+    }
+    observe(text, 'change',  resize);
+    observe(text, 'cut',     delayedResize);
+    observe(text, 'paste',   delayedResize);
+    observe(text, 'drop',    delayedResize);
+    observe(text, 'keydown', delayedResize);
+
+    text.focus();
+    text.select();
+    resize();
+}
+
+        window.onload = function()
+        {
+            console.log('on load!');
+            //init();
+        }
+
+        document.getElementById('text').addEventListener('click',()=>{
+            init();
+        });
+
         var rellax = new Rellax('.rellax');
     /*        
         //ref to section//

@@ -135,6 +135,32 @@ header {
                     transition-duration: .5s;
                     position: relative;
                     //border: 1px solid white; // !!! SUCH IMPORTANT TO CENTER FLAG !!!
+                    &:nth-of-type(2) // li with services 
+                    {
+                        //border: 2px solid green;
+                        ul 
+                        {
+                            position: absolute;
+                            top: 100%;
+                            left: -85%;
+                            //border: 2px solid white;
+                            li
+                            {
+                                //border: 2px solid red;
+                                background: #08123b;
+                                a
+                                {
+                                    //border: 2px solid aqua;
+                                    white-space: nowrap;
+                                    &:hover
+                                    {
+                                        color: #e5aa28;
+                                    }
+                                }
+                            }   
+                        }
+                        
+                    }
                     &:nth-of-type(6) //li with flag
                     {
                         //border: 3px solid aqua;
@@ -150,6 +176,7 @@ header {
                         //height: 2.68vh;
                     }
                     ul {
+                        //border: 2px solid white;
                         position: absolute;
                         right: 0;
                         top: 50%;
@@ -186,6 +213,10 @@ header {
         ul li ul:hover {
             display: block;
         }
+        ul li:nth-of-type(2):hover>ul
+        {
+            display: flex;
+        }
         #deutsch::after {
             content: 'Deutsch';
             position: absolute;
@@ -194,7 +225,7 @@ header {
             width: 350%;
             height: 100%;
             display: none;
-            background: #0a3e7d;
+            background: #08123b;
         }
         #deutsch:hover::after,
         #français:hover::after,
@@ -209,7 +240,7 @@ header {
             width: 350%;
             height: 100%;
             display: none;
-            background: #0a3e7d;
+            background: #08123b;
         }
         #polski::after {
             content: 'Polski';
@@ -219,7 +250,7 @@ header {
             width: 350%;
             height: 100%;
             display: none;
-            background: #0a3e7d;
+            background: #08123b;
         }
         //temporary class to fixed nav 
         
@@ -1096,8 +1127,8 @@ header {
                     border: none;
                     border-bottom: 2px solid white;
                     font-family: lato-regular;
-                    resize: vertical;
-                    max-height: 6rem;
+                    outline: none;
+                    resize: none;
                 }
                 form .form-bottom input:nth-of-type(1) {
                     border: 3px solid white;
