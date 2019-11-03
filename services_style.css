@@ -360,35 +360,35 @@ header .content .boxes .box .box-in .close-box-in {
   padding: 2rem;
 }
 
-header .content .boxes .box .box-in .top {
+header .content .boxes .box .box-in .top-in {
   border: 1px solid white;
 }
 
-header .content .boxes .box .box-in .top p {
+header .content .boxes .box .box-in .top-in p {
   font-family: lato-light;
   font-size: 3.85em;
 }
 
-header .content .boxes .box .box-in .bottom {
+header .content .boxes .box .box-in .bottom-in {
   border: 1px solid red;
 }
 
-header .content .boxes .box .box-in .bottom p:nth-of-type(1) {
+header .content .boxes .box .box-in .bottom-in p:nth-of-type(1) {
   font-family: lato-regular;
   font-size: 1.54em;
 }
 
-header .content .boxes .box .box-in .bottom p:nth-of-type(2) {
+header .content .boxes .box .box-in .bottom-in p:nth-of-type(2) {
   font-family: lato-bold;
   font-size: 3em;
 }
 
-header .content .boxes .box .box-in .bottom p:nth-of-type(3) {
+header .content .boxes .box .box-in .bottom-in p:nth-of-type(3) {
   font-family: lato-regular;
   font-size: 1.54em;
 }
 
-header .content .boxes .box .box-in .bottom ul li {
+header .content .boxes .box .box-in .bottom-in ul li {
   font-family: lato-light;
   font-size: 1.54em;
 }
@@ -413,7 +413,7 @@ header .content .boxes .box .top p {
   font-size: 3.85em;
 }
 
-header .content .boxes .box .down {
+header .content .boxes .box .bottom {
   font-family: lato-regular;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -428,11 +428,11 @@ header .content .boxes .box .down {
   height: 18.44em;
 }
 
-header .content .boxes .box .down p {
+header .content .boxes .box .bottom p {
   font-size: 1.54em;
 }
 
-header .content .boxes .box .down button {
+header .content .boxes .box .bottom button {
   height: 3.62em;
   width: 13.75em;
   font-size: 1.28em;
@@ -664,7 +664,11 @@ footer .content .right p:nth-of-type(1) {
             justify-content: center;
   }
   header .content .boxes .box:nth-of-type(1), header .content .boxes .box:nth-of-type(2) {
-    margin-bottom: 0;
+    margin-bottom: 2em;
+  }
+  header .content .boxes .box {
+    width: 100%;
+    margin-bottom: 2em;
   }
   #deutsch::after {
     content: 'Deutsch';
