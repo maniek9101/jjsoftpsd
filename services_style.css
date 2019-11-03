@@ -657,6 +657,7 @@ footer .content .right p:nth-of-type(1) {
     outline: none;
   }
   header .content {
+    font-size: 6.4px;
     width: 80vw;
     border: 2px solid white;
     -webkit-box-pack: center;
