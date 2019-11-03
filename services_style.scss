@@ -647,10 +647,17 @@ footer
             }
         }
         .content {
-            font-size: ($baseFontSize*0.4);
-            width: 80vw;
+            font-size: ($baseFontSize*0.6);
+            width: 90vw;
             border: 2px solid white;
             justify-content: center;
+            .content-header
+            {
+                p:nth-of-type(1)
+                {
+                    text-align: center;
+                }
+            }
             p {
                 //text-align: center;
             }
