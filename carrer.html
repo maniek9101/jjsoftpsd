@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="carrer_style.css">
+    <title>JJ Soft</title>
+</head>
+
+<body>
+
+    <header id="home">
+        <div class="cookies-info">
+            <p>Strona korzysta z plików cookies. Pozostając na niej, wyrażasz zgodę na wykorzystanie plików cookies</p>
+            <span id="scross">🗙</span>
+        </div>
+        <div class="header-nav">
+            <div class="header-nav-mobile">
+                <img src="images/logo.png">
+                <button>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <nav>
+                <img src="images/logo.png" alt="logo" id="logo" srcset="images/logo.png 1920w">
+                <ul>
+                    <li><a href="index.html" hreflang="en" class="active-section" id="homeID">Home</a></li>
+                    <li><a href="services.html" hreflang="en" id="servicesID">Services</a>
+                        <ul>
+                            <li><a href="services.html" hreflang="en">IT Outsourcing</a></li>
+                            <li><a href="#" hreflang="en">Software development</a></li>
+                            <li><a href="#" hreflang="en">Recruitment</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="company.html" hreflang="en" id="companyID">Company</a></li>
+                    <li><a href="carrer.html" hreflang="en" id="careersID">Careers</a></li>
+                    <li><a href="index.html#contact" hreflang="en" id="contactID">Contact</a></li>
+                    <li>
+                        <a href="#" hreflang="en" id="select-language"><img src="images/GBflag.png" alt="English" srcset="images/GBflag.png 1920w"></a>
+                        <ul>
+                            <li><a href="#" hreflang="deu" id="deutsch"><img src="images/GERflag.png" alt="Deutsch" srcset="images/GERflag.png 1920w"></a></li>
+                            <li><a href="#" hreflang="fran" id="français"><img src="images/FRflag.png" alt="Français" srcset="images/FRflag.png 1920w"></a></li>
+                            <li><a href="#" hreflang="pl" id="polski"><img src="images/PLflag.png" alt="Polski" srcset="images/PLflag.png 1920w"></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content">
+            <p>You’re at a perfect place!</p>
+            <p>Just as perfect begins with good, the company begins with people.</p>
+            <p>JJ Soft keeps personal approach, with both customers and employees.</p>
+        </div>
+
+    </header>
+
+    <section>
+        <div class="section-content">
+            <div class="left">
+                <p>Our company believes <br> in long-term relationships. <br> We cherish an easy and warm company atmosphere that is comfortable for the whole team.</p>
+            </div>
+            <div class="right">
+                <p>If you’re passionate about technology, know your job and <br> looking for challenging projects to boost your experience and career, <span>JJ Soft would be glad to have you in our company.</span> </p> 
+                <p>Find your perfect match exploring the list of our open vacancies or send your resume to <span>job@jjsoft.pl</span> and introduce yourself so we may contact you if something corresponding comes along.</p>
+            </div>
+        </div>
+    </section>
+
+    <span class="break-line"><div class="break-line-shape"></div></span>
+
+    <section>
+        <div class="section-content">
+            <div class="section-content-header"><p>Dlaczego warto z nami pracować?</p></div>
+            <div class="boxes">
+                <div class="box">
+                    <img src="images/carrer/ico-1.png" alt="remote-work">
+                    <p>Zapewniamy możliwość <br> pracy zdalnej</p>
+                </div>
+                <div class="box">
+                    <img src="images/carrer/ico-2.png" alt="">
+                    <p>Interesujące projekty dla <br> największych globalnych <br> korporacji</p>
+                </div>
+                <div class="box">
+                    <img src="images/carrer/ico-3.png" alt="">
+                    <p>Innowacyjne projekty <br>
+                            z wykorzystaniem <br> najnowszych technologii</p>
+                </div>
+                <div class="box">
+                    <img src="images/carrer/ico-4.png" alt="">
+                    <p>Miła atmosfera w pracy. <br> Działamy w niewielkich <br> zespołach (2-5 osób)</p>
+                </div>
+                <div class="box">
+                    <img src="images/carrer/ico-5.png" alt="">
+                    <p>Wewnętrzne szkolenia w <br> technologiach, w których <br> chcesz się rozwijać</p>
+                </div>
+                <div class="box">
+                    <img src="images/carrer/ico-6.png" alt="">
+                    <p>Długoterminowa <br> współpraca i możliwość <br> zmiany projektów </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+
+    </section>
+
+    <footer>
+        <div class="content">
+            <div class="left"><p>Copyright 2019<span> © JJSoft</span>.</p></div>
+            <div class="right">
+                <p>Cookies Politicy</p>
+                <p>info@jjsoft.pl</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="navBehavior.js"></script>
+    <script type="text/javascript" src="cookies.js"></script>
+    <script>
+        //**set height content
+        function setHeightContent()
+        {
+            let el = document.querySelector('.content');
+            let style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+            let fontSize = parseFloat(style); 
+
+            heightContent = document.querySelector('.content').offsetHeight; // wysokość .content
+            heightContent += (10*fontSize); // + margin-top .content * current_em_font_size
+            document.querySelector('header').style.height = heightContent + 'px' ; // ustawienie wysokości żeby cały .content się zmieścił 
+        }
+
+        window.onload = function()
+        {
+            setHeightContent();
+        }
+    </script>
+</body>
+
+</html>

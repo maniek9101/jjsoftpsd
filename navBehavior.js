@@ -12,23 +12,23 @@ x=w.innerWidth||e.clientWidth||g.clientWidth,
 y=w.innerHeight||e.clientHeight||g.clientHeight;
 
 //
-function setHeightContent()
+/*function setHeightContent()
 {
     let el = document.querySelector('.content');
     let style = window.getComputedStyle(el, null).getPropertyValue('font-size');
     let fontSize = parseFloat(style); 
 
     heightContent = document.querySelector('.content').offsetHeight; // wysokość .content
-    heightContent += (18.5*fontSize); // + margin-top .content * current_em_font_size
+    heightContent += (10*fontSize); // + margin-top .content * current_em_font_size
     document.querySelector('header').style.height = heightContent + 'px' ; // ustawienie wysokości żeby cały .content się zmieścił 
-}
+}*/
 
 //** behavior desktop menu */
 
 window.onload = function()
 {
     navToTop = document.querySelector('nav').offsetTop;
-    setHeightContent();
+    //setHeightContent();
 }
         
         function fixNav() {            
@@ -99,7 +99,7 @@ window.addEventListener('resize',()=>{
     x=w.innerWidth||e.clientWidth||g.clientWidth,
     y=w.innerHeight||e.clientHeight||g.clientHeight;
     
-    setHeightContent();
+    //setHeightContent();
 
     if(x <= 768)
     {

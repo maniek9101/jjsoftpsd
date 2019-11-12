@@ -110,7 +110,6 @@ window.addEventListener('click',()=>{
 //end **behavior subject drop down list in section contact**
 
 //** behavior while user zoom page **/
-/*
 window.addEventListener('resize',()=>{
     x=w.innerWidth||e.clientWidth||g.clientWidth,
     y=w.innerHeight||e.clientHeight||g.clientHeight;
@@ -133,7 +132,6 @@ window.addEventListener('resize',()=>{
         });
     }
 });
-*/
 //end ** behavior while user zoom page **/
 
 //** animation apper object on page */
