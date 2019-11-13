@@ -479,6 +479,221 @@ section:nth-of-type(2) .section-content .boxes .box:nth-of-type(1) p {
   margin-bottom: 1.6rem;
 }
 
+.massonary {
+  width: 100vw;
+  max-width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+}
+
+.massonary .item {
+  padding: 5.93rem 0 2.87rem 4.25rem;
+  color: #ffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.massonary .item p:nth-of-type(1) {
+  font-family: lato-light;
+  font-size: 3.42rem;
+  margin-bottom: 2.31rem;
+}
+
+.massonary .item .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5.93rem;
+}
+
+.massonary .item .wrap p {
+  margin-bottom: 0;
+}
+
+.massonary .item p:nth-of-type(2) {
+  font-family: lato-regular;
+  font-size: 2.14rem;
+}
+
+.massonary .item a button {
+  font-family: lato-bold;
+  font-size: 1.28rem;
+  width: 12.12rem;
+  height: 3.68rem;
+  border-radius: 50px;
+  background: transparent;
+  border: 2px solid #ffff;
+  color: #ffff;
+  cursor: pointer;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.massonary .item img {
+  margin-right: 2rem;
+}
+
+.massonary .item1 {
+  background-image: url("images/carrer/bg-1.png");
+  background-size: cover;
+  background-position: center center;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  grid-row: 1 / 1;
+}
+
+.massonary .item1 a button:hover {
+  background: #ffff;
+  color: #4daff6;
+}
+
+.massonary .item2 {
+  background-image: url("images/carrer/bg-2.png");
+  background-size: cover;
+  background-position: center center;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 1;
+  grid-row: 1 / 1;
+}
+
+.massonary .item2 a button:hover {
+  background: #ffff;
+  color: #8a9094;
+}
+
+.massonary .item3 {
+  position: relative;
+  background-image: url("images/carrer/bg-3.png");
+  background-size: cover;
+  background-position: center center;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+}
+
+.massonary .item3 a {
+  position: absolute;
+  bottom: 2.87rem;
+}
+
+.massonary .item3 a button:hover {
+  background: #ffff;
+  color: #0974b9;
+}
+
+.massonary .item4 {
+  background-image: url("images/carrer/bg-4.png");
+  background-size: cover;
+  background-position: center center;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+}
+
+.massonary .item4 a button:hover {
+  background: #ffff;
+  color: #ffb12a;
+}
+
+.massonary-for-3-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+}
+
+.massonary-for-3-item .item1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  grid-row: 1 / 1;
+}
+
+.massonary-for-3-item .item2 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 1;
+  grid-row: 1 / 1;
+}
+
+.massonary-for-3-item .item3 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+}
+
+.massonary-for-2-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[1];
+      grid-template-rows: repeat(1, 1fr);
+}
+
+.massonary-for-2-item .item1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  grid-row: 1 / 1;
+}
+
+.massonary-for-2-item .item2 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 1;
+  grid-row: 1 / 1;
+}
+
+.massonary-for-1-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  -ms-grid-rows: (1fr)[1];
+      grid-template-rows: repeat(1, 1fr);
+}
+
+.massonary-for-1-item .item1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
 footer {
   width: 100vw;
   height: 5.25em;
@@ -678,6 +893,59 @@ footer .content .right p:nth-of-type(1) {
   }
   section:nth-of-type(2) .section-content .boxes .box {
     width: 100%;
+  }
+  .massonary {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    -ms-grid-rows: (1fr)[4];
+        grid-template-rows: repeat(4, 1fr);
+  }
+  .massonary .item1 {
+    -ms-grid-column: 1;
+    grid-column: 1 / 1;
+    -ms-grid-row: 1;
+    grid-row: 1 / 1;
+  }
+  .massonary .item2 {
+    -ms-grid-column: 1;
+    grid-column: 1 / 1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  .massonary .item3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  .massonary .item4 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+  }
+  .massonary-for-3-item {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+  }
+  .massonary-for-2-item {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+  }
+  .massonary-for-1-item {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    -ms-grid-rows: (1fr)[1];
+        grid-template-rows: repeat(1, 1fr);
   }
 }
 

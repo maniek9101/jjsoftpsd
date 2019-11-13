@@ -106,9 +106,96 @@
         </div>
     </section>
 
-    <section>
-
+    <section class="massonary ">
+        <div class="item item1">
+            <p>UI/UX Design</p>
+            <div class="wrap">
+                <img src="images/carrer/ico-offert-1.png" alt="location">
+                <p>Warsaw</p>
+            </div>
+            <a href=""><button>APPLY NOW</button></a>
+        </div>
+        <div class="item item2">
+            <p>Quality Assurance</p>
+            <div class="wrap">
+                <img src="images/carrer/ico-offert-1.png" alt="location">
+                <p>Warsaw</p>
+            </div>
+            <a href=""><button>APPLY NOW</button></a>
+        </div>
+        <div class="item item3">
+            <p>Project Management</p>
+            <div class="wrap">
+                <img src="images/carrer/ico-offert-1.png" alt="location">
+                <p>Warsaw</p>
+            </div>
+            <a href=""><button>APPLY NOW</button></a>
+        </div>
+        <div class="item item4">
+            <p>Quality Assurance</p>
+            <div class="wrap">
+                <img src="images/carrer/ico-offert-1.png" alt="location">
+                <p>Warsaw</p>
+            </div>
+            <a href=""><button>APPLY NOW</button></a>
+        </div>
     </section>
+
+    <section class="massonary ">
+        <div class="item item1">
+            <p>UI/UX Design</p>
+            <div class="wrap">
+                <img src="images/carrer/ico-offert-1.png" alt="location">
+                <p>Warsaw</p>
+            </div>
+            <a href=""><button>APPLY NOW</button></a>
+        </div>
+        <div class="item item2">
+            <p>Quality Assurance</p>
+            <div class="wrap">
+                <img src="images/carrer/ico-offert-1.png" alt="location">
+                <p>Warsaw</p>
+            </div>
+            <a href=""><button>APPLY NOW</button></a>
+        </div>
+        <div class="item item3">
+            <p>Project Management</p>
+            <div class="wrap">
+                <img src="images/carrer/ico-offert-1.png" alt="location">
+                <p>Warsaw</p>
+            </div>
+            <a href=""><button>APPLY NOW</button></a>
+        </div>
+        <div class="item item4">
+            <p>Quality Assurance</p>
+            <div class="wrap">
+                <img src="images/carrer/ico-offert-1.png" alt="location">
+                <p>Warsaw</p>
+            </div>
+            <a href=""><button>APPLY NOW</button></a>
+        </div>
+    </section>
+
+    <section class="massonary ">
+        <div class="item item1">
+            <p>UI/UX Design</p>
+            <div class="wrap">
+                <img src="images/carrer/ico-offert-1.png" alt="location">
+                <p>Warsaw</p>
+            </div>
+            <a href=""><button>APPLY NOW</button></a>
+        </div>
+        <div class="item item2">
+            <p>Quality Assurance</p>
+            <div class="wrap">
+                <img src="images/carrer/ico-offert-1.png" alt="location">
+                <p>Warsaw</p>
+            </div>
+            <a href=""><button>APPLY NOW</button></a>
+        </div>
+    </section>
+
+    
 
     <footer>
         <div class="content">
@@ -138,6 +225,53 @@
         window.onload = function()
         {
             setHeightContent();
+            massonary_behavior();
+        }
+
+        //**count offerts job
+
+        function massonary_behavior()
+        {
+            let count_massonary = document.querySelectorAll('.massonary');
+            let count_items_in_massonary = document.querySelectorAll('.massonary .item');
+
+            if(count_massonary.length > 1) // more then one section .massonary
+            {
+                //check how many .item is in last .massonary
+                //console.log(count_items_in_massonary.length);
+                let mod = count_items_in_massonary.length % 4 ;
+                if(mod == 1) // only one .item in last .massonary
+                {
+                    count_massonary[count_massonary.length-1].classList.add('massonary-for-1-item');
+                }
+                if(mod == 2)// two .item in last .massonary
+                {
+                    count_massonary[count_massonary.length-1].classList.add('massonary-for-2-item');
+                }
+                if(mod == 3)// three .item in last .massonary 
+                {
+                    count_massonary[count_massonary.length-1].classList.add('massonary-for-3-item');
+                }
+                if(mod == 4)// full .item in last .massonary 
+                {
+                    //do nothing default style is for 4 .items
+                }
+            }
+            else //literally one section .massonary
+            {
+                if(count_items_in_massonary.length == 3)
+                {
+                    count_massonary[0].classList.add('massonary-for-3-item');
+                }
+                if(count_items_in_massonary.length == 2)
+                {
+                    count_massonary[0].classList.add('massonary-for-2-item');
+                }
+                if(count_items_in_massonary.length == 1)
+                {
+                    count_massonary[0].classList.add('massonary-for-1-item');
+                }
+            }
         }
     </script>
 </body>
