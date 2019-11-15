@@ -1,0 +1,820 @@
+//Variables
+$baseFontSize: 16px;
+//fonts
+@font-face {
+    font-family: lato-light;
+    src: url('fonts/lato-light.ttf');
+}
+
+@font-face {
+    font-family: lato-bold;
+    src: url('fonts/lato-bold.ttf');
+}
+
+@font-face {
+    font-family: lato-regular;
+    src: url('fonts/lato-regular.ttf');
+}
+
+@font-face {
+    font-family: futura-light-bt;
+    src: url('fonts/futura-light-bt.ttf');
+}
+
+@font-face {
+    font-family: futura-bold-bt;
+    src: url('fonts/futura-bold-bt.ttf');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: $baseFontSize;
+}
+
+header {
+    background-image: url('images/joboffert/main.png');
+    background-size: cover;
+    background-position: center top;
+    //min-height: 200vh;
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    //border: 3px solid white;
+    .cookies-info {
+        width: 100vw;
+        max-width: 100%;
+        height: 7.42vh;
+        background: #3fb2f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        transition: all .5s;
+        visibility: hidden;
+        p {
+            font-family: lato-light;
+            color: white;
+        }
+        span {
+            position: absolute;
+            right: 3.7%;
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+    .header-nav {
+        z-index: 998;
+        //border: 2px solid gold;
+        width: 100vw;
+        max-width: 100%;
+        
+        //position: fixed;
+        //top: 0;
+        //left: 0;
+        .header-nav-mobile {
+            display: none;
+            //height: 75px;
+            width: 100vw;
+            max-width: 100%;
+            //border: 2px solid gold;
+            img {
+                cursor: pointer;
+            }
+            button {
+                //position: absolute;
+                //right: 50px;
+                //top: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                span {
+                    width: 45px;
+                    height: 5px;
+                    background: white;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        nav {
+            //border:4px solid green;
+            display: flex;
+            justify-content: space-between;
+            width: 100vw;
+            max-width: 100%;
+            //height: 18vh;
+            padding: 0 3.7vw;
+            padding-top: 5.7vh;
+            transition: all .5s ease;
+            
+            img {
+                //border: 2px solid red;
+                //width: 16.16vw;
+                //height: 6.70vh;
+            }
+            ul {
+                //border: 2px solid lightblue;
+                display: flex;
+                align-items: center;
+                padding-top: 2vh;
+                li {
+                    list-style: none;
+                    display: flex;
+                    transition-duration: .5s;
+                    position: relative;
+                    //border: 1px solid white; // !!! SUCH IMPORTANT TO CENTER FLAG !!!
+                    &:nth-of-type(2) // li with services 
+                    {
+                        //border: 2px solid green;
+                        ul 
+                        {
+                            position: absolute;
+                            top: 100%;
+                            left: -85%;
+                            //border: 2px solid white;
+                            li
+                            {
+                                //border: 2px solid red;
+                                background: #08123b;
+                                a
+                                {
+                                    //border: 2px solid aqua;
+                                    white-space: nowrap;
+                                    &:hover
+                                    {
+                                        color: #e5aa28;
+                                    }
+                                }
+                            }   
+                        }
+                        
+                    }
+                    &:nth-of-type(6) //li with flag
+                    {
+                        //border: 3px solid aqua;
+                        a {
+                            //border: 3px solid red;
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                    img {
+                        border: 1px solid white; //!! DONT COMENT THIS BORDER !!
+                        //width: 2.20vw;
+                        //height: 2.68vh;
+                    }
+                    ul {
+                        //border: 2px solid white;
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        //border: 2px solid firebrick;
+                        display: none;
+                        li a {
+                            //border: 2px dashed darkviolet;
+                            margin-bottom: 0.6vh;
+                            position: relative;
+                            &:hover
+                            {
+                                color: white;;
+                            }
+                        }
+                    }
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        font-family: lato-bold;
+                        margin-left: 3.7vw;
+                        &:hover
+                        {
+                            color: #e5aa28;
+                        }
+                    }
+                    /*#select-language {
+                        margin-left: 1.05vw;
+                    }*/
+                }
+            }
+        }
+        //show flag
+        ul li:hover>ul,
+        ul li ul:hover {
+            display: block;
+        }
+        ul li:nth-of-type(2):hover>ul
+        {
+            display: flex;
+        }
+        #deutsch::after {
+            content: 'Deutsch';
+            position: absolute;
+            top: 0;
+            left: -350%;
+            width: 350%;
+            height: 100%;
+            display: none;
+            background: #08123b;
+        }
+        #deutsch:hover::after,
+        #français:hover::after,
+        #polski:hover::after {
+            display: block;
+        }
+        #français::after {
+            content: 'Français';
+            position: absolute;
+            top: 0;
+            left: -350%;
+            width: 350%;
+            height: 100%;
+            display: none;
+            background: #08123b;
+        }
+        #polski::after {
+            content: 'Polski';
+            position: absolute;
+            top: 0;
+            left: -350%;
+            width: 350%;
+            height: 100%;
+            display: none;
+            background: #08123b;
+        }
+        //temporary class to fixed nav 
+        
+        #logo {
+            //border: 1px solid white;
+        }
+    }
+
+    //color current watching section TO DO BEHAVIOR JS WHILE SCROLL 
+    .active-section {
+        color: #e5aa28;
+    }
+    .content {
+        width: 70vw;
+        //border: 2px solid red;
+        position: absolute;
+        top: 18.75rem;
+        
+        .content-header
+        {
+            //border: 2px solid aqua;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p
+            {
+                font-family: lato-bold;
+                color: #f4c348;
+                font-size: 8.14rem;
+                //border: 2px solid red;
+                text-align: center;
+                white-space: nowrap;
+                margin-bottom: 7.12rem;
+            }
+            .work-place
+            {
+                position: relative;
+                background: #103168;
+                opacity: .6;
+                padding: 3.25rem 3.5rem 3.25rem 3.5rem;
+                margin-bottom: 6.75rem;
+                p
+                {
+                    color: #ffff;
+                    font-size: 2.57rem;
+                    font-family: lato-light;
+                    margin-bottom: 0;
+                    span
+                    {
+                        font-family: lato-bold;
+                    }
+                }
+                &::after
+                {
+                    content: url('images/joboffert/work-place.png'); // to repair !!
+                    position: absolute;
+                    top: -25%;
+                    left: 50%;
+                    border-radius: 50%;
+                    transform: translateX(-50%);
+                    width: 4.64rem;
+                    height: 4.64rem;
+                    background: #103168;
+                    //border: 1px solid red;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                }
+            }
+        }
+        .boxes
+        {
+            //border: 2px solid green;
+            margin-bottom: 7.87rem;
+            .row
+            {
+                //border: 1px solid palevioletred;
+                display: flex;
+                .box
+                {
+                    //border: 1px solid white;
+                    width: 50%;
+                    padding: 4.18rem 0 0 2.81rem;
+                    p
+                    {
+                        color: #ffff;
+                        font-family: lato-light;
+                        font-size: 3.85rem;
+                        margin-bottom: 4.37rem;
+                    }
+                    ul
+                    {
+                        list-style: none;
+                        li 
+                        {
+                            color: #ffff;
+                            font-family: lato-regular;
+                            font-size: 1.54rem;
+                            margin-bottom: 3rem;
+                            &::before
+                            {
+                                content: "•"; 
+                                color: #ffc030;
+                                display: inline-block;
+                                width: 1em;
+                                margin-left: -1em
+                            }
+                        }
+                    }
+                    
+                }
+                &:nth-of-type(1)
+                {
+                    margin-bottom: 3.56rem;
+                    .box:nth-of-type(1)
+                    {
+                        background: url('images/joboffert/bg-1.png');
+                        background-position: center center;
+                        background-size: cover;
+                        margin-right: 1.78rem;
+                    }
+                    .box:nth-of-type(2)
+                    {
+                        background: url('images/joboffert/bg-3.png');
+                        background-position: center center;
+                        background-size: cover;
+                        margin-left: 1.78rem;
+                    }
+                }
+                &:nth-of-type(2)
+                {
+                    .box:nth-of-type(1)
+                    {
+                        background: url('images/joboffert/bg-2.png');
+                        background-position: center center;
+                        background-size: cover;
+                        margin-right: 1.78rem;
+                    }
+                    .box:nth-of-type(2)
+                    {
+                        //border: 4px solid black;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        padding: 0;
+                        .top
+                        {
+                            background: url('images/joboffert/bg-4.png');
+                            background-size: cover;
+                            background-position: center center;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            font-family: lato-bold;
+                            font-size: 3.42rem;
+                            padding: 3.56rem 0 2.75rem 0;
+                            margin-bottom: 3.56rem;
+                            //border: 3px dashed green;
+                            margin-left: 1.78rem;
+                            p
+                            {
+                                text-align: center;
+                                margin: 0;
+                                margin-bottom: 3.56rem;
+                            }
+                            button
+                            {
+                                width: 21.8rem;
+                                height: 5.5rem;
+                                border: 2px solid #ffff;
+                                background: transparent;
+                                border-radius: 50px;
+                                font-family: lato-bold;
+                                color: #ffff;
+                                font-size: 1.95rem;
+                                transition: all .5s;
+                                cursor: pointer;
+                                &:hover
+                                {
+                                    background: #ffff;
+                                    color: orange;
+                                }
+                            }
+                        }
+                        .down
+                        {
+                            background: url('images/joboffert/bg-5.png');
+                            background-size: cover;
+                            background-position: center center;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            padding: 3.5rem 7.25rem 4.68rem 7.25rem;
+                            white-space: nowrap;
+                            margin-left: 1.78rem;
+                            img
+                            {
+                                //border: 1px solid red;
+                            }
+                            p
+                            {
+                                //border: 1px solid red;
+                                margin: 0;
+                                font-family: lato-light;
+                                font-size: 2.57rem;
+                                text-align: center;
+                                margin-top: 1.5rem;
+                                span
+                                {
+                                    font-family: lato-bold;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#fix-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    background: #08123b;
+}
+#fix-nav-mobile
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+}
+
+#active-nav
+{
+    display: block;
+    top: 70px;
+}
+
+footer
+{
+    width: 100vw;
+    height: 5.25em;
+    max-width: 100%;
+    background: #3fb2f9;
+    display: flex;
+    justify-content: center;
+    color: #ffff;
+    
+    .content
+    {
+        //border: 1px solid white;
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        .left
+        {
+            display: flex;
+            align-items: center;
+            p
+            {
+                font-family: lato-light;
+                font-size: 1.28em;
+                span
+                {
+                    font-family: lato-bold;
+                }
+            }
+        }
+        .right
+        {
+            //border: 1px solid red;
+            display: flex;
+            align-items: center;
+            font-family: lato-light;
+            font-size: 1.28em;
+            p:nth-of-type(1)
+            {
+                margin-right: 2em;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+// Media Queries 
+@media only screen and (max-width: 768px) {
+    //mobile
+    header
+    {
+        .header-nav {
+            background: transparent;
+            position: relative;
+            nav {
+                //border: 2px solid red;
+                position: fixed;
+                top: 50%;
+                left: 0;
+                display: none;
+                background: #3fb2f9;
+                //opacity: .8;
+                padding: 0;
+                #logo
+                {
+                    display: none;
+                }
+                ul {
+                    padding: 0;
+                    flex-direction: column;
+                    li {
+                        width: 100%;
+                        background: #081038;
+                        border-bottom: 1px solid #3fb2f9;
+                        font-size: 1.5rem;    
+                        &:nth-of-type(6)
+                        {
+                            padding: 0.4rem 0 0.4rem 0;
+                            a img 
+                            {
+                                width: 50px;
+                                height: 25px;
+                            }
+                        }                  
+                        a {
+                            border: none;
+                            font-size: 1.8rem;
+                        }
+                        ul
+                        {
+                            display: block;
+                            position: absolute;
+                            left: 0;
+                            top: 102%;
+                            //border: 2px solid white;
+                            li
+                            {
+                                padding: 0.4rem 0 0.4rem 0;
+                                //border: 2px solid red;
+                                a
+                                {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .header-nav-mobile {
+                //display: block;
+                //border: 3px solid white;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                //border: 2px solid white;
+                //height: 100px;
+                padding: 0 15px 0 15px;
+                background:#08123b;
+
+                img {
+                    //border: 1px solid white;
+                    //transform: scale(0.5);
+                    width: 152px;
+                    height: 33px;
+                }
+                
+                button {
+                    //@at-rootborder: 1px solid red;
+                    //right: 10px;
+                    //top: 0;
+                    
+                    width: 50px;
+                    height: 50px;
+                    background: transparent;
+                    border: none;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+        .content {
+            width: 80vw;
+            border: 2px solid white;
+            justify-content: center;
+            p {
+                //text-align: center;
+            }
+            .boxes .box
+            {
+                &:nth-of-type(1)
+                {
+                    margin-right: 0;
+                }
+                &:nth-of-type(3)
+                {
+                    margin-right: 0;
+                    margin-bottom: 3.38em;
+                }
+            }
+        }
+    }
+
+    #deutsch::after {
+        content: 'Deutsch';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 350%;
+        height: 100%;
+        display: none;
+        background: #0a3e7d;
+    }
+    
+    #français::after {
+        content: 'Français';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 350%;
+        height: 100%;
+        display: none;
+        background: #0a3e7d;
+    }
+    #polski::after {
+        content: 'Polski';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 350%;
+        height: 100%;
+        display: none;
+        background: #0a3e7d;
+    }
+
+    //end mobile style//
+    //mobile font size
+    //to do 
+    .cookies-info p {
+        font-size: 0.52rem;
+    }
+    nav ul li a {
+        font-size: 0.75rem;
+    }
+    
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1365px) // Tablets ? for 960px
+{
+    //style for tablet//
+    .cookies-info p {
+        font-size: 0.92rem;
+    }
+    nav ul li a {
+        font-size: 0.75rem;
+    }
+    header .content 
+    {
+        font-size: ($baseFontSize * 0.71);
+        .boxes 
+        {
+            .box
+            {
+                &:nth-of-type(1) 
+                {
+                    margin-right: 0;
+                }
+                &:nth-of-type(3)
+                {
+                    margin-right: 0;
+                    margin-bottom: 3.38em;
+                }
+                &:nth-of-type(4)
+                {
+                    margin-bottom: 3.38em;
+                }
+            }
+        }     
+    }
+    
+}
+
+@media only screen and (min-width: 1024px) {
+    
+}
+
+@media only screen and (min-width: 1366px) {
+    .cookies-info p {
+        font-size: 0.92rem;
+    }
+    nav ul li a {
+        font-size: 1.07rem;
+    }
+    header .content 
+    {
+        font-size: ($baseFontSize * 0.71);
+    }
+}
+
+@media only screen and (min-width: 1600px)
+{
+    header .content 
+    {
+        font-size: ($baseFontSize * 0.83);
+    }
+}
+
+//currently default res on project
+@media only screen and (min-width: 1920px) {
+    // FULL HD
+    .cookies-info p {
+        font-size: 1.29rem;
+    }
+    nav ul li a {
+        font-size: 1.5rem;
+    }
+    header .content 
+    {
+        font-size: $baseFontSize;
+    }
+    
+}
+
+@media only screen and (min-width: 2560px) {
+    // 2k
+    //TO DO SET DIMENSION ALL IMG 
+    //
+    .cookies-info p {
+        font-size: 1.72rem;
+    }
+    nav ul li a {
+        font-size: 2rem;
+    }
+    header .content 
+    {
+        font-size: ($baseFontSize * 1.34);
+    }
+    
+}
+
+@media only screen and (min-width: 3800px) {
+    // 4k
+    .cookies-info p {
+        font-size: 2.75rem;
+    }
+    nav ul li a {
+        font-size: 3.2rem;
+    }
+    header .content 
+    {
+        font-size: ($baseFontSize * 2.13);
+    }
+}

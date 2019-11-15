@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="joboffert_style.css">
+    <title>JJ Soft</title>
+</head>
+
+<body>
+
+    <header id="home">
+        <div class="cookies-info">
+            <p>Strona korzysta z plików cookies. Pozostając na niej, wyrażasz zgodę na wykorzystanie plików cookies</p>
+            <span id="scross">🗙</span>
+        </div>
+        <div class="header-nav">
+            <div class="header-nav-mobile">
+                <img src="images/logo.png">
+                <button>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <nav>
+                <img src="images/logo.png" alt="logo" id="logo" srcset="images/logo.png 1920w">
+                <ul>
+                    <li><a href="index.html" hreflang="en" class="active-section" id="homeID">Home</a></li>
+                    <li><a href="#services" hreflang="en" id="servicesID">Services</a>
+                        <ul>
+                            <li><a href="services.html" hreflang="en">IT Outsourcing</a></li>
+                            <li><a href="#" hreflang="en">Software development</a></li>
+                            <li><a href="#" hreflang="en">Recruitment</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="company.html" hreflang="en" id="companyID">Company</a></li>
+                    <li><a href="carrer.html" hreflang="en" id="careersID">Careers</a></li>
+                    <li><a href="index.html#contact" hreflang="en" id="contactID">Contact</a></li>
+                    <li>
+                        <a href="#" hreflang="en" id="select-language"><img src="images/GBflag.png" alt="English" srcset="images/GBflag.png 1920w"></a>
+                        <ul>
+                            <li><a href="#" hreflang="deu" id="deutsch"><img src="images/GERflag.png" alt="Deutsch" srcset="images/GERflag.png 1920w"></a></li>
+                            <li><a href="#" hreflang="fran" id="français"><img src="images/FRflag.png" alt="Français" srcset="images/FRflag.png 1920w"></a></li>
+                            <li><a href="#" hreflang="pl" id="polski"><img src="images/PLflag.png" alt="Polski" srcset="images/PLflag.png 1920w"></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content">
+            <div class="content-header">
+                <p>Administrator systemów IT</p>
+                <div class="work-place">
+                    <p>Miejsce pracy: <span> Katowice</span></p>
+                </div>
+            </div>
+            <div class="boxes">
+                <div class="row">
+                    <div class="box">
+                        <p>Wymagania</p>
+                        <ul>
+                            <li>Znajomość systemów Linux i Windows</li>
+                            <li>Administrowanie aplikacjami opartymi o Nginx, PHP,  MySQL, PostgreSQL, etc.,</li>
+                            <li>Umiejętność prawidłowego diagnozowania problemów,</li>
+                            <li>Umiejętność pisania skryptów w konsoli,</li>
+                            <li>Doświadczenie w pracy na podobnym stanowisku.</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <p>Zakres obowiązków</p>
+                        <ul>
+                            <li>Zarządzanie utrzymaniem aplikacji internetowych oraz diagnozowanie i rozwiązywanie występujących problemów,</li>
+                            <li>współpraca z programistami i projektantami systemów informatycznych,</li>
+                            <li>migracja rozwiązań firmy do Cloud</li>
+                            <li>udział we wdrożeniach nowych rozwiązań i technologii (np. Kubernetes, Ansible),</li>
+                            <li>analiza wskaźników wydajności oraz przygotowywanie zaleceń, mających na cel usprawnienie funkcjonowania systemów,</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="box">
+                        <p>Oferujemy</p>
+                        <ul>
+                            <li>Udział w ciekawych projektach dających wyzwania i możliwość kreatywnego rozwoju,</li>
+                            <li>dostęp do najnowszych technologii i oprogramowania,</li>
+                            <li>pakiet szkoleń wewnętrznych i zewnętrznych, wybór preferowanej formy zatrudnienia,</li>
+                            <li>benefity pozapłacowe (m.in.: karta multisport, bilety do kina, zajęcia językowe),</li>
+                            <li>możliwość realizacji swoich pasji (nie tylko tych związanych z pracą),</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <div class="top">
+                            <p>Bądź jednym z pierwszych który aplikuje!</p>
+                            <button>APLIKUJ TERAZ</button>
+                        </div>
+                        <div class="down">
+                            <img src="images/joboffert/work-place.png" alt="mark">
+                            <p>Miejsce pracy: <span>Katowice</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <footer>
+        <div class="content">
+            <div class="left"><p>Copyright 2019<span> © JJSoft</span>.</p></div>
+            <div class="right">
+                <p>Cookies Politicy</p>
+                <p>info@jjsoft.pl</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="navBehavior.js"></script>
+    <script type="text/javascript" src="cookies.js"></script>
+    <script>
+        //**set height content
+        
+        function setHeightContent()
+        {
+            let el = document.querySelector('.content');
+            let style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+            let fontSize = parseFloat(style); 
+
+            heightContent = document.querySelector('.content').offsetHeight; // wysokość .content
+            heightContent += (18.75*fontSize); // + margin-top .content * current_em_font_size
+            document.querySelector('header').style.height = heightContent + 'px' ; // ustawienie wysokości żeby cały .content się zmieścił 
+        }
+
+        window.onload = function()
+        {
+            setHeightContent();
+        }
+    </script>
+</body>
+
+</html>
