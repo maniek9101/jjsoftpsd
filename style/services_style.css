@@ -1,27 +1,27 @@
 @charset "UTF-8";
 @font-face {
   font-family: lato-light;
-  src: url("fonts/lato-light.ttf");
+  src: url("../fonts/lato-light.ttf");
 }
 
 @font-face {
   font-family: lato-bold;
-  src: url("fonts/lato-bold.ttf");
+  src: url("../fonts/lato-bold.ttf");
 }
 
 @font-face {
   font-family: lato-regular;
-  src: url("fonts/lato-regular.ttf");
+  src: url("../fonts/lato-regular.ttf");
 }
 
 @font-face {
   font-family: futura-light-bt;
-  src: url("fonts/futura-light-bt.ttf");
+  src: url("../fonts/futura-light-bt.ttf");
 }
 
 @font-face {
   font-family: futura-bold-bt;
-  src: url("fonts/futura-bold-bt.ttf");
+  src: url("../fonts/futura-bold-bt.ttf");
 }
 
 html {
@@ -42,7 +42,7 @@ html {
 }
 
 header {
-  background-image: url("images/services/main.png");
+  background-image: url("../images/services/main.png");
   background-size: cover;
   background-position: center top;
   width: 100vw;
@@ -452,7 +452,7 @@ header .content .boxes .box .bottom button {
 }
 
 header .content .boxes .box:nth-of-type(1) {
-  background-image: url("images/services/box_one_bg.png");
+  background-image: url("../images/services/box_one_bg.png");
   background-position: center center;
   background-size: cover;
 }
@@ -463,7 +463,7 @@ header .content .boxes .box:nth-of-type(1) button:hover {
 }
 
 header .content .boxes .box:nth-of-type(2) {
-  background-image: url("images/services/box_two_bg.png");
+  background-image: url("../images/services/box_two_bg.png");
   background-position: center center;
   background-size: cover;
 }
@@ -474,7 +474,7 @@ header .content .boxes .box:nth-of-type(2) button:hover {
 }
 
 header .content .boxes .box:nth-of-type(2) .box-in {
-  background: url("images/services/box_in_two_bg.png");
+  background: url("../images/services/box_in_two_bg.png");
   background-size: cover;
   background-position: center center;
   z-index: 2;
@@ -483,7 +483,7 @@ header .content .boxes .box:nth-of-type(2) .box-in {
 }
 
 header .content .boxes .box:nth-of-type(3) {
-  background-image: url("images/services/box_three_bg.png");
+  background-image: url("../images/services/box_three_bg.png");
   background-position: center center;
   background-size: cover;
 }
@@ -494,7 +494,7 @@ header .content .boxes .box:nth-of-type(3) button:hover {
 }
 
 header .content .boxes .box:nth-of-type(4) {
-  background-image: url("images/services/box_four_bg.png");
+  background-image: url("../images/services/box_four_bg.png");
   background-position: center center;
   background-size: cover;
 }

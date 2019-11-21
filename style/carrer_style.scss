@@ -3,27 +3,27 @@ $baseFontSize: 16px;
 //fonts
 @font-face {
     font-family: lato-light;
-    src: url('fonts/lato-light.ttf');
+    src: url('../fonts/lato-light.ttf');
 }
 
 @font-face {
     font-family: lato-bold;
-    src: url('fonts/lato-bold.ttf');
+    src: url('../fonts/lato-bold.ttf');
 }
 
 @font-face {
     font-family: lato-regular;
-    src: url('fonts/lato-regular.ttf');
+    src: url('../fonts/lato-regular.ttf');
 }
 
 @font-face {
     font-family: futura-light-bt;
-    src: url('fonts/futura-light-bt.ttf');
+    src: url('../fonts/futura-light-bt.ttf');
 }
 
 @font-face {
     font-family: futura-bold-bt;
-    src: url('fonts/futura-bold-bt.ttf');
+    src: url('../fonts/futura-bold-bt.ttf');
 }
 
 html {
@@ -44,7 +44,7 @@ html {
 }
 
 header {
-    background-image: url('images/carrer/main.png');
+    background-image: url('../images/carrer/main.png');
     background-size: cover;
     background-position: center top;
     //min-height: 200vh;
@@ -511,7 +511,7 @@ section:nth-of-type(2)
     }
     .item1
     {
-        background-image: url('images/carrer/bg-1.png');
+        background-image: url('../images/carrer/bg-1.png');
         background-size: cover;
         background-position: center center;
         grid-column: 1 / 2;
@@ -524,7 +524,7 @@ section:nth-of-type(2)
     }
     .item2
     {
-        background-image: url('images/carrer/bg-2.png');
+        background-image: url('../images/carrer/bg-2.png');
         background-size: cover;
         background-position: center center;
         grid-column: 2 / 3;
@@ -538,7 +538,7 @@ section:nth-of-type(2)
     .item3
     {
         position: relative;
-        background-image: url('images/carrer/bg-3.png');
+        background-image: url('../images/carrer/bg-3.png');
         background-size: cover;
         background-position: center center;
         grid-column: 3 / 4;
@@ -557,7 +557,7 @@ section:nth-of-type(2)
     }
     .item4
     {
-        background-image: url('images/carrer/bg-4.png');
+        background-image: url('../images/carrer/bg-4.png');
         background-size: cover;
         background-position: center center;
         grid-column: 1 / 3;
