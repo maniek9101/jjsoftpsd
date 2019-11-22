@@ -647,7 +647,7 @@ footer
             }
         }
         .content {
-            width: 80vw;
+            width: 100vw;
             border: 2px solid red;
             justify-content: center;
             .content-header
@@ -655,6 +655,10 @@ footer
                 p
                 {
                     white-space: normal;
+                }
+                .work-place
+                {
+                    width: 100%;
                 }
             }
             .boxes

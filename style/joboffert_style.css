@@ -661,7 +661,7 @@ footer .content .right p:nth-of-type(1) {
     outline: none;
   }
   header .content {
-    width: 80vw;
+    width: 100vw;
     border: 2px solid red;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -669,6 +669,9 @@ footer .content .right p:nth-of-type(1) {
   }
   header .content .content-header p {
     white-space: normal;
+  }
+  header .content .content-header .work-place {
+    width: 100%;
   }
   header .content .boxes {
     border: 3px solid aqua;
