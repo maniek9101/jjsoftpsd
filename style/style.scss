@@ -1166,7 +1166,7 @@ header {
                 left: 0;
                 display: none;
                 background: #3fb2f9;
-                //opacity: .8;
+                opacity: .5;
                 padding: 0;
                 #logo
                 {
@@ -1175,6 +1175,7 @@ header {
                 ul {
                     padding: 0;
                     flex-direction: column;
+                    //border: 2px solid red;
                     li {
                         width: 100%;
                         background: #081038;
@@ -1194,7 +1195,8 @@ header {
                             font-size: 1.8rem;
                         }
                         ul
-                        {
+                        {/*
+                            border: 2px solid red;
                             display: block;
                             position: absolute;
                             left: 0;
@@ -1203,12 +1205,13 @@ header {
                             li
                             {
                                 padding: 0.4rem 0 0.4rem 0;
-                                //border: 2px solid red;
+                                border: 2px solid azure;
                                 a
                                 {
                                     margin-bottom: 0;
                                 }
-                            }
+                            }*/
+
                         }
                     }
                 }

@@ -1387,6 +1387,7 @@ header .right {
     left: 0;
     display: none;
     background: #3fb2f9;
+    opacity: .5;
     padding: 0;
   }
   header .header-nav nav #logo {
@@ -1417,16 +1418,22 @@ header .right {
     font-size: 1.8rem;
   }
   header .header-nav nav ul li ul {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 102%;
-  }
-  header .header-nav nav ul li ul li {
-    padding: 0.4rem 0 0.4rem 0;
-  }
-  header .header-nav nav ul li ul li a {
-    margin-bottom: 0;
+    /*
+                            border: 2px solid red;
+                            display: block;
+                            position: absolute;
+                            left: 0;
+                            top: 102%;
+                            //border: 2px solid white;
+                            li
+                            {
+                                padding: 0.4rem 0 0.4rem 0;
+                                border: 2px solid azure;
+                                a
+                                {
+                                    margin-bottom: 0;
+                                }
+                            }*/
   }
   header .header-nav .header-nav-mobile {
     display: -webkit-box;

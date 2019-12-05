@@ -2,7 +2,7 @@
 const headerNavMobile = document.querySelector('.header-nav .header-nav-mobile');
 const btnMobile = document.querySelector('.header-nav .header-nav-mobile button');
 const nav = document.querySelector('nav')
-const navUlLanguage = document.querySelector('nav ul li ul');
+
 let w=window,
         d=document,
         e=d.documentElement,
@@ -81,9 +81,12 @@ if(x <= 768)
     window.addEventListener('click',()=>{
         nav.setAttribute('id','');
     });
-    /*document.querySelector('nav ul li:nth-of-type(6)').addEventListener('click',(e)=>{
+    document.querySelector('nav ul li:nth-of-type(6)').addEventListener('click',(e)=>{
         e.stopPropagation();
-    });*/
+    });
+    document.querySelector('nav ul li:nth-of-type(2)').addEventListener('click',(e)=>{
+        e.stopPropagation();
+    });
 }
 //** end behavior mobile menu */
 
